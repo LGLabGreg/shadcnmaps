@@ -21,8 +21,19 @@
   "overrides": [
     {
       "files": ["registry/shadcnmaps/**/*.ts", "registry/shadcnmaps/**/*.tsx"],
-      "jsPlugins": [{ "name": "react-hooks-js", "specifier": "eslint-plugin-react-hooks" }],
-      "plugins": ["typescript", "react", "import", "oxc", "unicorn", "jsx-a11y", "react-perf", "promise"],
+      "jsPlugins": [
+        { "name": "react-hooks-js", "specifier": "eslint-plugin-react-hooks" }
+      ],
+      "plugins": [
+        "typescript",
+        "react",
+        "import",
+        "oxc",
+        "unicorn",
+        "jsx-a11y",
+        "react-perf",
+        "promise"
+      ],
       "rules": {
         "jsx-a11y/click-events-have-key-events": "error",
         "jsx-a11y/no-static-element-interactions": "error",

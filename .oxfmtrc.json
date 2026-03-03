@@ -28,5 +28,9 @@
     ],
     "newlinesBetween": true
   },
+  "sortTailwindcss": {
+    "stylesheet": "./app/globals.css",
+    "functions": ["cn", "clsx", "cva", "twMerge"]
+  },
   "ignorePatterns": []
 }

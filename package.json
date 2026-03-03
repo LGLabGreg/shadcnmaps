@@ -13,12 +13,6 @@
     "prepare": "husky",
     "registry:build": "shadcn build"
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "oxlint --fix",
-      "oxfmt"
-    ]
-  },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
     "class-variance-authority": "^0.7.1",
@@ -44,5 +38,11 @@
     "oxlint": "^1.51.0",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "oxlint --fix",
+      "oxfmt"
+    ]
   }
 }

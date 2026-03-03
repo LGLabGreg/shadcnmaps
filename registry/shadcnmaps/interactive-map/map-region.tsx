@@ -75,7 +75,7 @@ export function MapRegion({
         aria-pressed={isSelected}
         aria-disabled={disabled || undefined}
         className={cn(
-          'cursor-pointer fill-(--map-region) stroke-(--map-region-stroke) stroke-1 outline-none transition-colors duration-150',
+          'cursor-pointer fill-(--map-region) stroke-(--map-region-stroke) stroke-1 transition-colors duration-150 outline-none',
           isHovered &&
             'fill-(--map-region-hover) stroke-(--map-region-stroke-hover)',
           isSelected && 'fill-(--map-region-selected)',
@@ -143,7 +143,7 @@ export function MapRegion({
           y={labelY}
           aria-hidden='true'
           className={cn(
-            'pointer-events-none select-none fill-(--map-label) text-[10px] font-medium transition-colors duration-150',
+            'pointer-events-none fill-(--map-label) text-[10px] font-medium transition-colors duration-150 select-none',
             isHovered && 'fill-(--map-label-hover)',
             isSelected && 'fill-(--map-label-selected)'
           )}
