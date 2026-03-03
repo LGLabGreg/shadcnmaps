@@ -1,0 +1,51 @@
+'use client'
+
+import { cn } from '@/lib/utils'
+import { type ReactNode, useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
+
+export interface MapTooltipProps {
+  visible: boolean
+  content: ReactNode
+  position?: { x: number; y: number } | null
+  className?: string
+}
+
+export function MapTooltip({
+  visible,
+  content,
+  position,
+  className,
+}: MapTooltipProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const left = position?.x ?? 0
+  const top = position?.y ?? 0
+
+  return createPortal(
+    <div
+      aria-hidden={!visible}
+      className={cn(
+        'pointer-events-none fixed z-50 -translate-y-full rounded-md border bg-background px-2 py-1 text-xs shadow-md transition-all duration-150',
+        visible ? 'opacity-100' : 'opacity-0',
+        className
+      )}
+      style={{
+        left,
+        top: top - 10,
+        transform: `translate(-50%, ${visible ? '-100%' : '-95%'})`,
+      }}
+    >
+      {content}
+    </div>,
+    document.body
+  )
+}

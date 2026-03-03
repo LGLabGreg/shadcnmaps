@@ -13,6 +13,31 @@
           "path": "registry/shadcnmaps/interactive-map/interactive-map.tsx",
           "type": "registry:file",
           "target": "components/shadcnmaps/interactive-map.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/interactive-map/map-context.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-context.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/interactive-map/map-region.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-region.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/interactive-map/map-tooltip.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-tooltip.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/interactive-map/map-marker.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-marker.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/interactive-map/types.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/types.ts"
         }
       ]
     }
