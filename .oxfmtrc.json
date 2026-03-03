@@ -1,0 +1,32 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 80,
+  "trailingComma": "es5",
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "sortImports": {
+    "groups": [
+      "builtin",
+      "external",
+      "internal",
+      ["parent", "sibling", "index"],
+      "unknown"
+    ],
+    "internalPattern": [
+      "components",
+      "config",
+      "context",
+      "hooks",
+      "layout",
+      "mocks",
+      "pages",
+      "store",
+      "tests",
+      "types",
+      "utils"
+    ],
+    "newlinesBetween": true
+  },
+  "ignorePatterns": []
+}
