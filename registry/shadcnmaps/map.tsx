@@ -1,9 +1,10 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { type ReactNode, useMemo } from 'react'
+import { type ReactNode, useId, useMemo, useState } from 'react'
 
 import { MapProvider, useMapContext } from './map-context'
+import { MapListbox } from './map-listbox'
 import { MapMarker } from './map-marker'
 import { MapRegion } from './map-region'
 import { MapTooltip } from './map-tooltip'
@@ -100,6 +101,8 @@ function MapInner({
   'aria-label': ariaLabel,
 }: MapProps) {
   const { selectedRegion, setSelectedRegion, setTooltipState } = useMapContext()
+  const descId = useId()
+  const [announcement, setAnnouncement] = useState('')
 
   const regionOverrides = useMemo(() => {
     return new globalThis.Map(
@@ -121,14 +124,21 @@ function MapInner({
     })
   }, [data.regions, regionOverrides])
 
+  const mapLabel = ariaLabel ?? data.name
+
   return (
     <div className='relative'>
       <svg
         role='group'
-        aria-label={ariaLabel ?? data.name}
+        aria-label={mapLabel}
+        aria-describedby={descId}
         viewBox={data.viewBox}
         className={cn('h-auto w-full', className)}
       >
+        <desc id={descId}>
+          Interactive map. Tab to focus, arrow keys to navigate between regions,
+          Enter or Space to select, Escape to clear.
+        </desc>
         {mergedRegions.map((region) => {
           const disabled = region.disabled || disabledRegionSet.has(region.id)
           const tooltipContent =
@@ -147,8 +157,12 @@ function MapInner({
               className={region.className}
               disabled={disabled}
               onClick={(event) => {
-                setSelectedRegion((current) =>
-                  current === region.id ? null : region.id
+                const isCurrentlySelected = selectedRegion === region.id
+                setSelectedRegion(isCurrentlySelected ? null : region.id)
+                setAnnouncement(
+                  isCurrentlySelected
+                    ? `${region.name} deselected`
+                    : `${region.name} selected`
                 )
                 onRegionClick?.(event)
 
@@ -246,6 +260,31 @@ function MapInner({
         ))}
         {children}
       </svg>
+      <MapListbox
+        regions={mergedRegions}
+        disabledRegions={disabledRegionSet}
+        label={mapLabel}
+        onSelect={(region) => {
+          const isCurrentlySelected = selectedRegion === region.id
+          setAnnouncement(
+            isCurrentlySelected
+              ? `${region.name} deselected`
+              : `${region.name} selected`
+          )
+          onRegionClick?.({
+            region,
+            nativeEvent: null as unknown as RegionEvent['nativeEvent'],
+          })
+        }}
+      />
+      <div
+        role='status'
+        aria-live='polite'
+        aria-atomic='true'
+        className='sr-only'
+      >
+        {announcement}
+      </div>
       {showTooltips ? <MapTooltipContainer /> : null}
     </div>
   )

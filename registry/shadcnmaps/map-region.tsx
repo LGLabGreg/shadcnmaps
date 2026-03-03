@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import type { KeyboardEvent, ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 import { useMapContext } from './map-context'
 import type { MapRegionData, RegionEvent } from './types'
@@ -36,10 +36,12 @@ export function MapRegion({
   onLeave,
   onMove,
 }: MapRegionProps) {
-  const { hoveredRegion, selectedRegion, setHoveredRegion } = useMapContext()
+  const { hoveredRegion, selectedRegion, focusedRegion, setHoveredRegion } =
+    useMapContext()
 
   const isSelected = selected ?? selectedRegion === id
   const isHovered = hovered ?? hoveredRegion === id
+  const isFocused = focusedRegion === id
 
   const regionData: MapRegionData = {
     id,
@@ -51,26 +53,12 @@ export function MapRegion({
     metadata,
   }
 
-  const handleKeyDown = (event: KeyboardEvent<SVGPathElement>) => {
-    if (disabled) {
-      return
-    }
-
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      onClick?.({
-        region: regionData,
-        nativeEvent: event as unknown as RegionEvent['nativeEvent'],
-      })
-    }
-  }
-
   return (
     <>
       <path
         d={path}
         role='button'
-        tabIndex={disabled ? -1 : 0}
+        tabIndex={-1}
         aria-label={name ?? id}
         aria-pressed={isSelected}
         aria-disabled={disabled || undefined}
@@ -79,6 +67,7 @@ export function MapRegion({
           isHovered &&
             'fill-(--map-region-hover) stroke-(--map-region-stroke-hover)',
           isSelected && 'fill-(--map-region-selected)',
+          isFocused && !disabled && 'stroke-(--map-region-focus-ring) stroke-2',
           disabled &&
             'cursor-not-allowed fill-(--map-region-disabled) opacity-60',
           className
@@ -113,29 +102,6 @@ export function MapRegion({
 
           onMove?.({ region: regionData, nativeEvent })
         }}
-        onFocus={(nativeEvent) => {
-          if (disabled) {
-            return
-          }
-
-          setHoveredRegion(id)
-          onEnter?.({
-            region: regionData,
-            nativeEvent: nativeEvent as unknown as RegionEvent['nativeEvent'],
-          })
-        }}
-        onBlur={(nativeEvent) => {
-          if (disabled) {
-            return
-          }
-
-          setHoveredRegion((current) => (current === id ? null : current))
-          onLeave?.({
-            region: regionData,
-            nativeEvent: nativeEvent as unknown as RegionEvent['nativeEvent'],
-          })
-        }}
-        onKeyDown={handleKeyDown}
       />
       {abbreviation && labelX !== undefined && labelY !== undefined ? (
         <text

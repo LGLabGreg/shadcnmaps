@@ -61,6 +61,11 @@
           "target": "components/shadcnmaps/map-marker.tsx"
         },
         {
+          "path": "registry/shadcnmaps/map-listbox.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-listbox.tsx"
+        },
+        {
           "path": "registry/shadcnmaps/types.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/types.ts"

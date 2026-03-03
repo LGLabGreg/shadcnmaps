@@ -21,6 +21,8 @@ interface MapContextValue {
   setSelectedRegion: Dispatch<SetStateAction<string | null>>
   hoveredRegion: string | null
   setHoveredRegion: Dispatch<SetStateAction<string | null>>
+  focusedRegion: string | null
+  setFocusedRegion: Dispatch<SetStateAction<string | null>>
   tooltipState: TooltipState
   setTooltipState: Dispatch<SetStateAction<TooltipState>>
 }
@@ -34,6 +36,7 @@ interface MapProviderProps {
 export function MapProvider({ children }: MapProviderProps) {
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null)
+  const [focusedRegion, setFocusedRegion] = useState<string | null>(null)
   const [tooltipState, setTooltipState] = useState<TooltipState>({
     visible: false,
     content: null,
@@ -46,10 +49,12 @@ export function MapProvider({ children }: MapProviderProps) {
       setSelectedRegion,
       hoveredRegion,
       setHoveredRegion,
+      focusedRegion,
+      setFocusedRegion,
       tooltipState,
       setTooltipState,
     }),
-    [hoveredRegion, selectedRegion, tooltipState]
+    [focusedRegion, hoveredRegion, selectedRegion, tooltipState]
   )
 
   return <MapContext.Provider value={value}>{children}</MapContext.Provider>
