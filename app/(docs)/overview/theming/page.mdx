@@ -1,0 +1,91 @@
+import { DocPage } from '@/components/docs/doc-page'
+
+export const metadata = {
+  title: 'Theming',
+  description: 'Customize map colors using CSS variables and Tailwind.',
+}
+
+<DocPage>
+
+# Theming
+
+All map colors are driven by CSS variables, registered as Tailwind theme colors. Override them globally in your CSS or inline per-component via `className`.
+
+## CSS variables
+
+These variables are injected into your project when you install any map component.
+
+### Region colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-region` | `fill-map-region` | Default region fill |
+| `--map-region-hover` | `fill-map-region-hover` | Fill on hover |
+| `--map-region-selected` | `fill-map-region-selected` | Fill when selected |
+| `--map-region-disabled` | `fill-map-region-disabled` | Fill when disabled |
+
+### Stroke colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-region-stroke` | `stroke-map-region-stroke` | Default border between regions |
+| `--map-region-stroke-hover` | `stroke-map-region-stroke-hover` | Border on hover |
+| `--map-region-focus-ring` | `stroke-map-region-focus-ring` | Keyboard focus ring color |
+
+### Label colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-label` | `text-map-label` | Abbreviation label color |
+| `--map-label-hover` | — | Label color on hover |
+| `--map-label-selected` | — | Label color when selected |
+
+## Override globally
+
+Add overrides to your `globals.css` after the shadcn import:
+
+```css
+:root {
+  --map-region: oklch(60% 0.15 145);
+  --map-region-hover: oklch(50% 0.18 145);
+  --map-region-selected: oklch(45% 0.22 145);
+}
+```
+
+## Dark mode
+
+Dark mode values are included by default. Override them in the `.dark` selector:
+
+```css
+.dark {
+  --map-region: oklch(55% 0.12 145);
+}
+```
+
+## Per-state colors
+
+Pass any Tailwind color class to a state via the `states` prop:
+
+```tsx
+<USAMap
+  states={[
+    { id: 'CA', className: 'fill-emerald-500 hover:fill-emerald-600' },
+    { id: 'TX', className: 'fill-amber-500 hover:fill-amber-600' },
+  ]}
+/>
+```
+
+## Choropleth pattern
+
+For data-driven coloring, compute `className` dynamically:
+
+```tsx
+const states = data.map(({ id, value }) => ({
+  id,
+  className: value > threshold ? 'fill-blue-600' : 'fill-blue-200',
+}))
+
+<USAMap states={states} />
+```
+
+</DocPage>

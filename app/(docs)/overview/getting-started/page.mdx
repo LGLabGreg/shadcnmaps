@@ -1,0 +1,58 @@
+import { DocPage } from '@/components/docs/doc-page'
+
+export const metadata = {
+  title: 'Getting Started',
+  description: 'Install shadcnmaps and add your first map to a React project.',
+}
+
+<DocPage>
+
+# Getting Started
+
+## Prerequisites
+
+- React 18+
+- Next.js 13+ (app router) or any React project with Tailwind CSS v4
+- [shadcn/ui](https://ui.shadcn.com) configured in your project
+
+## Installation
+
+Install the USA map using the shadcn CLI. This pulls the component directly into your project — no npm package, no version lock.
+
+```bash
+npx shadcn add https://shadcnmaps.com/r/usa-map.json
+```
+
+This installs the following files:
+
+| File | Description |
+| --- | --- |
+| `components/shadcnmaps/map.tsx` | Core SVG renderer |
+| `components/shadcnmaps/map-context.tsx` | Shared state context |
+| `components/shadcnmaps/map-region.tsx` | Individual region (path) |
+| `components/shadcnmaps/map-tooltip.tsx` | Hover/click tooltip |
+| `components/shadcnmaps/map-marker.tsx` | SVG marker overlay |
+| `components/shadcnmaps/map-listbox.tsx` | Accessible keyboard listbox |
+| `components/shadcnmaps/types.ts` | Shared TypeScript types |
+| `components/shadcnmaps/maps/usa-map.tsx` | `USAMap` component |
+| `components/shadcnmaps/map-data/usa.ts` | SVG path data for all 50 states + DC |
+
+## Basic usage
+
+```tsx
+import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
+
+export default function Page() {
+  return <USAMap />
+}
+```
+
+That's it. The map is interactive out of the box — hover states, tooltips, and full keyboard navigation are included by default.
+
+## Next steps
+
+- [Quick Start](/docs/overview/quick-start) — build a state selector in 5 minutes
+- [Theming](/docs/overview/theming) — customize colors with CSS variables
+- [USA Map](/docs/maps/usa-map) — full props reference and examples
+
+</DocPage>

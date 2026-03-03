@@ -1,0 +1,107 @@
+# shadcnmaps — Full Documentation
+
+> Interactive SVG map components for React. No dependencies, pure Tailwind.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- React 18+
+- Next.js 13+ (app router) or any React project with Tailwind CSS v4
+- shadcn/ui configured in your project
+
+### Installation
+
+Install the USA map using the shadcn CLI:
+
+```bash
+npx shadcn add https://shadcnmaps.com/r/usa-map.json
+```
+
+This installs:
+- `components/shadcnmaps/map.tsx` — Core SVG renderer
+- `components/shadcnmaps/map-context.tsx` — Shared state context
+- `components/shadcnmaps/map-region.tsx` — Individual region (path)
+- `components/shadcnmaps/map-tooltip.tsx` — Hover/click tooltip
+- `components/shadcnmaps/map-marker.tsx` — SVG marker overlay
+- `components/shadcnmaps/map-listbox.tsx` — Accessible keyboard listbox
+- `components/shadcnmaps/types.ts` — Shared TypeScript types
+- `components/shadcnmaps/maps/usa-map.tsx` — USAMap component
+- `components/shadcnmaps/map-data/usa.ts` — SVG path data for all 50 states + DC
+
+### Basic usage
+
+```tsx
+import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
+
+export default function Page() {
+  return <USAMap />
+}
+```
+
+---
+
+## Quick Start: State Selector
+
+```tsx
+'use client'
+
+import { useState } from 'react'
+import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa-map'
+
+export function StatePicker() {
+  const [selected, setSelected] = useState<StateId | null>(null)
+
+  return (
+    <div>
+      <p>{selected ? `Selected: ${selected}` : 'Click a state'}</p>
+      <USAMap
+        states={
+          selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []
+        }
+        onRegionClick={({ region }) =>
+          setSelected((prev) => (prev === region.id ? null : region.id as StateId))
+        }
+        renderTooltip={(region) => <span>{region.name}</span>}
+      />
+    </div>
+  )
+}
+```
+
+---
+
+## Theming
+
+All colors are CSS variables registered as Tailwind theme colors.
+
+```css
+:root {
+  --map-region: oklch(44.6% 0.043 257.281);
+  --map-region-hover: oklch(37.2% 0.044 257.287);
+  --map-region-selected: oklch(48.8% 0.243 264.376);
+  --map-region-disabled: oklch(55.4% 0.046 257.417);
+  --map-region-stroke: oklch(20.8% 0.042 265.755);
+  --map-region-focus-ring: oklch(70.7% 0.165 254.624);
+  --map-label: oklch(98.4% 0.003 247.858);
+}
+```
+
+Per-state colors via `states` prop:
+
+```tsx
+<USAMap
+  states={[
+    { id: 'CA', className: 'fill-emerald-500 hover:fill-emerald-600' },
+    { id: 'TX', className: 'fill-amber-500 hover:fill-amber-600' },
+  ]}
+/>
+```
+
+---
+
+## USA Map
+
+See full docs: https://shadcnmaps.com/maps/usa-map.md

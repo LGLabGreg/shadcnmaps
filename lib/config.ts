@@ -6,3 +6,11 @@ const REGISTRY_BASE_URL =
 export function registryUrl(componentName: string): string {
   return `${REGISTRY_BASE_URL}/r/${componentName}.json`
 }
+
+export const siteConfig = {
+  name: 'shadcnmaps',
+  url: 'https://shadcnmaps.com',
+  description:
+    'Interactive SVG map components for React. No dependencies, pure Tailwind.',
+  keywords: ['React', 'Tailwind CSS', 'SVG maps', 'shadcn', 'interactive maps'],
+}
