@@ -22,7 +22,7 @@ type RegionOverride = Partial<MapRegionData> & {
   disabled?: boolean
 }
 
-export interface InteractiveMapProps {
+export interface MapProps {
   data: MapData
   regions?: RegionOverride[]
   markers?: MapMarkerData[]
@@ -83,7 +83,7 @@ function getPointerPosition(
   return null
 }
 
-function InteractiveMapInner({
+function MapInner({
   data,
   regions,
   markers,
@@ -98,11 +98,13 @@ function InteractiveMapInner({
   className,
   children,
   'aria-label': ariaLabel,
-}: InteractiveMapProps) {
+}: MapProps) {
   const { selectedRegion, setSelectedRegion, setTooltipState } = useMapContext()
 
   const regionOverrides = useMemo(() => {
-    return new Map(regions?.map((region) => [region.id, region]) ?? [])
+    return new globalThis.Map(
+      regions?.map((region) => [region.id, region]) ?? []
+    )
   }, [regions])
 
   const disabledRegionSet = useMemo(() => {
@@ -161,11 +163,12 @@ function InteractiveMapInner({
               onEnter={(event) => {
                 onRegionEnter?.(event)
                 if (showTooltips) {
-                  setTooltipState({
+                  setTooltipState((current) => ({
                     visible: true,
                     content: tooltipContent,
-                    position: getPointerPosition(event.nativeEvent),
-                  })
+                    position:
+                      getPointerPosition(event.nativeEvent) ?? current.position,
+                  }))
                 }
               }}
               onMove={(event) => {
@@ -265,10 +268,10 @@ function MapTooltipContainer() {
   )
 }
 
-export function InteractiveMap(props: InteractiveMapProps) {
+export function Map(props: MapProps) {
   return (
     <MapProvider>
-      <InteractiveMapInner {...props} />
+      <MapInner {...props} />
     </MapProvider>
   )
 }

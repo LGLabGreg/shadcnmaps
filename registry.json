@@ -4,9 +4,9 @@
   "homepage": "https://shadcnmaps.com",
   "items": [
     {
-      "name": "interactive-map",
+      "name": "map",
       "type": "registry:ui",
-      "title": "Interactive Map",
+      "title": "Map",
       "description": "Core SVG map renderer with region interaction, tooltips, and markers. Required by all map components.",
       "cssVars": {
         "light": {
@@ -36,34 +36,61 @@
       },
       "files": [
         {
-          "path": "registry/shadcnmaps/interactive-map/interactive-map.tsx",
+          "path": "registry/shadcnmaps/map.tsx",
           "type": "registry:file",
-          "target": "components/shadcnmaps/interactive-map.tsx"
+          "target": "components/shadcnmaps/map.tsx"
         },
         {
-          "path": "registry/shadcnmaps/interactive-map/map-context.tsx",
+          "path": "registry/shadcnmaps/map-context.tsx",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-context.tsx"
         },
         {
-          "path": "registry/shadcnmaps/interactive-map/map-region.tsx",
+          "path": "registry/shadcnmaps/map-region.tsx",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-region.tsx"
         },
         {
-          "path": "registry/shadcnmaps/interactive-map/map-tooltip.tsx",
+          "path": "registry/shadcnmaps/map-tooltip.tsx",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-tooltip.tsx"
         },
         {
-          "path": "registry/shadcnmaps/interactive-map/map-marker.tsx",
+          "path": "registry/shadcnmaps/map-marker.tsx",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-marker.tsx"
         },
         {
-          "path": "registry/shadcnmaps/interactive-map/types.ts",
+          "path": "registry/shadcnmaps/types.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/types.ts"
+        }
+      ]
+    },
+    {
+      "name": "usa-map",
+      "type": "registry:component",
+      "title": "USA Map",
+      "description": "Interactive United States map with all 50 states and DC. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": ["map", "usa-map-data"],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/usa-map.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/usa-map.tsx"
+        }
+      ]
+    },
+    {
+      "name": "usa-map-data",
+      "type": "registry:file",
+      "title": "USA Map Data",
+      "description": "SVG path data for all 50 US states and DC.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/usa.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/usa.ts"
         }
       ]
     }

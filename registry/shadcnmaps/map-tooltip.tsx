@@ -28,7 +28,7 @@ export function MapTooltip({
     <div
       aria-hidden={!visible}
       className={cn(
-        'pointer-events-none fixed z-50 -translate-y-full rounded-md border bg-background px-2 py-1 text-xs shadow-md transition-all duration-150',
+        'pointer-events-none fixed z-50 -translate-y-full rounded-md border bg-background px-2 py-1 text-sm shadow-md transition-[opacity,transform] duration-150',
         visible ? 'opacity-100' : 'opacity-0',
         className
       )}
