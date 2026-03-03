@@ -36,12 +36,10 @@ export function MapRegion({
   onLeave,
   onMove,
 }: MapRegionProps) {
-  const { hoveredRegion, selectedRegion, focusedRegion, setHoveredRegion } =
-    useMapContext()
+  const { hoveredRegion, selectedRegion, setHoveredRegion } = useMapContext()
 
   const isSelected = selected ?? selectedRegion === id
   const isHovered = hovered ?? hoveredRegion === id
-  const isFocused = focusedRegion === id
 
   const regionData: MapRegionData = {
     id,
@@ -63,13 +61,10 @@ export function MapRegion({
         aria-pressed={isSelected}
         aria-disabled={disabled || undefined}
         className={cn(
-          'cursor-pointer fill-(--map-region) stroke-(--map-region-stroke) stroke-1 transition-colors duration-150 outline-none',
-          isHovered &&
-            'fill-(--map-region-hover) stroke-(--map-region-stroke-hover)',
-          isSelected && 'fill-(--map-region-selected)',
-          isFocused && !disabled && 'stroke-(--map-region-focus-ring) stroke-2',
-          disabled &&
-            'cursor-not-allowed fill-(--map-region-disabled) opacity-60',
+          'cursor-pointer fill-map-region stroke-map-region-stroke stroke-1 transition-colors duration-150 outline-none',
+          isHovered && 'fill-map-region-hover stroke-map-region-stroke-hover',
+          isSelected && 'fill-map-region-selected',
+          disabled && 'cursor-default fill-map-region-disabled opacity-60',
           className
         )}
         onClick={(nativeEvent) => {
@@ -109,9 +104,9 @@ export function MapRegion({
           y={labelY}
           aria-hidden='true'
           className={cn(
-            'pointer-events-none fill-(--map-label) text-[10px] font-medium transition-colors duration-150 select-none',
-            isHovered && 'fill-(--map-label-hover)',
-            isSelected && 'fill-(--map-label-selected)'
+            'pointer-events-none fill-map-label text-[10px] font-medium transition-colors duration-150 select-none',
+            isHovered && 'fill-map-label-hover',
+            isSelected && 'fill-map-label-selected'
           )}
           textAnchor='middle'
           dominantBaseline='middle'

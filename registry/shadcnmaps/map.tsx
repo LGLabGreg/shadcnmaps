@@ -100,7 +100,8 @@ function MapInner({
   children,
   'aria-label': ariaLabel,
 }: MapProps) {
-  const { selectedRegion, setSelectedRegion, setTooltipState } = useMapContext()
+  const { selectedRegion, setSelectedRegion, focusedRegion, setTooltipState } =
+    useMapContext()
   const descId = useId()
   const [announcement, setAnnouncement] = useState('')
 
@@ -259,6 +260,10 @@ function MapInner({
           />
         ))}
         {children}
+        <FocusRingOverlay
+          focusedRegion={focusedRegion}
+          regions={mergedRegions}
+        />
       </svg>
       <MapListbox
         regions={mergedRegions}
@@ -287,6 +292,26 @@ function MapInner({
       </div>
       {showTooltips ? <MapTooltipContainer /> : null}
     </div>
+  )
+}
+
+function FocusRingOverlay({
+  focusedRegion,
+  regions,
+}: {
+  focusedRegion: string | null
+  regions: MapRegionData[]
+}) {
+  if (!focusedRegion) return null
+  const region = regions.find((r) => r.id === focusedRegion)
+  if (!region) return null
+
+  return (
+    <path
+      d={region.path}
+      aria-hidden='true'
+      className='pointer-events-none fill-none stroke-map-region-focus-ring stroke-2'
+    />
   )
 }
 

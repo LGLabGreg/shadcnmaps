@@ -11,7 +11,7 @@
     "lint:ci": "oxlint --deny-warnings .",
     "lint:registry": "oxlint --deny-warnings registry/shadcnmaps",
     "prepare": "husky",
-    "registry:build": "shadcn build"
+    "registry:build": "tsx scripts/build-registry.ts && shadcn build"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
@@ -37,6 +37,7 @@
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
     "tailwindcss": "^4.2.1",
+    "tsx": "^4.19.3",
     "typescript": "^5.9.3"
   },
   "lint-staged": {

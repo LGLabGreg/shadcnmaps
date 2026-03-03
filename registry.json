@@ -77,7 +77,10 @@
       "type": "registry:component",
       "title": "USA Map",
       "description": "Interactive United States map with all 50 states and DC. Supports click, hover, selection, tooltips, and custom markers.",
-      "registryDependencies": ["map", "usa-map-data"],
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/usa-map-data.json"
+      ],
       "files": [
         {
           "path": "registry/shadcnmaps/maps/usa-map.tsx",

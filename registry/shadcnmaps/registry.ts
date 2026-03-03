@@ -1,0 +1,72 @@
+export const components = [
+  {
+    name: 'map',
+    type: 'registry:ui',
+    title: 'Map',
+    description:
+      'Core SVG map renderer with region interaction, tooltips, and markers. Required by all map components.',
+    cssVars: {
+      light: {
+        'map-region': 'oklch(44.6% 0.043 257.281)',
+        'map-region-hover': 'oklch(37.2% 0.044 257.287)',
+        'map-region-selected': 'oklch(48.8% 0.243 264.376)',
+        'map-region-disabled': 'oklch(55.4% 0.046 257.417)',
+        'map-region-stroke': 'oklch(20.8% 0.042 265.755)',
+        'map-region-stroke-hover': 'oklch(12.9% 0.042 264.695)',
+        'map-region-focus-ring': 'oklch(70.7% 0.165 254.624)',
+        'map-label': 'oklch(98.4% 0.003 247.858)',
+        'map-label-hover': 'oklch(100% 0 0)',
+        'map-label-selected': 'oklch(93.2% 0.032 255.585)',
+      },
+      dark: {
+        'map-region': 'oklch(70.4% 0.04 256.788)',
+        'map-region-hover': 'oklch(86.9% 0.022 252.894)',
+        'map-region-selected': 'oklch(70.7% 0.165 254.624)',
+        'map-region-disabled': 'oklch(44.6% 0.043 257.281)',
+        'map-region-stroke': 'oklch(20.8% 0.042 265.755)',
+        'map-region-stroke-hover': 'oklch(92.9% 0.013 255.508)',
+        'map-region-focus-ring': 'oklch(80.9% 0.105 251.813)',
+        'map-label': 'oklch(20.8% 0.042 265.755)',
+        'map-label-hover': 'oklch(12.9% 0.042 264.695)',
+        'map-label-selected': 'oklch(20.8% 0.042 265.755)',
+      },
+    },
+    files: [
+      {
+        path: 'registry/shadcnmaps/map.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-context.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-context.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-region.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-region.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-tooltip.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-tooltip.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-marker.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-marker.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-listbox.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-listbox.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/types.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/types.ts',
+      },
+    ],
+  },
+]

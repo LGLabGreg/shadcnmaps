@@ -28,14 +28,14 @@ export function MapTooltip({
     <div
       aria-hidden={!visible}
       className={cn(
-        'pointer-events-none fixed z-50 -translate-y-full rounded-md border bg-background px-2 py-1 text-sm shadow-md transition-[opacity,transform] duration-150',
+        'pointer-events-none fixed z-50 -translate-y-full rounded-lg border border-border bg-background px-3 py-2 text-sm shadow-xl transition-[opacity,transform] duration-150',
         visible ? 'opacity-100' : 'opacity-0',
         className
       )}
       style={{
         left,
         top: top - 10,
-        transform: `translate(-50%, ${visible ? '-100%' : '-95%'})`,
+        transform: `translate(-50%, ${visible ? 0 : '-100%'})`,
       }}
     >
       {content}
