@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# registry build output
+/public/r/
+
 # production
 /build
 
@@ -39,3 +42,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+docs

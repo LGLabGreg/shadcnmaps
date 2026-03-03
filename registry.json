@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "shadcnmaps",
+  "homepage": "https://shadcnmaps.com",
+  "items": [
+    {
+      "name": "interactive-map",
+      "type": "registry:ui",
+      "title": "Interactive Map",
+      "description": "Core SVG map renderer with region interaction, tooltips, and markers. Required by all map components.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/interactive-map/interactive-map.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/interactive-map.tsx"
+        }
+      ]
+    }
+  ]
+}

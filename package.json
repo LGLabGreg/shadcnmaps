@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "pnpm registry:build && next dev",
+    "build": "pnpm registry:build && next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky"
+    "prepare": "husky",
+    "registry:build": "shadcn build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
