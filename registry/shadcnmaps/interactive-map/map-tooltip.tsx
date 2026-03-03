@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { type ReactNode, useEffect, useState } from 'react'
+import { type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 
 export interface MapTooltipProps {
@@ -17,13 +17,7 @@ export function MapTooltip({
   position,
   className,
 }: MapTooltipProps) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
+  if (typeof document === 'undefined') {
     return null
   }
 

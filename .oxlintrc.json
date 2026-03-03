@@ -1,39 +1,50 @@
 {
-  "plugins": ["typescript", "react", "import"],
-  "categories": {},
-  "rules": {},
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "import", "oxc", "unicorn"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn"
+  },
   "settings": {
-    "jsx-a11y": {
-      "polymorphicPropName": null,
-      "components": {},
-      "attributes": {}
-    },
-    "next": {
-      "rootDir": []
-    },
     "react": {
-      "formComponents": [],
-      "linkComponents": [],
-      "version": null,
-      "componentWrapperFunctions": []
-    },
-    "jsdoc": {
-      "ignorePrivate": false,
-      "ignoreInternal": false,
-      "ignoreReplacesDocs": true,
-      "overrideReplacesDocs": true,
-      "augmentsExtendsReplacesDocs": false,
-      "implementsReplacesDocs": false,
-      "exemptDestructuredRootsFromChecks": false,
-      "tagNamePreference": {}
-    },
-    "vitest": {
-      "typecheck": false
+      "version": "19.2.4"
     }
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "import/no-unassigned-import": "off"
   },
   "env": {
     "builtin": true
   },
-  "globals": {},
-  "ignorePatterns": []
+  "ignorePatterns": ["node_modules", ".next", "public/r"],
+  "overrides": [
+    {
+      "files": ["registry/shadcnmaps/**/*.ts", "registry/shadcnmaps/**/*.tsx"],
+      "jsPlugins": [{ "name": "react-hooks-js", "specifier": "eslint-plugin-react-hooks" }],
+      "plugins": ["typescript", "react", "import", "oxc", "unicorn", "jsx-a11y", "react-perf", "promise"],
+      "rules": {
+        "jsx-a11y/click-events-have-key-events": "error",
+        "jsx-a11y/no-static-element-interactions": "error",
+        "jsx-a11y/aria-props": "error",
+        "jsx-a11y/aria-role": "error",
+        "jsx-a11y/aria-unsupported-elements": "error",
+        "jsx-a11y/tabindex-no-positive": "error",
+        "jsx-a11y/no-aria-hidden-on-focusable": "error",
+        "jsx-a11y/prefer-tag-over-role": "off",
+        "react-perf/jsx-no-new-function-as-prop": "off",
+        "react-perf/jsx-no-new-object-as-prop": "off",
+        "react-perf/jsx-no-jsx-as-prop": "off",
+        "react-hooks-js/rules-of-hooks": "error",
+        "react-hooks-js/exhaustive-deps": "warn",
+        "react-hooks-js/unsupported-syntax": "warn",
+        "react-hooks-js/static-components": "warn",
+        "react-hooks-js/set-state-in-render": "warn",
+        "react-hooks-js/set-state-in-effect": "warn",
+        "react-hooks-js/purity": "warn",
+        "react-hooks-js/immutability": "warn",
+        "react-hooks-js/refs": "warn"
+      }
+    }
+  ]
 }
