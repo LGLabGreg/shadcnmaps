@@ -72,3 +72,23 @@ export interface MarkerEvent {
     | FocusEvent<SVGGElement>
     | KeyboardEvent<SVGGElement>
 }
+
+export interface RegionOverride {
+  id: string
+  /** Override display name (e.g. for localization) */
+  name?: string
+  /** Override abbreviation label */
+  abbreviation?: string
+  /** Override label X position */
+  labelX?: number
+  /** Override label Y position */
+  labelY?: number
+  /** Attach arbitrary metadata */
+  metadata?: Record<string, unknown>
+  /** Extra CSS classes for fill/stroke */
+  className?: string
+  /** Custom tooltip content */
+  tooltipContent?: ReactNode
+  /** Disable interaction */
+  disabled?: boolean
+}

@@ -14,14 +14,8 @@ import type {
   MapRegionData,
   MarkerEvent,
   RegionEvent,
+  RegionOverride,
 } from './types'
-
-type RegionOverride = Partial<MapRegionData> & {
-  id: string
-  className?: string
-  tooltipContent?: ReactNode
-  disabled?: boolean
-}
 
 export interface MapProps {
   data: MapData
@@ -216,7 +210,6 @@ function MapInner({
             x={marker.x}
             y={marker.y}
             content={marker.content}
-            tooltipContent={marker.tooltipContent}
             label={marker.label}
             disabled={marker.disabled}
             onClick={(event) => {

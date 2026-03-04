@@ -1,6 +1,5 @@
 import { MapPage } from '@/components/docs/map-page'
 import { ExampleLoader } from '@/components/docs/example-loader'
-import { ApiTable } from '@/components/docs/api-table'
 
 import SimpleExample from './examples/simple'
 
@@ -21,11 +20,6 @@ export const metadata = {
 
 ## USAMap Props
 
-<ApiTable data={[
-  { prop: 'states', type: 'StateOverride[]', default: '[]', description: 'Per-state overrides for className, tooltipContent, and any MapRegionData field.' },
-  { prop: 'disabledStates', type: 'StateId[]', default: '[]', description: 'State IDs to mark as non-interactive.' },
-]} />
-
-All other props are inherited from the shared Map component. See [API Reference](/overview/api-reference) for the full list.
+USAMap accepts all [Map props](/overview/api-reference) except `data`, which is pre-filled with US state data. The exported `StateId` type provides autocomplete for all 50 states and DC.
 
 </MapPage>

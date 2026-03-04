@@ -1,7 +1,6 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import type { ReactNode } from 'react'
 
 import { useMapContext } from './map-context'
 import type { MapRegionData, RegionEvent } from './types'
@@ -11,8 +10,6 @@ export interface MapRegionProps extends MapRegionData {
   hovered?: boolean
   disabled?: boolean
   className?: string
-  tooltipContent?: ReactNode
-  disableTooltip?: boolean
   onClick?: (event: RegionEvent) => void
   onEnter?: (event: RegionEvent) => void
   onLeave?: (event: RegionEvent) => void

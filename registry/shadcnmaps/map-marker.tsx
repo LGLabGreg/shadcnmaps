@@ -10,7 +10,6 @@ export interface MapMarkerProps {
   x: number
   y: number
   content: ReactNode
-  tooltipContent?: ReactNode
   label?: string
   disabled?: boolean
   className?: string

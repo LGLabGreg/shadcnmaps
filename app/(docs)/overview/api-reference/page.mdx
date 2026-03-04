@@ -15,6 +15,8 @@ All pre-configured map components (USAMap, WorldMap, etc.) share a common set of
 ## Map Props
 
 <ApiTable data={[
+  { prop: 'regions', type: 'RegionOverride[]', default: '[]', description: 'Per-region overrides for className, tooltipContent, disabled, and display fields.' },
+  { prop: 'disabledRegions', type: 'string[]', default: '[]', description: 'Region IDs to mark as non-interactive.' },
   { prop: 'onRegionClick', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on click or keyboard Enter/Space.' },
   { prop: 'onRegionEnter', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse enter or focus.' },
   { prop: 'onRegionLeave', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse leave or blur.' },
@@ -44,6 +46,22 @@ interface RegionEvent {
 interface MarkerEvent {
   id: string
   nativeEvent: MouseEvent | TouchEvent | FocusEvent | KeyboardEvent
+}
+```
+
+### RegionOverride
+
+```typescript
+interface RegionOverride {
+  id: string
+  name?: string
+  abbreviation?: string
+  labelX?: number
+  labelY?: number
+  metadata?: Record<string, unknown>
+  className?: string
+  tooltipContent?: ReactNode
+  disabled?: boolean
 }
 ```
 

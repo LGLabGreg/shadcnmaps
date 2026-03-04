@@ -1,6 +1,6 @@
 import type { MapData } from '@/registry/shadcnmaps/types'
 
-export const usaMapData: MapData = {
+export const usaMapData = {
   id: 'usa',
   name: 'United States',
   viewBox: '0 0 930 590',
@@ -414,4 +414,4 @@ export const usaMapData: MapData = {
       path: 'M 360.37668,143.27587 L 253.63408,129.81881 L 239.5506,218.27684 L 352.81521,231.86233 L 360.37668,143.27587 z',
     },
   ],
-}
+} as const satisfies MapData

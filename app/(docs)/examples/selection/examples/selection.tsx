@@ -12,7 +12,7 @@ export default function SelectionExample() {
         {selected ? `Selected: ${selected}` : 'Click a state.'}
       </p>
       <USAMap
-        states={
+        regions={
           selected
             ? [{ id: selected, className: 'fill-map-region-selected' }]
             : []

@@ -71,7 +71,7 @@ function colorClass(id: StateId): string {
 }
 
 export default function ChoroplethExample() {
-  const states = (Object.keys(POPULATION) as StateId[]).map((id) => ({
+  const regions = (Object.keys(POPULATION) as StateId[]).map((id) => ({
     id,
     className: colorClass(id),
     tooltipContent: (
@@ -84,5 +84,5 @@ export default function ChoroplethExample() {
     ),
   }))
 
-  return <USAMap states={states} />
+  return <USAMap regions={regions} />
 }
