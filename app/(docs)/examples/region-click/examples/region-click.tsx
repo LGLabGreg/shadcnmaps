@@ -4,15 +4,15 @@ import { USAMap } from '@/registry/shadcnmaps/maps/usa-map'
 import { useState } from 'react'
 
 export default function RegionClickExample() {
-  const [clicked, setClicked] = useState<string | null>(null)
+  const [selected, setSelected] = useState<string | null>(null)
 
   return (
     <div className='space-y-3'>
-      <p className='min-h-5 text-sm text-muted-foreground'>
-        {clicked ? (
+      <p className='text-muted-foreground'>
+        {selected ? (
           <>
             Selected:{' '}
-            <span className='font-medium text-foreground'>{clicked}</span>
+            <span className='font-medium text-foreground'>{selected}</span>
           </>
         ) : (
           'Click a state to select it.'
@@ -20,7 +20,7 @@ export default function RegionClickExample() {
       </p>
       <USAMap
         onRegionClick={({ region }) =>
-          setClicked((prev) => (prev === region.name ? null : region.name))
+          setSelected((prev) => (prev === region.name ? null : region.name))
         }
       />
     </div>

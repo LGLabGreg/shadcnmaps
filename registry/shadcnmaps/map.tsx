@@ -9,11 +9,13 @@ import { MapMarker } from './map-marker'
 import { MapRegion } from './map-region'
 import { MapTooltip } from './map-tooltip'
 import type {
+  GroupEvent,
   MapData,
   MapMarkerData,
   MapRegionData,
   MarkerEvent,
   RegionEvent,
+  RegionGroup,
   RegionOverride,
 } from './types'
 
@@ -21,10 +23,14 @@ export interface MapProps {
   data: MapData
   regions?: RegionOverride[]
   markers?: MapMarkerData[]
+  groups?: RegionGroup[]
   disabledRegions?: string[]
   onRegionClick?: (event: RegionEvent) => void
   onRegionEnter?: (event: RegionEvent) => void
   onRegionLeave?: (event: RegionEvent) => void
+  onGroupClick?: (event: GroupEvent) => void
+  onGroupEnter?: (event: GroupEvent) => void
+  onGroupLeave?: (event: GroupEvent) => void
   onMarkerClick?: (event: MarkerEvent) => void
   showLabels?: boolean
   showTooltips?: boolean
@@ -82,10 +88,14 @@ function MapInner({
   data,
   regions,
   markers,
+  groups,
   disabledRegions,
   onRegionClick,
   onRegionEnter,
   onRegionLeave,
+  onGroupClick,
+  onGroupEnter,
+  onGroupLeave,
   onMarkerClick,
   showLabels = true,
   showTooltips = true,
@@ -94,8 +104,14 @@ function MapInner({
   children,
   'aria-label': ariaLabel,
 }: MapProps) {
-  const { selectedRegion, setSelectedRegion, focusedRegion, setTooltipState } =
-    useMapContext()
+  const {
+    selectedRegion,
+    setSelectedRegion,
+    setHoveredRegion,
+    focusedRegion,
+    setTooltipState,
+    regionToGroupId,
+  } = useMapContext()
   const descId = useId()
   const [announcement, setAnnouncement] = useState('')
 
@@ -109,15 +125,29 @@ function MapInner({
     return new Set(disabledRegions ?? [])
   }, [disabledRegions])
 
+  const regionToGroup = useMemo(() => {
+    const map = new globalThis.Map<string, RegionGroup>()
+    if (groups) {
+      for (const group of groups) {
+        for (const regionId of group.regionIds) {
+          map.set(regionId, group)
+        }
+      }
+    }
+    return map
+  }, [groups])
+
   const mergedRegions = useMemo(() => {
     return data.regions.map((baseRegion) => {
       const override = regionOverrides.get(baseRegion.id)
+      const group = regionToGroup.get(baseRegion.id)
       return {
         ...baseRegion,
         ...override,
+        className: cn(group?.className, override?.className),
       }
     })
-  }, [data.regions, regionOverrides])
+  }, [data.regions, regionOverrides, regionToGroup])
 
   const mapLabel = ariaLabel ?? data.name
 
@@ -130,6 +160,12 @@ function MapInner({
         aria-describedby={descId}
         viewBox={data.viewBox}
         className={cn('h-auto w-full', className)}
+        onMouseLeave={() => {
+          setHoveredRegion(null)
+          if (showTooltips && !selectedRegion) {
+            setTooltipState((current) => ({ ...current, visible: false }))
+          }
+        }}
       >
         <desc id={descId}>
           Interactive map. Tab to focus, arrow keys to navigate between regions,
@@ -137,8 +173,13 @@ function MapInner({
         </desc>
         {mergedRegions.map((region) => {
           const disabled = region.disabled || disabledRegionSet.has(region.id)
+          const group = regionToGroup.get(region.id)
           const tooltipContent =
-            renderTooltip?.(region) ?? region.tooltipContent ?? region.name
+            renderTooltip?.(region) ??
+            region.tooltipContent ??
+            group?.tooltipContent ??
+            group?.name ??
+            region.name
 
           return (
             <MapRegion
@@ -154,14 +195,29 @@ function MapInner({
               labelClassName={region.labelClassName}
               disabled={disabled}
               onClick={(event) => {
-                const isCurrentlySelected = selectedRegion === region.id
+                const myGroupId = regionToGroupId.get(region.id)
+                const selectedGroupId = regionToGroupId.get(
+                  selectedRegion ?? ''
+                )
+                const isCurrentlySelected =
+                  selectedRegion === region.id ||
+                  (myGroupId != null && myGroupId === selectedGroupId)
                 setSelectedRegion(isCurrentlySelected ? null : region.id)
+
+                const label = group?.name ?? region.name
                 setAnnouncement(
                   isCurrentlySelected
-                    ? `${region.name} deselected`
-                    : `${region.name} selected`
+                    ? `${label} deselected`
+                    : `${label} selected`
                 )
                 onRegionClick?.(event)
+                if (group) {
+                  onGroupClick?.({
+                    group,
+                    triggerRegion: region,
+                    nativeEvent: event.nativeEvent,
+                  })
+                }
 
                 if (showTooltips) {
                   setTooltipState({
@@ -173,6 +229,13 @@ function MapInner({
               }}
               onEnter={(event) => {
                 onRegionEnter?.(event)
+                if (group) {
+                  onGroupEnter?.({
+                    group,
+                    triggerRegion: region,
+                    nativeEvent: event.nativeEvent,
+                  })
+                }
                 if (showTooltips) {
                   setTooltipState((current) => ({
                     visible: true,
@@ -197,9 +260,19 @@ function MapInner({
               }}
               onLeave={(event) => {
                 onRegionLeave?.(event)
+                if (group) {
+                  onGroupLeave?.({
+                    group,
+                    triggerRegion: region,
+                    nativeEvent: event.nativeEvent,
+                  })
+                }
 
                 if (showTooltips && selectedRegion !== region.id) {
-                  setTooltipState((current) => ({ ...current, visible: false }))
+                  setTooltipState((current) => ({
+                    ...current,
+                    visible: false,
+                  }))
                 }
               }}
             />
@@ -263,18 +336,31 @@ function MapInner({
       <MapListbox
         regions={mergedRegions}
         disabledRegions={disabledRegionSet}
+        groups={groups}
+        regionToGroupId={regionToGroupId}
         label={mapLabel}
         onSelect={(region) => {
-          const isCurrentlySelected = selectedRegion === region.id
+          const myGroupId = regionToGroupId.get(region.id)
+          const selectedGroupId = regionToGroupId.get(selectedRegion ?? '')
+          const isCurrentlySelected =
+            selectedRegion === region.id ||
+            (myGroupId != null && myGroupId === selectedGroupId)
+          const group = regionToGroup.get(region.id)
+          const label = group?.name ?? region.name
           setAnnouncement(
-            isCurrentlySelected
-              ? `${region.name} deselected`
-              : `${region.name} selected`
+            isCurrentlySelected ? `${label} deselected` : `${label} selected`
           )
           onRegionClick?.({
             region,
             nativeEvent: null as unknown as RegionEvent['nativeEvent'],
           })
+          if (group) {
+            onGroupClick?.({
+              group,
+              triggerRegion: region,
+              nativeEvent: null as unknown as GroupEvent['nativeEvent'],
+            })
+          }
         }}
       />
       <div
@@ -330,7 +416,7 @@ function MapTooltipContainer() {
 
 export function Map(props: MapProps) {
   return (
-    <MapProvider>
+    <MapProvider groups={props.groups}>
       <MapInner {...props} />
     </MapProvider>
   )

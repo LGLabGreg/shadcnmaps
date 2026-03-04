@@ -1,0 +1,21 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import GroupsExample from './examples/groups'
+
+export const metadata = {
+  title: 'Region Groups',
+  description: 'Group regions together so hovering or selecting one highlights the entire group.',
+}
+
+<DocPage>
+
+# Region Groups
+
+Group regions together so that hovering or clicking any member highlights the entire group. The tooltip displays the group name.
+
+<ExampleLoader filePath="app/(docs)/examples/groups/examples/groups.tsx">
+  <GroupsExample />
+</ExampleLoader>
+
+</DocPage>

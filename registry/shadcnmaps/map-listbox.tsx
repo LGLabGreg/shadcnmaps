@@ -3,11 +3,13 @@
 import { useId, useRef } from 'react'
 
 import { useMapContext } from './map-context'
-import type { MapRegionData } from './types'
+import type { MapRegionData, RegionGroup } from './types'
 
 export interface MapListboxProps {
   regions: MapRegionData[]
   disabledRegions: Set<string>
+  groups?: RegionGroup[]
+  regionToGroupId: globalThis.Map<string, string>
   label: string
   onSelect: (region: MapRegionData) => void
 }
@@ -15,6 +17,7 @@ export interface MapListboxProps {
 export function MapListbox({
   regions,
   disabledRegions,
+  regionToGroupId,
   label,
   onSelect,
 }: MapListboxProps) {
@@ -63,7 +66,12 @@ export function MapListbox({
         event.preventDefault()
         const region = activeRegions[idx]
         if (!region) break
-        setSelectedRegion((prev) => (prev === region.id ? null : region.id))
+        const myGroupId = regionToGroupId.get(region.id)
+        const selectedGroupId = regionToGroupId.get(selectedRegion ?? '')
+        const isCurrentlySelected =
+          selectedRegion === region.id ||
+          (myGroupId != null && myGroupId === selectedGroupId)
+        setSelectedRegion(isCurrentlySelected ? null : region.id)
         onSelect(region)
         break
       }
@@ -111,17 +119,24 @@ export function MapListbox({
       }}
       onBlur={() => setFocusedRegion(null)}
     >
-      {regions.map((region) => (
-        <div
-          key={region.id}
-          id={`${id}-${region.id}`}
-          role='option'
-          aria-selected={selectedRegion === region.id}
-          aria-disabled={disabledRegions.has(region.id) || undefined}
-        >
-          {region.name}
-        </div>
-      ))}
+      {regions.map((region) => {
+        const myGroupId = regionToGroupId.get(region.id)
+        const selectedGroupId = regionToGroupId.get(selectedRegion ?? '')
+        const isSelected =
+          selectedRegion === region.id ||
+          (myGroupId != null && myGroupId === selectedGroupId)
+        return (
+          <div
+            key={region.id}
+            id={`${id}-${region.id}`}
+            role='option'
+            aria-selected={isSelected}
+            aria-disabled={disabledRegions.has(region.id) || undefined}
+          >
+            {region.name}
+          </div>
+        )
+      })}
     </div>
   )
 }

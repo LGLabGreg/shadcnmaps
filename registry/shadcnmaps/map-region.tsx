@@ -35,10 +35,20 @@ export function MapRegion({
   onLeave,
   onMove,
 }: MapRegionProps) {
-  const { hoveredRegion, selectedRegion, setHoveredRegion } = useMapContext()
+  const { hoveredRegion, selectedRegion, setHoveredRegion, regionToGroupId } =
+    useMapContext()
 
-  const isSelected = selected ?? selectedRegion === id
-  const isHovered = hovered ?? hoveredRegion === id
+  const myGroupId = regionToGroupId.get(id)
+  const isSelected =
+    selected ??
+    (selectedRegion === id ||
+      (myGroupId != null &&
+        myGroupId === regionToGroupId.get(selectedRegion ?? '')))
+  const isHovered =
+    hovered ??
+    (hoveredRegion === id ||
+      (myGroupId != null &&
+        myGroupId === regionToGroupId.get(hoveredRegion ?? '')))
 
   const regionData: MapRegionData = {
     id,
@@ -62,10 +72,10 @@ export function MapRegion({
         aria-disabled={disabled || undefined}
         className={cn(
           'cursor-pointer fill-map-region stroke-map-region-stroke stroke-1 transition-colors duration-150 outline-none',
+          !isHovered && !isSelected && !disabled && className,
           isHovered && 'fill-map-region-hover stroke-map-region-stroke-hover',
           isSelected && 'fill-map-region-selected',
-          disabled && 'cursor-default fill-map-region-disabled opacity-60',
-          className
+          disabled && 'cursor-default fill-map-region-disabled opacity-60'
         )}
         onClick={(nativeEvent) => {
           if (disabled) {

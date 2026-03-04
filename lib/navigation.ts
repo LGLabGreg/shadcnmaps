@@ -26,6 +26,7 @@ export const navigation: NavSection[] = [
     title: 'Examples',
     items: [
       { title: 'Region Click', href: '/examples/region-click' },
+      { title: 'Region Groups', href: '/examples/groups' },
       { title: 'Choropleth', href: '/examples/choropleth' },
       { title: 'Markers', href: '/examples/markers' },
     ],

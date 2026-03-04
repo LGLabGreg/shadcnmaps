@@ -73,6 +73,21 @@ export interface MarkerEvent {
     | KeyboardEvent<SVGGElement>
 }
 
+export interface RegionGroup {
+  id: string
+  name: string
+  regionIds: string[]
+  className?: string
+  tooltipContent?: ReactNode
+  metadata?: Record<string, unknown>
+}
+
+export interface GroupEvent {
+  group: RegionGroup
+  triggerRegion: MapRegionData
+  nativeEvent: RegionEvent['nativeEvent']
+}
+
 export interface RegionOverride {
   id: string
   /** Override display name (e.g. for localization) */
