@@ -1,5 +1,6 @@
 import { TooltipProvider } from '@/components/ui/tooltip'
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
 
 import './globals.css'
@@ -46,11 +47,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en' className={inter.variable}>
+    <html lang='en' className={inter.variable} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TooltipProvider>{children}</TooltipProvider>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TooltipProvider>{children}</TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

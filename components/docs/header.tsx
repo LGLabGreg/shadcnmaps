@@ -1,7 +1,12 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import { SidebarTrigger } from '@/components/ui/sidebar'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from 'next-themes'
 
 export function DocHeader() {
+  const { resolvedTheme, setTheme } = useTheme()
   return (
     <header className='sticky top-0 z-50 flex h-14 items-center gap-2 border-b bg-background px-6'>
       <SidebarTrigger className='md:hidden' />
@@ -9,9 +14,18 @@ export function DocHeader() {
         <Button
           variant='ghost'
           size='icon-lg'
+          onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+        >
+          <Sun className='size-5 scale-100 rotate-0 transition-transform dark:scale-0 dark:rotate-90' />
+          <Moon className='absolute size-5 scale-0 rotate-90 transition-transform dark:scale-100 dark:rotate-0' />
+          <span className='sr-only'>Toggle theme</span>
+        </Button>
+        <Button
+          variant='ghost'
+          size='icon-lg'
           render={
             <a
-              href='https://github.com/shadcnmaps/shadcnmaps'
+              href='https://github.com/LGLabGreg/shadcnmaps'
               target='_blank'
               rel='noreferrer'
             >

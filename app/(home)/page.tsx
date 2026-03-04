@@ -42,7 +42,7 @@ export default function Page() {
         <Button
           variant='outline'
           size='lg'
-          render={<Link href='https://github.com/shadcnmaps' />}
+          render={<Link href='https://github.com/LGLabGreg/shadcnmaps' />}
           nativeButton={false}
         >
           GitHub
