@@ -124,6 +124,7 @@ function MapInner({
   return (
     <>
       <svg
+        data-slot='map'
         role='group'
         aria-label={mapLabel}
         aria-describedby={descId}
@@ -150,6 +151,7 @@ function MapInner({
               labelY={showLabels ? region.labelY : undefined}
               metadata={region.metadata}
               className={region.className}
+              labelClassName={region.labelClassName}
               disabled={disabled}
               onClick={(event) => {
                 const isCurrentlySelected = selectedRegion === region.id
@@ -301,6 +303,7 @@ function FocusRingOverlay({
 
   return (
     <path
+      data-slot='map-focus-ring'
       d={region.path}
       aria-hidden='true'
       className='pointer-events-none fill-none stroke-map-region-focus-ring stroke-2'

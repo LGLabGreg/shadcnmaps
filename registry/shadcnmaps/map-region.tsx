@@ -10,6 +10,7 @@ export interface MapRegionProps extends MapRegionData {
   hovered?: boolean
   disabled?: boolean
   className?: string
+  labelClassName?: string
   onClick?: (event: RegionEvent) => void
   onEnter?: (event: RegionEvent) => void
   onLeave?: (event: RegionEvent) => void
@@ -28,6 +29,7 @@ export function MapRegion({
   hovered,
   disabled,
   className,
+  labelClassName,
   onClick,
   onEnter,
   onLeave,
@@ -51,6 +53,7 @@ export function MapRegion({
   return (
     <>
       <path
+        data-slot='map-region'
         d={path}
         role='button'
         tabIndex={-1}
@@ -97,13 +100,15 @@ export function MapRegion({
       />
       {abbreviation && labelX !== undefined && labelY !== undefined ? (
         <text
+          data-slot='map-region-label'
           x={labelX}
           y={labelY}
           aria-hidden='true'
           className={cn(
             'pointer-events-none fill-map-label text-[10px] font-medium transition-colors duration-150 select-none',
             isHovered && 'fill-map-label-hover',
-            isSelected && 'fill-map-label-selected'
+            isSelected && 'fill-map-label-selected',
+            labelClassName
           )}
           textAnchor='middle'
           dominantBaseline='middle'

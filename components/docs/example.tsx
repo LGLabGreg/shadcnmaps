@@ -23,7 +23,9 @@ export function Example({ children, codeBlock }: ExampleProps) {
         </TabsTrigger>
       </TabsList>
       <TabsContent value='preview'>
-        <div className='rounded-lg border p-6'>{children}</div>
+        <div className='rounded-lg border p-6'>
+          <div className='mx-auto w-5xl max-w-full'>{children}</div>
+        </div>
       </TabsContent>
       <TabsContent value='code'>
         <div className='rounded-lg border'>

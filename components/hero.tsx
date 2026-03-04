@@ -32,8 +32,8 @@ export function Hero() {
             Interactive SVG Maps for React
           </h1>
           <p className='max-w-3xl text-base text-foreground sm:text-lg'>
-            Beautiful, composable map components powered by pure SVG. No
-            dependencies — just install via shadcn CLI and start building.
+            Beautiful map components powered by pure SVG. No dependencies — just
+            install via shadcn CLI and start building.
           </p>
         </div>
         <div className='flex flex-wrap justify-center gap-4'>

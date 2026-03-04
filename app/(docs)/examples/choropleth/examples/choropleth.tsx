@@ -59,21 +59,43 @@ const POPULATION: Partial<Record<StateId, number>> = {
 
 const MAX_POP = Math.max(...(Object.values(POPULATION) as number[]))
 
-function colorClass(id: StateId): string {
+function colorClasses(id: StateId): {
+  className: string
+  labelClassName?: string
+} {
   const pop = POPULATION[id]
-  if (!pop) return ''
+  if (!pop) return { className: '' }
   const r = pop / MAX_POP
-  if (r > 0.6) return 'fill-blue-700 hover:fill-blue-800'
-  if (r > 0.3) return 'fill-blue-500 hover:fill-blue-600'
-  if (r > 0.15) return 'fill-blue-300 hover:fill-blue-400'
-  if (r > 0.05) return 'fill-blue-200 hover:fill-blue-300'
-  return 'fill-blue-100 hover:fill-blue-200'
+  if (r > 0.6)
+    return {
+      className: 'fill-blue-700 hover:fill-blue-800',
+      labelClassName: 'fill-white',
+    }
+  if (r > 0.3)
+    return {
+      className: 'fill-blue-500 hover:fill-blue-600',
+      labelClassName: 'fill-foreground',
+    }
+  if (r > 0.15)
+    return {
+      className: 'fill-blue-300 hover:fill-blue-400',
+      labelClassName: 'fill-foreground',
+    }
+  if (r > 0.05)
+    return {
+      className: 'fill-blue-200 hover:fill-blue-300',
+      labelClassName: 'fill-foreground',
+    }
+  return {
+    className: 'fill-blue-100 hover:fill-blue-200',
+    labelClassName: 'fill-foreground',
+  }
 }
 
 export default function ChoroplethExample() {
   const regions = (Object.keys(POPULATION) as StateId[]).map((id) => ({
     id,
-    className: colorClass(id),
+    ...colorClasses(id),
     tooltipContent: (
       <div>
         <p className='font-medium'>{id}</p>

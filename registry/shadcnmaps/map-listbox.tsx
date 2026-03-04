@@ -91,6 +91,7 @@ export function MapListbox({
 
   return (
     <div
+      data-slot='map-listbox'
       role='listbox'
       aria-label={label}
       aria-activedescendant={

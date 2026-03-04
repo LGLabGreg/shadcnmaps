@@ -87,6 +87,8 @@ export interface RegionOverride {
   metadata?: Record<string, unknown>
   /** Extra CSS classes for fill/stroke */
   className?: string
+  /** Extra CSS classes for the abbreviation label */
+  labelClassName?: string
   /** Custom tooltip content */
   tooltipContent?: ReactNode
   /** Disable interaction */

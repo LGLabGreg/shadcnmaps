@@ -26,16 +26,17 @@ export function MapTooltip({
 
   return createPortal(
     <div
+      data-slot='map-tooltip'
       aria-hidden={!visible}
       className={cn(
-        'pointer-events-none fixed z-50 -translate-y-full rounded-lg border border-border bg-background px-3 py-2 text-sm shadow-xl transition-[opacity,transform] duration-150',
+        'pointer-events-none fixed z-50 -translate-y-full rounded-lg border border-border bg-background px-3 py-2 text-sm font-medium shadow-xl transition-[opacity,left,top] duration-150 ease-out',
         visible ? 'opacity-100' : 'opacity-0',
         className
       )}
       style={{
         left,
         top: top - 10,
-        transform: `translate(-50%, ${visible ? 0 : '-100%'})`,
+        transform: 'translate(-50%, 0)',
       }}
     >
       {content}

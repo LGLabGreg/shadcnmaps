@@ -60,7 +60,7 @@ export default function MarkersExample() {
         <circle
           cx={0}
           cy={0}
-          r={5}
+          r={8}
           className='fill-primary stroke-background stroke-[1.5]'
         />
       ),

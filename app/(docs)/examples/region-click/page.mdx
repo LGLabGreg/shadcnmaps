@@ -1,0 +1,21 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import RegionClickExample from './examples/region-click'
+
+export const metadata = {
+  title: 'Region Click',
+  description: 'Respond to region clicks on the map.',
+}
+
+<DocPage>
+
+# Region Click
+
+Click a region to select it. Click again to deselect. The `onRegionClick` callback provides the region data for each click.
+
+<ExampleLoader filePath="app/(docs)/examples/region-click/examples/region-click.tsx">
+  <RegionClickExample />
+</ExampleLoader>
+
+</DocPage>

@@ -48,6 +48,7 @@ export function MapMarker({
 
   return (
     <g
+      data-slot='map-marker'
       transform={`translate(${x}, ${y})`}
       role='button'
       tabIndex={disabled ? -1 : 0}
