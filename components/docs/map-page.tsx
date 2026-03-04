@@ -15,16 +15,12 @@ export function MapPage({
   registryName,
   children,
 }: MapPageProps) {
-  const command = `npx shadcn add https://shadcnmaps.com/r/${registryName}.json`
-
   return (
     <div className='p-6 md:p-8'>
-      <div className='mb-8'>
-        <h1 className='text-3xl font-bold tracking-tight'>{title}</h1>
-        <p className='mt-2 text-muted-foreground'>{description}</p>
-        <div className='mt-4'>
-          <InstallCommand command={command} />
-        </div>
+      <h1 className='text-3xl font-bold tracking-tight'>{title}</h1>
+      <p className='mt-2 text-muted-foreground'>{description}</p>
+      <div className='mt-4'>
+        <InstallCommand registryName={registryName} />
       </div>
       <div className='grid grid-cols-1 gap-6'>{children}</div>
     </div>

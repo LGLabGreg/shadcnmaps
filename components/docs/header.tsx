@@ -5,18 +5,10 @@ export function DocHeader() {
   return (
     <header className='sticky top-0 z-50 flex h-14 items-center gap-2 border-b bg-background px-6'>
       <SidebarTrigger className='md:hidden' />
-      <nav className='hidden items-center gap-4 text-sm font-medium md:flex'>
-        <a
-          href='/overview/getting-started'
-          className='text-muted-foreground transition-colors hover:text-foreground'
-        >
-          Docs
-        </a>
-      </nav>
       <div className='ml-auto flex items-center gap-1'>
         <Button
           variant='ghost'
-          size='icon'
+          size='icon-lg'
           render={
             <a
               href='https://github.com/shadcnmaps/shadcnmaps'

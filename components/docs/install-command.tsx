@@ -1,11 +1,12 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Check, Copy } from 'lucide-react'
+import { Check, Copy, Terminal } from 'lucide-react'
 import { useState } from 'react'
 
-export function InstallCommand({ command }: { command: string }) {
+export function InstallCommand({ registryName }: { registryName: string }) {
   const [copied, setCopied] = useState(false)
+  const command = `npx shadcn add https://shadcnmaps.com/r/${registryName}.json`
 
   function copy() {
     navigator.clipboard.writeText(command)
@@ -14,22 +15,10 @@ export function InstallCommand({ command }: { command: string }) {
   }
 
   return (
-    <div className='flex max-w-fit items-center gap-3 rounded-lg border bg-muted px-4 py-2.5 font-mono text-sm'>
-      <span className='text-muted-foreground select-none'>$</span>
-      <span>{command}</span>
-      <Button
-        variant='ghost'
-        size='icon-sm'
-        onClick={copy}
-        aria-label='Copy command'
-        className='ml-1 shrink-0'
-      >
-        {copied ? (
-          <Check className='size-3.5' />
-        ) : (
-          <Copy className='size-3.5' />
-        )}
-      </Button>
-    </div>
+    <Button variant='outline' onClick={copy}>
+      <Terminal />
+      {command}
+      {copied ? <Check className='ml-1' /> : <Copy className='ml-1' />}
+    </Button>
   )
 }

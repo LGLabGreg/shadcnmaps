@@ -23,7 +23,7 @@ export function AppSidebar() {
   return (
     <Sidebar collapsible='offcanvas'>
       <SidebarHeader>
-        <Link href='/' className='flex items-center gap-2 px-2 font-semibold'>
+        <Link href='/' className='flex items-center gap-2 p-2 font-semibold'>
           <Logo />
           shadcnmaps
         </Link>
