@@ -1,0 +1,23 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import MarkersExample from './examples/markers'
+
+export const metadata = {
+  title: 'Markers',
+  description: 'Overlay custom SVG markers on the map.',
+}
+
+<DocPage>
+
+# Markers
+
+Place custom SVG elements at specific coordinates on the map. Markers support tooltips and click handlers just like regions.
+
+This pattern uses the `markers` prop with an array of `MapMarkerData` objects, each providing coordinates, a label, and custom SVG content.
+
+<ExampleLoader title="Markers" filePath="app/(docs)/examples/markers/examples/markers.tsx">
+  <MarkersExample />
+</ExampleLoader>
+
+</DocPage>

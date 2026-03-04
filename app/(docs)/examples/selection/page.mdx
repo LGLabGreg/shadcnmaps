@@ -1,0 +1,23 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import SelectionExample from './examples/selection'
+
+export const metadata = {
+  title: 'Selection',
+  description: 'Select and highlight map regions on click.',
+}
+
+<DocPage>
+
+# Selection
+
+Click a region to select it and apply a highlight style. Click again to deselect.
+
+This pattern uses the `onRegionClick` callback to track the selected region in state, and the `states` prop to apply a custom className to the selected region.
+
+<ExampleLoader title="Selection" filePath="app/(docs)/examples/selection/examples/selection.tsx">
+  <SelectionExample />
+</ExampleLoader>
+
+</DocPage>

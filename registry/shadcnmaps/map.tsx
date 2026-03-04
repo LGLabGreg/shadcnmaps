@@ -128,7 +128,7 @@ function MapInner({
   const mapLabel = ariaLabel ?? data.name
 
   return (
-    <div className='relative'>
+    <>
       <svg
         role='group'
         aria-label={mapLabel}
@@ -291,7 +291,7 @@ function MapInner({
         {announcement}
       </div>
       {showTooltips ? <MapTooltipContainer /> : null}
-    </div>
+    </>
   )
 }
 

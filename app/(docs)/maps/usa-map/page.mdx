@@ -3,9 +3,6 @@ import { ExampleLoader } from '@/components/docs/example-loader'
 import { ApiTable } from '@/components/docs/api-table'
 
 import SimpleExample from './examples/simple'
-import SelectionExample from './examples/selection'
-import ChoroplethExample from './examples/choropleth'
-import MarkersExample from './examples/markers'
 
 export const metadata = {
   title: 'USA Map',
@@ -22,35 +19,13 @@ export const metadata = {
   <SimpleExample />
 </ExampleLoader>
 
-<ExampleLoader title="Selection" filePath="app/(docs)/maps/usa-map/examples/selection.tsx">
-  <SelectionExample />
-</ExampleLoader>
-
-<ExampleLoader title="Choropleth" filePath="app/(docs)/maps/usa-map/examples/choropleth.tsx">
-  <ChoroplethExample />
-</ExampleLoader>
-
-<ExampleLoader title="Markers" filePath="app/(docs)/maps/usa-map/examples/markers.tsx">
-  <MarkersExample />
-</ExampleLoader>
-
-## API Reference
-
-### USAMap Props
+## USAMap Props
 
 <ApiTable data={[
   { prop: 'states', type: 'StateOverride[]', default: '[]', description: 'Per-state overrides for className, tooltipContent, and any MapRegionData field.' },
   { prop: 'disabledStates', type: 'StateId[]', default: '[]', description: 'State IDs to mark as non-interactive.' },
-  { prop: 'markers', type: 'MapMarkerData[]', default: '[]', description: 'SVG markers to overlay on the map.' },
-  { prop: 'onRegionClick', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on click or keyboard Enter/Space.' },
-  { prop: 'onRegionEnter', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse enter or focus.' },
-  { prop: 'onRegionLeave', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse leave or blur.' },
-  { prop: 'onMarkerClick', type: '(event: MarkerEvent) => void', default: '—', description: 'Fired when a marker is clicked.' },
-  { prop: 'renderTooltip', type: '(region: MapRegionData) => ReactNode', default: '—', description: 'Custom tooltip renderer. Falls back to region name.' },
-  { prop: 'showLabels', type: 'boolean', default: 'true', description: 'Show state abbreviation labels inside each region.' },
-  { prop: 'showTooltips', type: 'boolean', default: 'true', description: 'Enable tooltip on hover and click.' },
-  { prop: 'className', type: 'string', default: '—', description: 'Class applied to the root SVG element.' },
-  { prop: 'aria-label', type: 'string', default: '"United States"', description: 'Accessible label for the map.' },
 ]} />
+
+All other props are inherited from the shared Map component. See [API Reference](/overview/api-reference) for the full list.
 
 </MapPage>

@@ -1,0 +1,78 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ApiTable } from '@/components/docs/api-table'
+
+export const metadata = {
+  title: 'API Reference',
+  description: 'Props and types shared by all map components.',
+}
+
+<DocPage>
+
+# API Reference
+
+All pre-configured map components (USAMap, WorldMap, etc.) share a common set of props inherited from the core `Map` component. Each map may also expose map-specific props documented on its own page.
+
+## Map Props
+
+<ApiTable data={[
+  { prop: 'onRegionClick', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on click or keyboard Enter/Space.' },
+  { prop: 'onRegionEnter', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse enter or focus.' },
+  { prop: 'onRegionLeave', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on mouse leave or blur.' },
+  { prop: 'onMarkerClick', type: '(event: MarkerEvent) => void', default: '—', description: 'Fired when a marker is clicked.' },
+  { prop: 'markers', type: 'MapMarkerData[]', default: '[]', description: 'SVG markers to overlay on the map.' },
+  { prop: 'renderTooltip', type: '(region: MapRegionData) => ReactNode', default: '—', description: 'Custom tooltip renderer. Falls back to region name.' },
+  { prop: 'showLabels', type: 'boolean', default: 'true', description: 'Show abbreviation labels inside each region.' },
+  { prop: 'showTooltips', type: 'boolean', default: 'true', description: 'Enable tooltip on hover and click.' },
+  { prop: 'className', type: 'string', default: '—', description: 'Class applied to the root SVG element.' },
+  { prop: 'aria-label', type: 'string', default: 'Map name', description: 'Accessible label for the map.' },
+]} />
+
+## Types
+
+### RegionEvent
+
+```typescript
+interface RegionEvent {
+  region: MapRegionData
+  nativeEvent: MouseEvent | TouchEvent | FocusEvent | KeyboardEvent
+}
+```
+
+### MarkerEvent
+
+```typescript
+interface MarkerEvent {
+  id: string
+  nativeEvent: MouseEvent | TouchEvent | FocusEvent | KeyboardEvent
+}
+```
+
+### MapRegionData
+
+```typescript
+interface MapRegionData {
+  id: string
+  name: string
+  path: string
+  abbreviation?: string
+  labelX?: number
+  labelY?: number
+  metadata?: Record<string, unknown>
+}
+```
+
+### MapMarkerData
+
+```typescript
+interface MapMarkerData {
+  id: string
+  x: number
+  y: number
+  content: ReactNode
+  tooltipContent?: ReactNode
+  label?: string
+  disabled?: boolean
+}
+```
+
+</DocPage>

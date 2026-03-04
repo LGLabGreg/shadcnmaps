@@ -1,0 +1,23 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import ChoroplethExample from './examples/choropleth'
+
+export const metadata = {
+  title: 'Choropleth',
+  description: 'Color-code map regions by data values.',
+}
+
+<DocPage>
+
+# Choropleth
+
+Color-code regions by a numeric value such as population, GDP, or any metric. Each region gets a fill class based on its value relative to the maximum.
+
+This pattern uses the `states` prop to assign per-region `className` and `tooltipContent` based on a data lookup.
+
+<ExampleLoader title="Choropleth" filePath="app/(docs)/examples/choropleth/examples/choropleth.tsx">
+  <ChoroplethExample />
+</ExampleLoader>
+
+</DocPage>

@@ -15,10 +15,19 @@ export const navigation: NavSection[] = [
       { title: 'Getting Started', href: '/overview/getting-started' },
       { title: 'Quick Start', href: '/overview/quick-start' },
       { title: 'Theming', href: '/overview/theming' },
+      { title: 'API Reference', href: '/overview/api-reference' },
     ],
   },
   {
     title: 'Maps',
     items: [{ title: 'USA Map', href: '/maps/usa-map' }],
+  },
+  {
+    title: 'Examples',
+    items: [
+      { title: 'Selection', href: '/examples/selection' },
+      { title: 'Choropleth', href: '/examples/choropleth' },
+      { title: 'Markers', href: '/examples/markers' },
+    ],
   },
 ]
