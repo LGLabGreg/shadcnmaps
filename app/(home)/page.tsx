@@ -1,53 +1,88 @@
+import { Hero } from '@/components/hero'
+import MainNav from '@/components/main-nav'
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Map } from 'lucide-react'
+import {
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  Card,
+  CardTitle,
+} from '@/components/ui/card'
+import { ArrowRight, Brush, Globe, Layers, Zap } from 'lucide-react'
 import Link from 'next/link'
 
-import { InstallCommand } from './install-command'
-import { JsonLd } from './json-ld'
+const features = [
+  {
+    icon: Zap,
+    title: 'Zero Dependencies',
+    description:
+      'Pure React SVG — no d3, no Raphael, no jQuery. Lightweight and tree-shakeable.',
+    href: '/overview/quick-start',
+  },
+  {
+    icon: Layers,
+    title: 'Drop-in Ready',
+    description:
+      'One component per map with tooltips, selection, markers, and labels built in.',
+    href: '/overview/api-reference',
+  },
+  {
+    icon: Globe,
+    title: (
+      <div className='flex items-start gap-2'>
+        180+ Maps<Badge>soon</Badge>
+      </div>
+    ),
+    description:
+      'Countries, continents, and the world. Install only the maps you need via the shadcn CLI.',
+    href: '/maps/usa-map',
+  },
+  {
+    icon: Brush,
+    title: 'Themeable',
+    description:
+      'CSS variables for every map color. Light and dark mode work automatically with Tailwind.',
+    href: '/overview/theming',
+  },
+]
 
-export default function Page() {
+export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-center gap-10 px-6 text-center'>
-      <JsonLd />
-      <div className='flex flex-col items-center gap-4'>
-        <div className='flex items-center gap-2.5'>
-          <Map className='size-8' />
-          <h1 className='text-4xl font-bold tracking-tight'>shadcnmaps</h1>
+    <div className='flex flex-col pb-10'>
+      <MainNav />
+      <Hero />
+      <div className='container mx-auto max-w-7xl px-6'>
+        <div className='mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
+          {features.map((feature) => (
+            <Card key={feature.href} className='flex flex-col'>
+              <CardHeader>
+                <CardTitle className='flex items-center gap-2'>
+                  <feature.icon className='size-6' />
+                  {feature.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className='flex-1'>
+                <CardDescription>{feature.description}</CardDescription>
+              </CardContent>
+              <CardFooter className='bg-background'>
+                <Button
+                  size='sm'
+                  variant='outline'
+                  className='ml-auto'
+                  render={
+                    <Link href={feature.href}>
+                      Learn more <ArrowRight className='size-4' />
+                    </Link>
+                  }
+                  nativeButton={false}
+                />
+              </CardFooter>
+            </Card>
+          ))}
         </div>
-        <p className='max-w-md text-lg text-muted-foreground'>
-          Interactive SVG map components for React. No dependencies, pure
-          Tailwind.
-        </p>
       </div>
-
-      <InstallCommand />
-
-      <div className='flex flex-wrap justify-center gap-3 text-sm text-muted-foreground'>
-        <Link
-          href='/llms.txt'
-          className='transition-colors hover:text-foreground'
-        >
-          llms.txt
-        </Link>
-      </div>
-
-      <div className='flex flex-wrap justify-center gap-3'>
-        <Button
-          size='lg'
-          render={<Link href='/overview/getting-started' />}
-          nativeButton={false}
-        >
-          Get Started <ArrowRight className='size-4' />
-        </Button>
-        <Button
-          variant='outline'
-          size='lg'
-          render={<Link href='https://github.com/LGLabGreg/shadcnmaps' />}
-          nativeButton={false}
-        >
-          GitHub
-        </Button>
-      </div>
-    </main>
+    </div>
   )
 }
