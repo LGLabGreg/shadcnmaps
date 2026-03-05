@@ -1,3 +1,5 @@
+<DocPage llmsSlug="markers">
+
 # Markers
 
 Place custom SVG elements at specific coordinates on the map. Markers support tooltips and click handlers just like regions.
