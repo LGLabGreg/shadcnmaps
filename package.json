@@ -11,7 +11,7 @@
     "lint:ci": "oxlint --deny-warnings .",
     "lint:registry": "oxlint --deny-warnings registry/shadcnmaps",
     "prepare": "husky",
-    "registry:build": "tsx scripts/build-registry.ts && shadcn build"
+    "registry:build": "tsx scripts/build-registry.ts && shadcn build && tsx scripts/build-llms.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
@@ -51,6 +51,10 @@
     "*.{ts,tsx}": [
       "oxlint --fix",
       "oxfmt"
+    ],
+    "*.mdx": [
+      "tsx scripts/build-llms.ts",
+      "git add public/llms.txt public/llms-full.txt public/llms/"
     ]
   }
 }

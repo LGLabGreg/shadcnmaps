@@ -10,27 +10,26 @@ Key features:
 - Fully accessible — ARIA attributes, keyboard navigation, screen reader support
 - TypeScript-first with full type safety
 
-## Installation
-
-```bash
-npx shadcn add https://shadcnmaps.com/r/usa-map.json
-```
-
 ## For AI Assistants
 
 When helping users with shadcnmaps:
 - Components install to `components/shadcnmaps/` in the user's project
-- Import from `@/components/shadcnmaps/maps/usa-map` (not from shadcnmaps package)
-- Use `StateId` type for typed state references: `'CA' | 'TX' | 'NY'` etc.
+- Import from `@/components/shadcnmaps/maps/<map-name>` (not from an npm package)
 - Colors use CSS variables: `fill-map-region`, `fill-map-region-selected`, etc.
 - All map components are `'use client'` — they require a client boundary
 
 ## Documentation
 
 - [Getting Started](https://shadcnmaps.com/overview/getting-started): Installation, prerequisites, basic usage
-- [Quick Start](https://shadcnmaps.com/overview/quick-start): Build a state selector in 5 minutes
-- [Theming](https://shadcnmaps.com/overview/theming): CSS variables, dark mode, per-state colors
+- [API Reference](https://shadcnmaps.com/overview/api-reference): Props and types shared by all map components
+- [Theming](https://shadcnmaps.com/overview/theming): CSS variables, dark mode, per-region colors
 
 ## Maps
 
-- [USA Map](https://shadcnmaps.com/maps/usa-map.md): Interactive United States map with all 50 states and DC
+- [USA Map](https://shadcnmaps.com/llms/usa-map.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+
+## Examples
+
+- [Choropleth](https://shadcnmaps.com/llms/choropleth.md): Color-code map regions by data values.
+- [Markers](https://shadcnmaps.com/llms/markers.md): Overlay custom SVG markers on the map.
+- [Region Click](https://shadcnmaps.com/llms/region-click.md): Respond to region clicks on the map.
