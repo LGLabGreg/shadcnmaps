@@ -68,27 +68,22 @@ function colorClasses(id: StateId): {
   const r = pop / MAX_POP
   if (r > 0.6)
     return {
-      className: 'fill-blue-700 hover:fill-blue-800',
-      labelClassName: 'fill-white',
+      className: 'fill-sky-900 hover:fill-sky-800',
     }
   if (r > 0.3)
     return {
-      className: 'fill-blue-500 hover:fill-blue-600',
-      labelClassName: 'fill-foreground',
+      className: 'fill-sky-800 hover:fill-sky-700',
     }
   if (r > 0.15)
     return {
-      className: 'fill-blue-300 hover:fill-blue-400',
-      labelClassName: 'fill-foreground',
+      className: 'fill-sky-700 hover:fill-sky-600',
     }
   if (r > 0.05)
     return {
-      className: 'fill-blue-200 hover:fill-blue-300',
-      labelClassName: 'fill-foreground',
+      className: 'fill-sky-600 hover:fill-sky-500',
     }
   return {
-    className: 'fill-blue-100 hover:fill-blue-200',
-    labelClassName: 'fill-foreground',
+    className: 'fill-sky-500 hover:fill-sky-400',
   }
 }
 
