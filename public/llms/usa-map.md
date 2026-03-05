@@ -8,98 +8,123 @@ Interactive SVG map of the United States with all 50 states and DC. Supports cli
 npx shadcn add https://shadcnmaps.com/r/usa-map.json
 ```
 
-Installs to: `components/shadcnmaps/maps/usa-map.tsx`
-
-## Basic Usage
-
 ```tsx
+'use client'
+
 import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
 
-export default function Page() {
+export default function SimpleExample() {
   return <USAMap />
 }
 ```
 
-## Selection Example
-
-```tsx
-'use client'
-
-import { useState } from 'react'
-import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa-map'
-
-export function StatePicker() {
-  const [selected, setSelected] = useState<StateId | null>(null)
-
-  return (
-    <USAMap
-      regions={selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []}
-      onRegionClick={({ region }) =>
-        setSelected((prev) => (prev === region.id ? null : region.id as StateId))
-      }
-      renderTooltip={(region) => <span>{region.name}</span>}
-    />
-  )
-}
-```
-
-## Choropleth Example
-
-```tsx
-'use client'
-
-import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa-map'
-
-const data: Partial<Record<StateId, number>> = {
-  CA: 39538223,
-  TX: 29145505,
-  FL: 21538187,
-  // ...
-}
-
-export function ChoroplethMap() {
-  const max = Math.max(...Object.values(data) as number[])
-  const regions = (Object.keys(data) as StateId[]).map((id) => {
-    const r = (data[id]! / max)
-    return {
-      id,
-      className: r > 0.5 ? 'fill-blue-600' : r > 0.2 ? 'fill-blue-400' : 'fill-blue-200',
-    }
-  })
-
-  return <USAMap regions={regions} />
-}
-```
-
-## Props
+## Map Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `regions` | `RegionOverride[]` | `[]` | Per-region overrides (className, tooltipContent, etc.) |
-| `disabledRegions` | `string[]` | `[]` | Region IDs to mark as non-interactive |
-| `markers` | `MapMarkerData[]` | `[]` | SVG markers to overlay on the map |
-| `onRegionClick` | `(event: RegionEvent) => void` | — | Click / keyboard activation handler |
-| `onRegionEnter` | `(event: RegionEvent) => void` | — | Hover enter / focus handler |
-| `onRegionLeave` | `(event: RegionEvent) => void` | — | Hover leave / blur handler |
-| `onMarkerClick` | `(event: MarkerEvent) => void` | — | Marker click handler |
-| `renderTooltip` | `(region: MapRegionData) => ReactNode` | — | Custom tooltip renderer |
-| `showLabels` | `boolean` | `true` | Show state abbreviation labels |
-| `showTooltips` | `boolean` | `true` | Enable tooltips |
-| `className` | `string` | — | Class on the root SVG element |
-| `aria-label` | `string` | `"United States"` | Accessible map label |
+| `regions` | `RegionOverride[]` | `[]` | Per-region overrides for className, tooltipContent, disabled, and display fields. |
+| `disabledRegions` | `string[]` | `[]` | Region IDs to mark as non-interactive. |
+| `onRegionClick` | `(event: RegionEvent) => void` | — | Fired on click or keyboard Enter/Space. |
+| `onRegionEnter` | `(event: RegionEvent) => void` | — | Fired on mouse enter or focus. |
+| `onRegionLeave` | `(event: RegionEvent) => void` | — | Fired on mouse leave or blur. |
+| `onMarkerClick` | `(event: MarkerEvent) => void` | — | Fired when a marker is clicked. |
+| `markers` | `MapMarkerData[]` | `[]` | SVG markers to overlay on the map. |
+| `renderTooltip` | `(region: MapRegionData) => ReactNode` | — | Custom tooltip renderer. Falls back to region name. |
+| `showLabels` | `boolean` | `true` | Show abbreviation labels inside each region. |
+| `showTooltips` | `boolean` | `true` | Enable tooltip on hover and click. |
+| `className` | `string` | — | Class applied to the root SVG element. |
+| `aria-label` | `string` | `Map name` | Accessible label for the map. |
 
-## StateId
+## Types
 
-All valid state IDs: `AK AL AR AZ CA CO CT DC DE FL GA HI IA ID IL IN KS KY LA MA MD ME MI MN MO MS MT NC ND NE NH NJ NM NV NY OH OK OR PA RI SC SD TN TX UT VA VT WA WI WV WY`
+### RegionEvent
 
-## CSS Variables
-
-Override map colors in your `globals.css`:
-
-```css
-:root {
-  --map-region: oklch(44.6% 0.043 257.281);
-  --map-region-hover: oklch(37.2% 0.044 257.287);
-  --map-region-selected: oklch(48.8% 0.243 264.376);
+```typescript
+interface RegionEvent {
+  region: MapRegionData
+  nativeEvent: MouseEvent | TouchEvent | FocusEvent | KeyboardEvent
 }
 ```
+
+### MarkerEvent
+
+```typescript
+interface MarkerEvent {
+  id: string
+  nativeEvent: MouseEvent | TouchEvent | FocusEvent | KeyboardEvent
+}
+```
+
+### RegionOverride
+
+```typescript
+interface RegionOverride {
+  id: string
+  name?: string
+  abbreviation?: string
+  labelX?: number
+  labelY?: number
+  metadata?: Record<string, unknown>
+  className?: string
+  labelClassName?: string
+  tooltipContent?: ReactNode
+  disabled?: boolean
+}
+```
+
+### MapRegionData
+
+```typescript
+interface MapRegionData {
+  id: string
+  name: string
+  path: string
+  abbreviation?: string
+  labelX?: number
+  labelY?: number
+  metadata?: Record<string, unknown>
+}
+```
+
+### MapMarkerData
+
+```typescript
+interface MapMarkerData {
+  id: string
+  x: number
+  y: number
+  content: ReactNode
+  tooltipContent?: ReactNode
+  label?: string
+  disabled?: boolean
+}
+```
+
+## CSS variables
+
+These variables are injected into your project when you install any map component.
+
+### Region colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-region` | `fill-map-region` | Default region fill |
+| `--map-region-hover` | `fill-map-region-hover` | Fill on hover |
+| `--map-region-selected` | `fill-map-region-selected` | Fill when selected |
+| `--map-region-disabled` | `fill-map-region-disabled` | Fill when disabled |
+
+### Stroke colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-region-stroke` | `stroke-map-region-stroke` | Default border between regions |
+| `--map-region-stroke-hover` | `stroke-map-region-stroke-hover` | Border on hover |
+| `--map-region-focus-ring` | `stroke-map-region-focus-ring` | Keyboard focus ring color |
+
+### Label colors
+
+| Variable | Tailwind class | Description |
+| --- | --- | --- |
+| `--map-label` | `text-map-label` | Abbreviation label color |
+| `--map-label-hover` | — | Label color on hover |
+| `--map-label-selected` | — | Label color when selected |
