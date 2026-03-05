@@ -32,7 +32,7 @@ export function StatePicker() {
     <div>
       <p>{selected ? `Selected: ${selected}` : 'Click a state'}</p>
       <USAMap
-        states={
+        regions={
           selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []
         }
         onRegionClick={({ region }) =>
@@ -57,7 +57,7 @@ export default function Page() {
 
 ## How it works
 
-- `states` — per-state overrides. Pass `className` to change fill color, `tooltipContent` for custom tooltip content, or any `MapRegionData` field.
+- `regions` — per-region overrides. Pass `className` to change fill color, `tooltipContent` for custom tooltip content, or any `MapRegionData` field.
 - `onRegionClick` — fired on click and on keyboard Enter/Space. Receives `{ region, nativeEvent }`.
 - `renderTooltip` — renders a tooltip that follows the cursor. Receives the full `MapRegionData` for the hovered/clicked region.
 - `fill-map-region-selected` — a Tailwind color class backed by the `--map-region-selected` CSS variable. Swap it for any color class.

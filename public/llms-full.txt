@@ -58,7 +58,7 @@ export function StatePicker() {
     <div>
       <p>{selected ? `Selected: ${selected}` : 'Click a state'}</p>
       <USAMap
-        states={
+        regions={
           selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []
         }
         onRegionClick={({ region }) =>
@@ -89,11 +89,11 @@ All colors are CSS variables registered as Tailwind theme colors.
 }
 ```
 
-Per-state colors via `states` prop:
+Per-region colors via `regions` prop:
 
 ```tsx
 <USAMap
-  states={[
+  regions={[
     { id: 'CA', className: 'fill-emerald-500 hover:fill-emerald-600' },
     { id: 'TX', className: 'fill-amber-500 hover:fill-amber-600' },
   ]}

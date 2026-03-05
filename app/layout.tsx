@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: BASE_URL,
     siteName: 'shadcnmaps',
-    images: [{ url: '/og/home.png', width: 1200, height: 630 }],
+    images: [{ url: '/og/home', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og/home.png'],
+    images: ['/og/home'],
   },
   alternates: { canonical: BASE_URL },
 }

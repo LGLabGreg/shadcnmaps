@@ -32,11 +32,11 @@ const features = [
     icon: Globe,
     title: (
       <div className='flex items-start gap-2'>
-        180+ Maps<Badge>soon</Badge>
+        Growing Map Library<Badge>new</Badge>
       </div>
     ),
     description:
-      'Countries, continents, and the world. Install only the maps you need via the shadcn CLI.',
+      'USA map available now. More countries and continents coming soon. Install only the maps you need via the shadcn CLI.',
     href: '/maps/usa-map',
   },
   {

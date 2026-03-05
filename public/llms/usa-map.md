@@ -33,7 +33,7 @@ export function StatePicker() {
 
   return (
     <USAMap
-      states={selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []}
+      regions={selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []}
       onRegionClick={({ region }) =>
         setSelected((prev) => (prev === region.id ? null : region.id as StateId))
       }
@@ -59,7 +59,7 @@ const data: Partial<Record<StateId, number>> = {
 
 export function ChoroplethMap() {
   const max = Math.max(...Object.values(data) as number[])
-  const states = (Object.keys(data) as StateId[]).map((id) => {
+  const regions = (Object.keys(data) as StateId[]).map((id) => {
     const r = (data[id]! / max)
     return {
       id,
@@ -67,7 +67,7 @@ export function ChoroplethMap() {
     }
   })
 
-  return <USAMap states={states} />
+  return <USAMap regions={regions} />
 }
 ```
 
@@ -75,8 +75,8 @@ export function ChoroplethMap() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `states` | `StateOverride[]` | `[]` | Per-state overrides (className, tooltipContent, etc.) |
-| `disabledStates` | `StateId[]` | `[]` | States to mark as non-interactive |
+| `regions` | `RegionOverride[]` | `[]` | Per-region overrides (className, tooltipContent, etc.) |
+| `disabledRegions` | `string[]` | `[]` | Region IDs to mark as non-interactive |
 | `markers` | `MapMarkerData[]` | `[]` | SVG markers to overlay on the map |
 | `onRegionClick` | `(event: RegionEvent) => void` | — | Click / keyboard activation handler |
 | `onRegionEnter` | `(event: RegionEvent) => void` | — | Hover enter / focus handler |

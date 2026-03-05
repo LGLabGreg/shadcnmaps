@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useRef } from 'react'
+import { useEffect, useId, useRef } from 'react'
 
 import { useMapContext } from './map-context'
 import type { MapRegionData } from './types'
@@ -23,6 +23,12 @@ export function MapListbox({
   const typeaheadRef = useRef('')
   const typeaheadTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const id = useId()
+
+  useEffect(() => {
+    return () => {
+      if (typeaheadTimer.current) clearTimeout(typeaheadTimer.current)
+    }
+  }, [])
 
   const activeRegions = regions.filter((r) => !disabledRegions.has(r.id))
   const focusedIndex = activeRegions.findIndex((r) => r.id === focusedRegion)

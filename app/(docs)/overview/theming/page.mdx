@@ -62,13 +62,13 @@ Dark mode values are included by default. Override them in the `.dark` selector:
 }
 ```
 
-## Per-state colors
+## Per-region colors
 
-Pass any Tailwind color class to a state via the `states` prop:
+Pass any Tailwind color class to a region via the `regions` prop:
 
 ```tsx
 <USAMap
-  states={[
+  regions={[
     { id: 'CA', className: 'fill-emerald-500 hover:fill-emerald-600' },
     { id: 'TX', className: 'fill-amber-500 hover:fill-amber-600' },
   ]}
@@ -80,12 +80,12 @@ Pass any Tailwind color class to a state via the `states` prop:
 For data-driven coloring, compute `className` dynamically:
 
 ```tsx
-const states = data.map(({ id, value }) => ({
+const regions = data.map(({ id, value }) => ({
   id,
   className: value > threshold ? 'fill-blue-600' : 'fill-blue-200',
 }))
 
-<USAMap states={states} />
+<USAMap regions={regions} />
 ```
 
 </DocPage>

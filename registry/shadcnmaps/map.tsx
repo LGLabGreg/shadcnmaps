@@ -271,10 +271,7 @@ function MapInner({
               ? `${region.name} deselected`
               : `${region.name} selected`
           )
-          onRegionClick?.({
-            region,
-            nativeEvent: null as unknown as RegionEvent['nativeEvent'],
-          })
+          onRegionClick?.({ region, nativeEvent: null })
         }}
       />
       <div

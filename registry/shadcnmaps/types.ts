@@ -54,12 +54,13 @@ export interface MapMarkerData {
 export interface RegionEvent {
   /** The region's static data from MapRegionData */
   region: MapRegionData
-  /** The native React synthetic event */
+  /** The native React synthetic event (null for programmatic selection via keyboard listbox) */
   nativeEvent:
     | MouseEvent<SVGPathElement>
     | TouchEvent<SVGPathElement>
     | FocusEvent<SVGPathElement>
     | KeyboardEvent<SVGPathElement>
+    | null
 }
 
 export interface MarkerEvent {
