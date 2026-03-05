@@ -1,3 +1,5 @@
+<DocPage llmsSlug="choropleth">
+
 # Choropleth
 
 Color-code regions by a numeric value such as population, GDP, or any metric. Each region gets a fill class based on its value relative to the maximum.

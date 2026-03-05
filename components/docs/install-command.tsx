@@ -17,7 +17,7 @@ export function InstallCommand({ registryName }: { registryName: string }) {
   return (
     <Button variant='outline' onClick={copy}>
       <Terminal />
-      {command}
+      npx shadcn add
       {copied ? <Check className='ml-1' /> : <Copy className='ml-1' />}
     </Button>
   )

@@ -1,3 +1,5 @@
+<DocPage llmsSlug="region-click">
+
 # Region Click
 
 Click a region to select it. Click again to deselect. The `onRegionClick` callback provides the region data for each click.
