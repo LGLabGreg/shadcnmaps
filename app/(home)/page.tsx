@@ -19,7 +19,7 @@ const features = [
     title: 'Zero Dependencies',
     description:
       'Pure React SVG — no d3, no Raphael, no jQuery. Lightweight and tree-shakeable.',
-    href: '/overview/quick-start',
+    href: '/overview/getting-started',
   },
   {
     icon: Layers,

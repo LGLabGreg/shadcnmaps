@@ -15,7 +15,7 @@ export function Hero() {
       <div className='relative z-10 flex flex-col items-center'>
         <div className='mb-6 flex flex-col items-center gap-3'>
           <Link
-            href='/overview/quick-start'
+            href='/overview/getting-started'
             className='mx-auto inline-flex items-center gap-3 rounded-full border bg-background px-2 py-1 text-sm shadow-xs'
           >
             <span className='inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground'>
@@ -40,7 +40,7 @@ export function Hero() {
           <Button
             size='lg'
             render={
-              <Link href='/overview/quick-start'>
+              <Link href='/overview/getting-started'>
                 Get Started
                 <ArrowRight />
               </Link>

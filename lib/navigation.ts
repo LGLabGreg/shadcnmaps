@@ -13,7 +13,6 @@ export const navigation: NavSection[] = [
     title: 'Overview',
     items: [
       { title: 'Getting Started', href: '/overview/getting-started' },
-      { title: 'Quick Start', href: '/overview/quick-start' },
       { title: 'Theming', href: '/overview/theming' },
       { title: 'API Reference', href: '/overview/api-reference' },
     ],
