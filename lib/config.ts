@@ -1,3 +1,5 @@
+export const IS_PRODUCTION = process.env.VERCEL_ENV === 'production'
+
 const REGISTRY_BASE_URL =
   process.env.NODE_ENV === 'production'
     ? 'https://shadcnmaps.com'

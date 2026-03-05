@@ -1,9 +1,11 @@
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { IS_PRODUCTION } from '@/lib/config'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
-import { Geist, Geist_Mono, Inter } from 'next/font/google'
 
 import './globals.css'
+import { Geist, Geist_Mono, Inter } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -39,6 +41,15 @@ export const metadata: Metadata = {
     images: ['/og/home'],
   },
   alternates: { canonical: BASE_URL },
+  icons: {
+    icon: [
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
@@ -59,6 +70,12 @@ export default function RootLayout({
         >
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
+        {IS_PRODUCTION && (
+          <Script
+            src='https://cloud.umami.is/script.js'
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+          />
+        )}
       </body>
     </html>
   )
