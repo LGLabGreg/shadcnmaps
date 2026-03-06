@@ -9,7 +9,7 @@ This pattern uses the `markers` prop with an array of `MapMarkerData` objects, e
 ```tsx
 'use client'
 
-import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
+import { USAMap } from '@/components/shadcnmaps/maps/usa'
 import type { MapMarkerData } from '@/components/shadcnmaps/types'
 
 const CITIES: (Omit<MapMarkerData, 'content'> & {

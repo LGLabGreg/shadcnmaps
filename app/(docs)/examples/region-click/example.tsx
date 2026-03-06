@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog'
-import { USAMap } from '@/registry/shadcnmaps/maps/usa-map'
+import { USAMap } from '@/registry/shadcnmaps/maps/usa'
 import { useState } from 'react'
 
 export default function RegionClickExample() {

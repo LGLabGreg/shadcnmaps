@@ -17,7 +17,7 @@
 Install the USA map using the shadcn CLI. This pulls the component directly into your project — no npm package, no version lock.
 
 ```bash
-npx shadcn add https://shadcnmaps.com/r/usa-map.json
+npx shadcn add https://shadcnmaps.com/r/usa.json
 ```
 
 This installs the following files:
@@ -31,13 +31,13 @@ This installs the following files:
 | `components/shadcnmaps/map-marker.tsx` | SVG marker overlay |
 | `components/shadcnmaps/map-listbox.tsx` | Accessible keyboard listbox |
 | `components/shadcnmaps/types.ts` | Shared TypeScript types |
-| `components/shadcnmaps/maps/usa-map.tsx` | `USAMap` component |
+| `components/shadcnmaps/maps/usa.tsx` | `USAMap` component |
 | `components/shadcnmaps/map-data/usa.ts` | SVG path data for all 50 states + DC |
 
 ## Basic usage
 
 ```tsx
-import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
+import { USAMap } from '@/components/shadcnmaps/maps/usa'
 
 export default function Page() {
   return <USAMap />
@@ -54,7 +54,7 @@ This example builds a clickable state selector that highlights the selected stat
 'use client'
 
 import { useState } from 'react'
-import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa-map'
+import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa'
 
 export function StatePicker() {
   const [selected, setSelected] = useState<StateId | null>(null)
@@ -90,7 +90,7 @@ The map is fully keyboard accessible — no extra setup needed. Tab to focus the
 ## Next steps
 
 - [Theming](/overview/theming) — customize colors with CSS variables
-- [USA Map](/maps/usa-map) — full props reference and examples
+- [USA Map](/maps/usa) — full props reference and examples
 
 ---
 
@@ -267,8 +267,8 @@ const regions = data.map(({ id, value }) => ({
 
 ## Maps
 
-- [France Map](https://shadcnmaps.com/llms/france-map.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
-- [USA Map](https://shadcnmaps.com/llms/usa-map.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [France Map](https://shadcnmaps.com/llms/france.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [USA Map](https://shadcnmaps.com/llms/usa.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
 ## Examples
 

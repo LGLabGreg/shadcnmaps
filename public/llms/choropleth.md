@@ -9,7 +9,7 @@ This pattern uses the `states` prop to assign per-region `className` and `toolti
 ```tsx
 'use client'
 
-import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa-map'
+import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa'
 
 // 2020 US Census (approximate)
 const POPULATION: Partial<Record<StateId, number>> = {

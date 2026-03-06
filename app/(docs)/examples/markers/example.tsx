@@ -1,6 +1,6 @@
 'use client'
 
-import { USAMap } from '@/registry/shadcnmaps/maps/usa-map'
+import { USAMap } from '@/registry/shadcnmaps/maps/usa'
 import type { MapMarkerData } from '@/registry/shadcnmaps/types'
 
 const CITIES: (Omit<MapMarkerData, 'content'> & {

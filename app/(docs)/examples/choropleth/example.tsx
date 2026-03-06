@@ -1,6 +1,6 @@
 'use client'
 
-import { USAMap, type StateId } from '@/registry/shadcnmaps/maps/usa-map'
+import { USAMap, type StateId } from '@/registry/shadcnmaps/maps/usa'
 
 // 2020 US Census (approximate)
 const POPULATION: Partial<Record<StateId, number>> = {

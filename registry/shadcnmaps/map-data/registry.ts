@@ -1,6 +1,6 @@
 export const mapData = [
   {
-    name: 'usa-map-data',
+    name: 'usa-data',
     type: 'registry:file',
     title: 'USA Map Data',
     description: 'SVG path data for all 50 US states and DC.',
@@ -13,7 +13,7 @@ export const mapData = [
     ],
   },
   {
-    name: 'france-map-data',
+    name: 'france-data',
     type: 'registry:file',
     title: 'France Map Data',
     description: 'SVG path data for France with 13 regions.',

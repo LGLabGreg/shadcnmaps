@@ -51,7 +51,7 @@ export function Hero() {
             variant='outline'
             size='lg'
             render={
-              <Link href='/maps/usa-map'>
+              <Link href='/maps/usa'>
                 <Map /> Maps
               </Link>
             }

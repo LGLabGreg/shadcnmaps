@@ -80,9 +80,9 @@ function camelToTitle(str: string): string {
     .replace(/^./, (c) => c.toUpperCase())
 }
 
-/** "france" → "france-map" */
+/** "france" → "france" */
 function toSlug(mapId: string): string {
-  return `${camelToKebab(mapId)}-map`
+  return camelToKebab(mapId)
 }
 
 /** "france" → "franceMapData" */
@@ -340,7 +340,7 @@ function updateMapsRegistry(
     title: '${title}',
     description:
       '${description}',
-    registryDependencies: [registryUrl('map'), registryUrl('${kebab}-map-data')],
+    registryDependencies: [registryUrl('map'), registryUrl('${kebab}-data')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/${slug}.tsx',
@@ -368,7 +368,7 @@ function updateMapDataRegistry(
   for (const { mapId, regionCount } of entries) {
     const kebab = camelToKebab(mapId)
     const title = toTitle(mapId)
-    const dataName = `${kebab}-map-data`
+    const dataName = `${kebab}-data`
     const description = buildDataDescription(mapId, regionCount)
 
     if (content.includes(`name: '${dataName}'`)) continue
