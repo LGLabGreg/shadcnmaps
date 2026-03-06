@@ -100,9 +100,7 @@ function MapInner({
   const [announcement, setAnnouncement] = useState('')
 
   const regionOverrides = useMemo(() => {
-    return new globalThis.Map(
-      regions?.map((region) => [region.id, region]) ?? []
-    )
+    return new Map(regions?.map((region) => [region.id, region]) ?? [])
   }, [regions])
 
   const disabledRegionSet = useMemo(() => {
@@ -130,6 +128,11 @@ function MapInner({
         aria-describedby={descId}
         viewBox={data.viewBox}
         className={cn('h-auto w-full', className)}
+        onPointerLeave={() => {
+          if (showTooltips) {
+            setTooltipState((current) => ({ ...current, visible: false }))
+          }
+        }}
       >
         <desc id={descId}>
           Interactive map. Tab to focus, arrow keys to navigate between regions,
@@ -325,10 +328,12 @@ function MapTooltipContainer() {
   )
 }
 
-export function Map(props: MapProps) {
+function MapRoot(props: MapProps) {
   return (
     <MapProvider>
       <MapInner {...props} />
     </MapProvider>
   )
 }
+
+export { MapRoot as Map }
