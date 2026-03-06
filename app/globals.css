@@ -146,6 +146,22 @@
   --map-label-selected: oklch(100% 0 0);
 }
 
+@media (prefers-contrast: more) {
+  :root {
+    --map-region-stroke: oklch(10% 0.05 260);
+    --map-region-stroke-hover: oklch(10% 0.05 260);
+    --map-region-focus-ring: oklch(80% 0.25 90);
+  }
+
+  [data-slot='map-region'] {
+    stroke-width: 2;
+  }
+
+  [data-slot='map-focus-ring'] {
+    stroke-width: 3;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .shadcnmaps-tooltip,
   svg [role='button'],

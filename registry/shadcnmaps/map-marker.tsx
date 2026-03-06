@@ -55,7 +55,7 @@ export function MapMarker({
       aria-label={label ?? `Map marker ${id}`}
       aria-disabled={disabled || undefined}
       className={cn(
-        'cursor-pointer transition-transform duration-150 outline-none',
+        'cursor-pointer outline-none motion-safe:transition-transform motion-safe:duration-150',
         disabled && 'cursor-not-allowed opacity-60',
         className
       )}

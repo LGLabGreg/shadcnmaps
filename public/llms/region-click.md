@@ -7,30 +7,41 @@ Click a region to select it. Click again to deselect. The `onRegionClick` callba
 ```tsx
 'use client'
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog'
 import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
 import { useState } from 'react'
 
 export default function RegionClickExample() {
-  const [clicked, setClicked] = useState<string | null>(null)
+  const [selected, setSelected] = useState<string | null>(null)
 
   return (
-    <div className='space-y-3'>
-      <p className='min-h-5 text-sm text-muted-foreground'>
-        {clicked ? (
-          <>
-            Selected:{' '}
-            <span className='font-medium text-foreground'>{clicked}</span>
-          </>
-        ) : (
-          'Click a state to select it.'
-        )}
-      </p>
+    <>
+      <Dialog
+        open={!!selected}
+        onOpenChange={(open) => setSelected(open ? selected : null)}
+      >
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{selected}</DialogTitle>
+          </DialogHeader>
+          <DialogDescription>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos.
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
       <USAMap
         onRegionClick={({ region }) =>
-          setClicked((prev) => (prev === region.name ? null : region.name))
+          setSelected((prev) => (prev === region.name ? null : region.name))
         }
       />
-    </div>
+    </>
   )
 }
 ```
