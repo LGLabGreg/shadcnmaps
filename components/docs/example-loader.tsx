@@ -18,5 +18,10 @@ export async function ExampleLoader({
   const absolutePath = path.resolve(process.cwd(), filePath)
   const source = await fs.readFile(absolutePath, 'utf-8')
 
-  return <Example codeBlock={<CodeBlock code={source} />}>{children}</Example>
+  const code = source.replace(
+    /@\/registry\/shadcnmaps\//g,
+    '@/components/shadcnmaps/'
+  )
+
+  return <Example codeBlock={<CodeBlock code={code} />}>{children}</Example>
 }
