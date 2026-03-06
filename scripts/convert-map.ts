@@ -564,18 +564,21 @@ function main() {
 
   if (args.length === 0 || args.includes('--help')) {
     console.log(`
-Usage: tsx scripts/convert-map.ts [options] <mapId...>
+Usage: pnpm tsx scripts/convert-map.ts [options] <mapId...>
 
 Options:
   --all       Convert all remaining maps
   --dry-run   Preview without writing files
   --help      Show this help
 
-Examples:
-  tsx scripts/convert-map.ts france
-  tsx scripts/convert-map.ts france germany italy
-  tsx scripts/convert-map.ts --all
-  tsx scripts/convert-map.ts --dry-run france
+Example usage:
+  pnpm tsx scripts/convert-map.ts france
+  pnpm tsx scripts/convert-map.ts france germany italy
+  pnpm tsx scripts/convert-map.ts --dry-run france
+  pnpm tsx scripts/convert-map.ts --all --dry-run
+
+After converting maps:
+  pnpm registry:build
 `)
     process.exit(0)
   }

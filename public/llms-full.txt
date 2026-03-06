@@ -267,6 +267,7 @@ const regions = data.map(({ id, value }) => ({
 
 ## Maps
 
+- [France Map](https://shadcnmaps.com/llms/france-map.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [USA Map](https://shadcnmaps.com/llms/usa-map.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
 ## Examples

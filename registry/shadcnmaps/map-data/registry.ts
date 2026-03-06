@@ -12,4 +12,17 @@ export const mapData = [
       },
     ],
   },
+  {
+    name: 'france-map-data',
+    type: 'registry:file',
+    title: 'France Map Data',
+    description: 'SVG path data for France with 13 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/france.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/france.ts',
+      },
+    ],
+  },
 ]
