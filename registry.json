@@ -73,24 +73,41 @@
       ]
     },
     {
-      "name": "usa-map",
+      "name": "usa",
       "type": "registry:component",
       "title": "USA Map",
       "description": "Interactive United States map with all 50 states and DC. Supports click, hover, selection, tooltips, and custom markers.",
       "registryDependencies": [
         "http://localhost:3000/r/map.json",
-        "http://localhost:3000/r/usa-map-data.json"
+        "http://localhost:3000/r/usa-data.json"
       ],
       "files": [
         {
-          "path": "registry/shadcnmaps/maps/usa-map.tsx",
+          "path": "registry/shadcnmaps/maps/usa.tsx",
           "type": "registry:file",
-          "target": "components/shadcnmaps/maps/usa-map.tsx"
+          "target": "components/shadcnmaps/maps/usa.tsx"
         }
       ]
     },
     {
-      "name": "usa-map-data",
+      "name": "france",
+      "type": "registry:component",
+      "title": "France Map",
+      "description": "Interactive France map with 13 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/france-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/france.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/france.tsx"
+        }
+      ]
+    },
+    {
+      "name": "usa-data",
       "type": "registry:file",
       "title": "USA Map Data",
       "description": "SVG path data for all 50 US states and DC.",
@@ -99,6 +116,19 @@
           "path": "registry/shadcnmaps/map-data/usa.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-data/usa.ts"
+        }
+      ]
+    },
+    {
+      "name": "france-data",
+      "type": "registry:file",
+      "title": "France Map Data",
+      "description": "SVG path data for France with 13 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/france.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/france.ts"
         }
       ]
     }

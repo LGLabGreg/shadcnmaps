@@ -1,6 +1,6 @@
 export const mapData = [
   {
-    name: 'usa-map-data',
+    name: 'usa-data',
     type: 'registry:file',
     title: 'USA Map Data',
     description: 'SVG path data for all 50 US states and DC.',
@@ -9,6 +9,19 @@ export const mapData = [
         path: 'registry/shadcnmaps/map-data/usa.ts',
         type: 'registry:file',
         target: 'components/shadcnmaps/map-data/usa.ts',
+      },
+    ],
+  },
+  {
+    name: 'france-data',
+    type: 'registry:file',
+    title: 'France Map Data',
+    description: 'SVG path data for France with 13 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/france.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/france.ts',
       },
     ],
   },

@@ -20,7 +20,10 @@ export const navigation: NavSection[] = [
   },
   {
     title: 'Maps',
-    items: [{ title: 'USA Map', href: '/maps/usa-map' }],
+    items: [
+      { title: 'France', href: '/maps/france' },
+      { title: 'USA', href: '/maps/usa' },
+    ],
   },
   {
     title: 'Examples',

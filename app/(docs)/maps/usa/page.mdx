@@ -1,7 +1,7 @@
 import { MapPage } from '@/components/docs/map-page'
 import { ExampleLoader } from '@/components/docs/example-loader'
 
-import SimpleExample from './examples/simple'
+import SimpleExample from './map'
 
 export const metadata = {
   title: 'USA Map',
@@ -11,11 +11,11 @@ export const metadata = {
 <MapPage
   title="USA Map"
   description="Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers."
-  registryName="usa-map"
+  registryName="usa"
 >
 
 <ExampleLoader
-  filePath='app/(docs)/maps/usa-map/examples/simple.tsx'
+  filePath='app/(docs)/maps/usa/map.tsx'
 >
   <SimpleExample />
 </ExampleLoader>

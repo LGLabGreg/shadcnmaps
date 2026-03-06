@@ -5,13 +5,13 @@ Interactive SVG map of the United States with all 50 states and DC. Supports cli
 ## Installation
 
 ```bash
-npx shadcn add https://shadcnmaps.com/r/usa-map.json
+npx shadcn add https://shadcnmaps.com/r/usa.json
 ```
 
 ```tsx
 'use client'
 
-import { USAMap } from '@/components/shadcnmaps/maps/usa-map'
+import { USAMap } from '@/components/shadcnmaps/maps/usa'
 
 export default function SimpleExample() {
   return <USAMap />
