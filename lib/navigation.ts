@@ -21,8 +21,8 @@ export const navigation: NavSection[] = [
   {
     title: 'Maps',
     items: [
-      { title: 'France Map', href: '/maps/france' },
-      { title: 'USA Map', href: '/maps/usa' },
+      { title: 'France', href: '/maps/france' },
+      { title: 'USA', href: '/maps/usa' },
     ],
   },
   {
