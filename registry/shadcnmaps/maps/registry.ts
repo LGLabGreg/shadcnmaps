@@ -31,4 +31,19 @@ export const maps = [
       },
     ],
   },
+  {
+    name: 'world',
+    type: 'registry:component',
+    title: 'World Map',
+    description:
+      'Interactive World map with 256 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('world-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/world.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/world.tsx',
+      },
+    ],
+  },
 ]

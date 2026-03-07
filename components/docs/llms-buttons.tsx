@@ -18,12 +18,13 @@ export function LlmsButtons({ slug }: { slug: string }) {
 
   return (
     <span className='inline-flex gap-2'>
-      <Button variant='outline' onClick={copy}>
+      <Button variant='outline' size='sm' onClick={copy}>
         Copy markdown
         {copied ? <Check /> : <Copy />}
       </Button>
       <Button
         variant='outline'
+        size='sm'
         render={
           <a href={url} target='_blank' rel='noopener noreferrer'>
             View markdown

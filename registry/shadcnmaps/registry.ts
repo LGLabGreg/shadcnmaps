@@ -63,6 +63,11 @@ export const components = [
         target: 'components/shadcnmaps/map-listbox.tsx',
       },
       {
+        path: 'registry/shadcnmaps/map-controls.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-controls.tsx',
+      },
+      {
         path: 'registry/shadcnmaps/types.ts',
         type: 'registry:file',
         target: 'components/shadcnmaps/types.ts',

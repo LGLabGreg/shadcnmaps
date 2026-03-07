@@ -1,20 +1,26 @@
-# USA Map
+# World Map
 
-Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+Interactive SVG map of World with 256 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/usa.json
+npx shadcn@latest add https://shadcnmaps.com/r/world.json
 ```
 
 ```tsx
 'use client'
 
-import { USAMap } from '@/components/shadcnmaps/maps/usa'
+import { MapControls } from '@/components/shadcnmaps/map-controls'
+import { WorldMap } from '@/components/shadcnmaps/maps/world'
 
 export default function SimpleExample() {
-  return <USAMap />
+  return (
+    <WorldMap
+      enableZoom
+      controls={<MapControls position='top-right' />}
+    />
+  )
 }
 ```
 
