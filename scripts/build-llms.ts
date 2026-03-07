@@ -239,7 +239,7 @@ function buildLlmsTxt(mapInfos: PageInfo[], exampleInfos: PageInfo[]): string {
 shadcnmaps provides interactive SVG map components for React built with Tailwind CSS. Components are installed directly into your project via the shadcn CLI and are fully customizable.
 
 Key features:
-- Zero dependencies — pure React SVG, no d3, Raphael, or jQuery
+- Zero dependencies — pure React SVG, no d3
 - Tailwind CSS theming via CSS variables
 - Fully accessible — ARIA attributes, keyboard navigation, screen reader support
 - TypeScript-first with full type safety

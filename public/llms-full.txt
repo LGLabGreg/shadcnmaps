@@ -13,7 +13,7 @@
 
 ## Installation
 
-Install the USA map using the shadcn CLI. This pulls the component directly into your project — no npm package, no version lock.
+Install a map using the shadcn CLI. Here we'll use the USA map as an example, but the same command works for [any map](/maps). This pulls the component directly into your project — no npm package, no version lock.
 
 ```bash
 npx shadcn@latest add https://shadcnmaps.com/r/usa.json
@@ -62,29 +62,16 @@ export function StatePicker() {
     <div>
       <p>{selected ? `Selected: ${selected}` : 'Click a state'}</p>
       <USAMap
-        regions={
-          selected
-            ? [{ id: selected, className: 'fill-map-region-selected' }]
-            : []
-        }
         onRegionClick={({ region }) =>
           setSelected((prev) =>
             prev === region.id ? null : (region.id as StateId)
           )
         }
-        renderTooltip={(region) => <span>{region.name}</span>}
       />
     </div>
   )
 }
 ```
-
-### How it works
-
-- `regions` — per-region overrides. Pass `className` to change fill color, `tooltipContent` for custom tooltip content, or any `MapRegionData` field.
-- `onRegionClick` — fired on click and on keyboard Enter/Space. Receives `{ region, nativeEvent }`.
-- `renderTooltip` — renders a tooltip that follows the cursor. Receives the full `MapRegionData` for the hovered/clicked region.
-- `fill-map-region-selected` — a Tailwind color class backed by the `--map-region-selected` CSS variable. Swap it for any color class.
 
 ### Keyboard navigation
 
@@ -273,6 +260,18 @@ const regions = data.map(({ id, value }) => ({
 
 ## Maps
 
+- [Africa Map](https://shadcnmaps.com/llms/africa.md): Interactive SVG map of Africa with 55 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Alabama Map](https://shadcnmaps.com/llms/alabama.md): Interactive SVG map of Alabama with 67 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Alaska Map](https://shadcnmaps.com/llms/alaska.md): Interactive SVG map of Alaska with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Algeria Map](https://shadcnmaps.com/llms/algeria.md): Interactive SVG map of Algeria with 48 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Angola Map](https://shadcnmaps.com/llms/angola.md): Interactive SVG map of Angola with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Argentina Map](https://shadcnmaps.com/llms/argentina.md): Interactive SVG map of Argentina with 24 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Arizona Map](https://shadcnmaps.com/llms/arizona.md): Interactive SVG map of Arizona with 15 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Arkansas Map](https://shadcnmaps.com/llms/arkansas.md): Interactive SVG map of Arkansas with 75 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Asia Map](https://shadcnmaps.com/llms/asia.md): Interactive SVG map of Asia with 53 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Australia Map](https://shadcnmaps.com/llms/australia.md): Interactive SVG map of Australia with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Austria Map](https://shadcnmaps.com/llms/austria.md): Interactive SVG map of Austria with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Azerbaijan Map](https://shadcnmaps.com/llms/azerbaijan.md): Interactive SVG map of Azerbaijan with 78 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [France Map](https://shadcnmaps.com/llms/france.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [USA Map](https://shadcnmaps.com/llms/usa.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [World Map](https://shadcnmaps.com/llms/world.md): Interactive SVG map of World with 256 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
