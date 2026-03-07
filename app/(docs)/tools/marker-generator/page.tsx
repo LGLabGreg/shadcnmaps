@@ -1,18 +1,29 @@
 'use client'
 
+import { ClientCodeBlock } from '@/components/docs/client-code-block'
 import { Button } from '@/components/ui/button'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxEmpty,
+  ComboboxList,
+} from '@/components/ui/combobox'
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet'
 import { Map } from '@/registry/shadcnmaps/map'
-import { franceMapData } from '@/registry/shadcnmaps/map-data/france'
-import { usaMapData } from '@/registry/shadcnmaps/map-data/usa'
-import type { MapData, MapMarkerData } from '@/registry/shadcnmaps/types'
-import { Copy, Trash2, X } from 'lucide-react'
+import type { MapMarkerData } from '@/registry/shadcnmaps/types'
+import { Code, Trash2, Undo2, X } from 'lucide-react'
 import { useCallback, useRef, useState } from 'react'
 
-const MAPS: Record<string, { data: MapData; label: string }> = {
-  usa: { data: usaMapData, label: 'USA' },
-  france: { data: franceMapData, label: 'France' },
-}
+import { MAPS } from './maps-config'
 
 interface PlacedMarker {
   id: string
@@ -51,7 +62,6 @@ export default function MarkerGeneratorPage() {
   const [activeMap, setActiveMap] = useState('usa')
   const [markers, setMarkers] = useState<PlacedMarker[]>([])
   const [cursor, setCursor] = useState<{ x: number; y: number } | null>(null)
-  const [copied, setCopied] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
   const counterRef = useRef(0)
 
@@ -94,23 +104,22 @@ export default function MarkerGeneratorPage() {
     setMarkers((prev) => prev.filter((m) => m.id !== id))
   }, [])
 
+  const undoMarker = useCallback(() => {
+    setMarkers((prev) => prev.slice(0, -1))
+  }, [])
+
   const clearMarkers = useCallback(() => {
     setMarkers([])
     counterRef.current = 0
   }, [])
 
-  const handleMapChange = useCallback((value: string) => {
+  const handleMapChange = useCallback((value: string | null) => {
+    if (!value) return
     setActiveMap(value)
     setMarkers([])
     setCursor(null)
     counterRef.current = 0
   }, [])
-
-  const copyCode = useCallback(async () => {
-    await navigator.clipboard.writeText(generateCode(markers))
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }, [markers])
 
   const mapMarkers: MapMarkerData[] = markers.map((m) => ({
     id: m.id,
@@ -127,6 +136,7 @@ export default function MarkerGeneratorPage() {
     label: m.id,
   }))
 
+  const mapKeys = Object.keys(MAPS)
   const mapConfig = MAPS[activeMap]
   const code = generateCode(markers)
 
@@ -138,20 +148,65 @@ export default function MarkerGeneratorPage() {
         the generated code to use in your project.
       </p>
 
-      <Tabs value={activeMap} onValueChange={handleMapChange} className='mt-6'>
-        <TabsList>
-          {Object.entries(MAPS).map(([key, { label }]) => (
-            <TabsTrigger key={key} value={key}>
-              {label}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-      </Tabs>
+      <div className='mt-6 flex items-center justify-between gap-2'>
+        <Combobox
+          value={activeMap}
+          onValueChange={handleMapChange}
+          items={mapKeys}
+          itemToStringLabel={(value: string) => MAPS[value]?.label ?? value}
+        >
+          <ComboboxInput className='w-48' placeholder='Select a map...' />
+          <ComboboxContent>
+            <ComboboxList>
+              {(key: string) => (
+                <ComboboxItem key={key} value={key}>
+                  {MAPS[key].label}
+                </ComboboxItem>
+              )}
+            </ComboboxList>
+            <ComboboxEmpty>No maps found.</ComboboxEmpty>
+          </ComboboxContent>
+        </Combobox>
+
+        <div className='flex items-center gap-1'>
+          <Button
+            variant='outline'
+            size='icon'
+            disabled={markers.length === 0}
+            onClick={undoMarker}
+          >
+            <Undo2 className='size-4' />
+          </Button>
+          <Sheet>
+            <SheetTrigger
+              render={
+                <Button variant='outline' disabled={markers.length === 0} />
+              }
+            >
+              <Code className='size-4' />
+              View code
+            </SheetTrigger>
+            <SheetContent className='sm:max-w-lg!'>
+              <SheetHeader>
+                <SheetTitle>Markers</SheetTitle>
+                <SheetDescription>
+                  Copy this code to use the markers in your project.
+                </SheetDescription>
+              </SheetHeader>
+              <div className='overflow-auto px-4 pb-4'>
+                <div className='rounded-lg border'>
+                  <ClientCodeBlock code={code} />
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
 
       {/* Map */}
       <div
         ref={wrapperRef}
-        className='mt-4 cursor-crosshair rounded-lg border border-border bg-card'
+        className='mt-4 cursor-crosshair rounded-lg border border-dashed border-border bg-card'
         onClick={handleClick}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -180,63 +235,44 @@ export default function MarkerGeneratorPage() {
         )}
       </div>
 
-      {/* Bottom section: marker list + code */}
-      <div className='mt-6 grid gap-6 lg:grid-cols-2'>
-        {/* Marker list */}
-        <div>
-          <div className='mb-2 flex items-center justify-between'>
-            <h2 className='text-lg font-semibold'>Placed Markers</h2>
-            {markers.length > 0 && (
-              <Button variant='ghost' size='sm' onClick={clearMarkers}>
-                <Trash2 className='mr-1 h-4 w-4' />
-                Clear all
-              </Button>
-            )}
-          </div>
-          {markers.length === 0 ? (
-            <p className='text-sm text-muted-foreground'>
-              No markers placed yet. Click on the map to add one.
-            </p>
-          ) : (
-            <div className='divide-y divide-border rounded-lg border'>
-              {markers.map((m) => (
-                <div
-                  key={m.id}
-                  className='flex items-center justify-between px-3 py-2 text-sm'
-                >
-                  <span className='font-mono'>
-                    {m.id}{' '}
-                    <span className='text-muted-foreground'>
-                      ({m.x}, {m.y})
-                    </span>
-                  </span>
-                  <button
-                    onClick={() => removeMarker(m.id)}
-                    className='text-muted-foreground hover:text-foreground'
-                  >
-                    <X className='h-4 w-4' />
-                  </button>
-                </div>
-              ))}
-            </div>
+      {/* Marker list */}
+      <div className='mt-6'>
+        <div className='mb-2 flex items-center justify-between'>
+          <h2 className='text-lg font-semibold'>Placed Markers</h2>
+          {markers.length > 0 && (
+            <Button variant='ghost' size='sm' onClick={clearMarkers}>
+              <Trash2 className='size-4' />
+              Clear all
+            </Button>
           )}
         </div>
-
-        {/* Generated code */}
-        <div>
-          <div className='mb-2 flex items-center justify-between'>
-            <h2 className='text-lg font-semibold'>Generated Code</h2>
-            {markers.length > 0 && (
-              <Button variant='ghost' size='sm' onClick={copyCode}>
-                <Copy className='mr-1 h-4 w-4' />
-                {copied ? 'Copied!' : 'Copy'}
-              </Button>
-            )}
+        {markers.length === 0 ? (
+          <p className='text-sm text-muted-foreground'>
+            No markers placed yet. Click on the map to add one.
+          </p>
+        ) : (
+          <div className='divide-y divide-border rounded-lg border'>
+            {markers.map((m) => (
+              <div
+                key={m.id}
+                className='flex items-center justify-between px-3 py-2 text-sm'
+              >
+                <span className='font-mono'>
+                  {m.id}{' '}
+                  <span className='text-muted-foreground'>
+                    ({m.x}, {m.y})
+                  </span>
+                </span>
+                <button
+                  onClick={() => removeMarker(m.id)}
+                  className='text-muted-foreground hover:text-foreground'
+                >
+                  <X className='size-4' />
+                </button>
+              </div>
+            ))}
           </div>
-          <pre className='overflow-auto rounded-lg bg-muted p-4 text-sm'>
-            <code>{code}</code>
-          </pre>
-        </div>
+        )}
       </div>
     </div>
   )
