@@ -33,4 +33,8 @@ export const navigation: NavSection[] = [
       { title: 'Markers', href: '/examples/markers' },
     ],
   },
+  {
+    title: 'Tools',
+    items: [{ title: 'Marker Generator', href: '/tools/marker-generator' }],
+  },
 ]
