@@ -15,12 +15,7 @@ import { MapControls } from '@/components/shadcnmaps/map-controls'
 import { WorldMap } from '@/components/shadcnmaps/maps/world'
 
 export default function SimpleExample() {
-  return (
-    <WorldMap
-      enableZoom
-      controls={<MapControls position='top-right' />}
-    />
-  )
+  return <WorldMap enableZoom controls={<MapControls position='top-right' />} />
 }
 ```
 
