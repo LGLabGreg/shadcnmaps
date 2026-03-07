@@ -36,7 +36,7 @@ const features = [
       </div>
     ),
     description:
-      'USA map available now. More countries and continents coming soon. Install only the maps you need via the shadcn CLI.',
+      'More countries and continents coming soon. Install only the maps you need via the shadcn CLI.',
     href: '/maps/usa',
   },
   {

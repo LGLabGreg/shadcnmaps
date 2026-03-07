@@ -24,7 +24,7 @@ export function Example({ children, codeBlock }: ExampleProps) {
       </TabsList>
       <TabsContent value='preview'>
         <div className='rounded-lg border p-6'>
-          <div className='mx-auto w-5xl max-w-full'>{children}</div>
+          <div className='mx-auto w-full max-w-5xl'>{children}</div>
         </div>
       </TabsContent>
       <TabsContent value='code'>
