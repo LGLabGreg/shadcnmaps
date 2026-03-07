@@ -45,7 +45,7 @@ function mdxToMarkdown(content: string): string {
   result = result.replace(
     /<MapPage\s+title="([^"]+)"\s+description="([^"]+)"\s+registryName="([^"]+)"\s*>/,
     (_, title, description, registryName) =>
-      `# ${title}\n\n${description}\n\n## Installation\n\n\`\`\`bash\nnpx shadcn add https://shadcnmaps.com/r/${registryName}.json\n\`\`\``
+      `# ${title}\n\n${description}\n\n## Installation\n\n\`\`\`bash\nnpx shadcn@latest add https://shadcnmaps.com/r/${registryName}.json\n\`\`\``
   )
   result = result.replace(/<\/MapPage>/g, '')
 

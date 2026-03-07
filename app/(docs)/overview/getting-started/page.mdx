@@ -20,21 +20,21 @@ export const metadata = {
 Install the USA map using the shadcn CLI. This pulls the component directly into your project — no npm package, no version lock.
 
 ```bash
-npx shadcn add https://shadcnmaps.com/r/usa.json
+npx shadcn@latest add https://shadcnmaps.com/r/usa.json
 ```
 
 This installs the following files:
 
-| File | Description |
-| --- | --- |
-| `components/shadcnmaps/map.tsx` | Core SVG renderer |
-| `components/shadcnmaps/map-context.tsx` | Shared state context |
-| `components/shadcnmaps/map-region.tsx` | Individual region (path) |
-| `components/shadcnmaps/map-tooltip.tsx` | Hover/click tooltip |
-| `components/shadcnmaps/map-marker.tsx` | SVG marker overlay |
-| `components/shadcnmaps/map-listbox.tsx` | Accessible keyboard listbox |
-| `components/shadcnmaps/types.ts` | Shared TypeScript types |
-| `components/shadcnmaps/maps/usa.tsx` | `USAMap` component |
+| File                                    | Description                          |
+| --------------------------------------- | ------------------------------------ |
+| `components/shadcnmaps/map.tsx`         | Core SVG renderer                    |
+| `components/shadcnmaps/map-context.tsx` | Shared state context                 |
+| `components/shadcnmaps/map-region.tsx`  | Individual region (path)             |
+| `components/shadcnmaps/map-tooltip.tsx` | Hover/click tooltip                  |
+| `components/shadcnmaps/map-marker.tsx`  | SVG marker overlay                   |
+| `components/shadcnmaps/map-listbox.tsx` | Accessible keyboard listbox          |
+| `components/shadcnmaps/types.ts`        | Shared TypeScript types              |
+| `components/shadcnmaps/maps/usa.tsx`    | `USAMap` component                   |
 | `components/shadcnmaps/map-data/usa.ts` | SVG path data for all 50 states + DC |
 
 ## Basic usage
@@ -67,10 +67,14 @@ export function StatePicker() {
       <p>{selected ? `Selected: ${selected}` : 'Click a state'}</p>
       <USAMap
         regions={
-          selected ? [{ id: selected, className: 'fill-map-region-selected' }] : []
+          selected
+            ? [{ id: selected, className: 'fill-map-region-selected' }]
+            : []
         }
         onRegionClick={({ region }) =>
-          setSelected((prev) => (prev === region.id ? null : region.id as StateId))
+          setSelected((prev) =>
+            prev === region.id ? null : (region.id as StateId)
+          )
         }
         renderTooltip={(region) => <span>{region.name}</span>}
       />
