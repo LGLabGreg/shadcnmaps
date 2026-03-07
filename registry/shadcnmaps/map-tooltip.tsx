@@ -51,7 +51,7 @@ export function MapTooltip({
       data-slot='map-tooltip'
       aria-hidden={!visible}
       className={cn(
-        'pointer-events-none fixed z-50 rounded-lg border border-border bg-background px-3 py-2 text-sm font-medium shadow-xl transition-[opacity,left,top] duration-150 ease-out',
+        'pointer-events-none fixed z-50 rounded-lg border border-border bg-background px-3 py-2 text-sm font-medium shadow-xl transition-opacity duration-150 ease-out',
         visible ? 'opacity-100' : 'opacity-0',
         className
       )}
