@@ -1,0 +1,71 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      next:
+        patterns:
+          - "next"
+          - "@next/*"
+          - "@mdx-js/*"
+      testing:
+        patterns:
+          - "vitest"
+          - "@vitest/*"
+          - "@testing-library/*"
+          - "jsdom"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "tw-animate-css"
+          - "tailwind-merge"
+      linting:
+        patterns:
+          - "oxlint"
+          - "oxfmt"
+          - "eslint-plugin-*"
+          - "husky"
+          - "lint-staged"
+      minor-and-patch:
+        update-types:
+          - minor
+          - patch
+        exclude-patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+          - "next"
+          - "@next/*"
+          - "@mdx-js/*"
+          - "vitest"
+          - "@vitest/*"
+          - "@testing-library/*"
+          - "jsdom"
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "tw-animate-css"
+          - "tailwind-merge"
+          - "oxlint"
+          - "oxfmt"
+          - "eslint-plugin-*"
+          - "husky"
+          - "lint-staged"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"

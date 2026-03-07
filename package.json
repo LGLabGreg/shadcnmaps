@@ -2,10 +2,13 @@
   "name": "shadcnmaps",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "dev": "pnpm registry:build && next dev",
     "build": "pnpm registry:build && next build",
     "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "oxlint .",
     "lint:fix": "oxlint --fix .",
     "lint:ci": "oxlint --deny-warnings .",
@@ -34,19 +37,25 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "^25.3.5",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "4.0.18",
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "husky": "^9.1.7",
+    "jsdom": "^28.1.0",
     "lint-staged": "^16.3.2",
     "oxfmt": "^0.36.0",
     "oxlint": "^1.51.0",
     "remark-gfm": "^4.0.1",
     "tailwindcss": "^4.2.1",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
