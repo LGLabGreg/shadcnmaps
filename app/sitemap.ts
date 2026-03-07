@@ -13,7 +13,7 @@ function getDocPages(): { slug: string; lastModified: Date }[] {
       const full = path.join(dir, entry.name)
       if (entry.isDirectory()) {
         scan(full, path.join(base, entry.name))
-      } else if (entry.name === 'page.mdx') {
+      } else if (entry.name === 'page.mdx' || entry.name === 'page.tsx') {
         pages.push({ slug: base, lastModified: fs.statSync(full).mtime })
       }
     }
