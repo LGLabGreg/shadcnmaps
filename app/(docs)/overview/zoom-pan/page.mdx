@@ -1,0 +1,78 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ApiTable } from '@/components/docs/api-table'
+
+export const metadata = {
+  title: 'Zoom & Pan',
+  description: 'Add interactive zoom and pan controls to any map component.',
+}
+
+<DocPage>
+
+# Zoom & Pan
+
+All map components support opt-in zoom and pan via the `enableZoom` prop. When enabled, users can zoom with mouse wheel, pinch gestures, or keyboard shortcuts, and pan by clicking and dragging.
+
+An optional `MapControls` component renders a UI overlay with zoom and pan buttons.
+
+## Quick start
+
+```tsx
+import { MapControls } from '@/components/shadcnmaps/map-controls'
+import { WorldMap } from '@/components/shadcnmaps/maps/world'
+
+export function MyMap() {
+  return (
+    <WorldMap
+      enableZoom
+      controls={<MapControls position="top-right" />}
+    />
+  )
+}
+```
+
+## Map Props
+
+These props are available on all map components (`USAMap`, `WorldMap`, `FranceMap`, etc.):
+
+<ApiTable data={[
+  { prop: 'enableZoom', type: 'boolean', default: 'false', description: 'Enable zoom and pan gestures (wheel, drag, pinch, keyboard).' },
+  { prop: 'zoomConfig', type: 'Partial<ZoomConfig>', default: '—', description: 'Override default zoom configuration.' },
+  { prop: 'controls', type: 'ReactNode', default: '—', description: 'Control overlay rendered inside the map container. Typically a MapControls component.' },
+]} />
+
+## MapControls Props
+
+<ApiTable data={[
+  { prop: 'position', type: "'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'", default: "'top-right'", description: 'Corner position of the control strip.' },
+  { prop: 'showPanButtons', type: 'boolean', default: 'true', description: 'Show directional pan arrow buttons.' },
+  { prop: 'className', type: 'string', default: '—', description: 'Additional CSS classes for the controls container.' },
+]} />
+
+## ZoomConfig
+
+<ApiTable data={[
+  { prop: 'minZoom', type: 'number', default: '1', description: 'Minimum zoom scale (1 = no zoom).' },
+  { prop: 'maxZoom', type: 'number', default: '8', description: 'Maximum zoom scale.' },
+  { prop: 'zoomStep', type: 'number', default: '0.5', description: 'Scale increment per zoom action.' },
+  { prop: 'panStep', type: 'number', default: '50', description: 'Translation increment (in SVG units) per pan button click.' },
+]} />
+
+## Gestures
+
+| Gesture | Action |
+|---------|--------|
+| Mouse wheel | Zoom toward cursor |
+| Click + drag | Pan the map |
+| Pinch (touch) | Zoom in/out |
+| `+` or `=` key | Zoom in |
+| `-` key | Zoom out |
+| `0` key | Reset to original view |
+
+## Notes
+
+- Zoom is **opt-in** — maps behave exactly as before when `enableZoom` is not set.
+- Region clicks, hover, tooltips, and keyboard navigation all work at any zoom level.
+- The `controls` prop is rendered inside a positioned container, so `MapControls` uses absolute positioning.
+- Pan boundaries prevent scrolling more than 50% past the map edge.
+
+</DocPage>

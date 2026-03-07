@@ -95,3 +95,16 @@ export interface RegionOverride {
   /** Disable interaction */
   disabled?: boolean
 }
+
+export interface ZoomState {
+  scale: number
+  translateX: number
+  translateY: number
+}
+
+export interface ZoomConfig {
+  minZoom: number
+  maxZoom: number
+  zoomStep: number
+  panStep: number
+}

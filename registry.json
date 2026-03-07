@@ -66,6 +66,11 @@
           "target": "components/shadcnmaps/map-listbox.tsx"
         },
         {
+          "path": "registry/shadcnmaps/map-controls.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-controls.tsx"
+        },
+        {
           "path": "registry/shadcnmaps/types.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/types.ts"
@@ -107,6 +112,23 @@
       ]
     },
     {
+      "name": "world",
+      "type": "registry:component",
+      "title": "World Map",
+      "description": "Interactive World map with 256 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/world-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/world.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/world.tsx"
+        }
+      ]
+    },
+    {
       "name": "usa-data",
       "type": "registry:file",
       "title": "USA Map Data",
@@ -129,6 +151,19 @@
           "path": "registry/shadcnmaps/map-data/france.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-data/france.ts"
+        }
+      ]
+    },
+    {
+      "name": "world-data",
+      "type": "registry:file",
+      "title": "World Map Data",
+      "description": "SVG path data for World with 256 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/world.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/world.ts"
         }
       ]
     }

@@ -1,0 +1,47 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import ZoomPanExample from './example'
+
+export const metadata = {
+  title: 'Zoom & Pan',
+  description: 'Add zoom and pan controls to any map.',
+}
+
+<DocPage llmsSlug="zoom-pan">
+
+# Zoom & Pan
+
+Enable zoom and pan on any map with the `enableZoom` prop and optional `MapControls` overlay.
+
+- **Mouse wheel** zooms toward the cursor
+- **Click and drag** pans the map
+- **Pinch to zoom** on touch devices
+- **Keyboard**: `+`/`=` zoom in, `-` zoom out, `0` reset
+- **Control buttons**: zoom in/out, reset, and directional pan
+
+<ExampleLoader filePath="app/(docs)/examples/zoom-pan/example.tsx">
+  <ZoomPanExample />
+</ExampleLoader>
+
+## Gestures only (no controls UI)
+
+You can enable zoom gestures without rendering the control buttons:
+
+```tsx
+<USAMap enableZoom />
+```
+
+## Custom zoom configuration
+
+Override zoom limits and step size via `zoomConfig`:
+
+```tsx
+<WorldMap
+  enableZoom
+  zoomConfig={{ minZoom: 1, maxZoom: 12, zoomStep: 1, panStep: 80 }}
+  controls={<MapControls position="bottom-left" showPanButtons={false} />}
+/>
+```
+
+</DocPage>

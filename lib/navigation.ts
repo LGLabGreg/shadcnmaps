@@ -16,6 +16,7 @@ export const navigation: NavSection[] = [
       { title: 'Theming', href: '/overview/theming' },
       { title: 'API Reference', href: '/overview/api-reference' },
       { title: 'LLMs', href: '/overview/llms' },
+      { title: 'Zoom & Pan', href: '/overview/zoom-pan' },
       { title: 'Marker Generator', href: '/tools/marker-generator' },
     ],
   },
@@ -24,6 +25,7 @@ export const navigation: NavSection[] = [
     items: [
       { title: 'France', href: '/maps/france' },
       { title: 'USA', href: '/maps/usa' },
+      { title: 'World Map', href: '/maps/world' },
     ],
   },
   {
@@ -32,6 +34,7 @@ export const navigation: NavSection[] = [
       { title: 'Region Click', href: '/examples/region-click' },
       { title: 'Choropleth', href: '/examples/choropleth' },
       { title: 'Markers', href: '/examples/markers' },
+      { title: 'Zoom & Pan', href: '/examples/zoom-pan' },
     ],
   },
 ]

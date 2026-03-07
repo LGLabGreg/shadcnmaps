@@ -25,4 +25,17 @@ export const mapData = [
       },
     ],
   },
+  {
+    name: 'world-data',
+    type: 'registry:file',
+    title: 'World Map Data',
+    description: 'SVG path data for World with 256 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/world.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/world.ts',
+      },
+    ],
+  },
 ]
