@@ -101,10 +101,9 @@ function toPropsType(mapId: string): string {
   return `${toComponentName(mapId)}Props`
 }
 
-/** "france" → "France Map" */
+/** "france" → "France" */
 function toTitle(mapId: string): string {
-  const name = camelToTitle(mapId)
-  return `${name} Map`
+  return camelToTitle(mapId)
 }
 
 /** Build a short description from the map data */
@@ -395,55 +394,89 @@ function updateMapDataRegistry(
   writeFileSync(filePath, content)
 }
 
+type MapCategory =
+  | 'Regions & Continents'
+  | 'Countries'
+  | 'US States'
+  | 'Special'
+
+function getMapCategory(mapId: string): MapCategory {
+  const trackingPath = resolve(ROOT, 'docs/MAP-TRACKING.md')
+  const content = readFileSync(trackingPath, 'utf-8')
+
+  // Split by section headers and find which section contains the mapId
+  const sections: Array<{ category: MapCategory; body: string }> = []
+  const sectionRegex =
+    /^## (Countries|Regions & Continents|US States|Multi-country \/ Special)[^\n]*\n([\s\S]*?)(?=^## |$)/gm
+  let m: RegExpExecArray | null
+  while ((m = sectionRegex.exec(content)) !== null) {
+    const header = m[1]
+    let category: MapCategory
+    if (header === 'Countries') category = 'Countries'
+    else if (header === 'Regions & Continents')
+      category = 'Regions & Continents'
+    else if (header === 'US States') category = 'US States'
+    else category = 'Special'
+    sections.push({ category, body: m[2] })
+  }
+
+  for (const section of sections) {
+    if (
+      section.body.includes(`] ${mapId}\n`) ||
+      section.body.includes(`] ${mapId}\r`)
+    ) {
+      return section.category
+    }
+  }
+
+  // Fallback: default to Countries
+  return 'Countries'
+}
+
 function updateNavigation(entries: Array<{ mapId: string }>): void {
   const filePath = resolve(ROOT, 'lib/navigation.ts')
   let content = readFileSync(filePath, 'utf-8')
 
-  // Find the Maps section items array
-  const mapsMatch = content.match(
-    /title:\s*'Maps',\s*\n\s*items:\s*\[([\s\S]*?)\]/
-  )
-  if (!mapsMatch) {
-    throw new Error('Could not find Maps section in navigation.ts')
-  }
-
-  const existingItems = mapsMatch[1]
-
-  // Collect new items to add
-  const newItems: Array<{ title: string; href: string }> = []
   for (const { mapId } of entries) {
     const slug = toSlug(mapId)
     const title = toTitle(mapId)
-    if (
-      existingItems.includes(`'${slug}'`) ||
-      existingItems.includes(`"${slug}"`)
+    const href = `/maps/${slug}`
+
+    // Skip if already present
+    if (content.includes(`'${href}'`)) continue
+
+    const category = getMapCategory(mapId)
+
+    // Find the group by title and insert the item alphabetically
+    const groupRegex = new RegExp(
+      `(title: '${category.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}',\\s*\\n\\s*items: \\[)([\\s\\S]*?)(\\])`
     )
-      continue
-    newItems.push({ title, href: `/maps/${slug}` })
+    const groupMatch = content.match(groupRegex)
+    if (!groupMatch) {
+      throw new Error(`Could not find group "${category}" in navigation.ts`)
+    }
+
+    const existingItemsStr = groupMatch[2]
+
+    // Parse existing items
+    const itemRegex = /\{\s*title:\s*'([^']+)',\s*href:\s*'([^']+)'\s*\}/g
+    const items: Array<{ title: string; href: string }> = []
+    let im: RegExpExecArray | null
+    while ((im = itemRegex.exec(existingItemsStr)) !== null) {
+      items.push({ title: im[1], href: im[2] })
+    }
+
+    items.push({ title, href })
+    items.sort((a, b) => a.title.localeCompare(b.title))
+
+    const newItemsStr = items
+      .map(
+        (item) => `          { title: '${item.title}', href: '${item.href}' }`
+      )
+      .join(',\n')
+
+    content = content.replace(groupRegex, `$1\n${newItemsStr},\n        $3`)
   }
-
-  if (newItems.length === 0) return
-
-  // Parse existing items into array for sorting
-  const itemRegex = /\{\s*title:\s*'([^']+)',\s*href:\s*'([^']+)'\s*\}/g
-  const allItems: Array<{ title: string; href: string }> = []
-  let match: RegExpExecArray | null
-  while ((match = itemRegex.exec(existingItems)) !== null) {
-    allItems.push({ title: match[1], href: match[2] })
-  }
-
-  allItems.push(...newItems)
-  allItems.sort((a, b) => a.title.localeCompare(b.title))
-
-  const itemsStr = allItems
-    .map((item) => `      { title: '${item.title}', href: '${item.href}' }`)
-    .join(',\n')
-
-  const newMapsSection = `title: 'Maps',\n    items: [\n${itemsStr},\n    ]`
-  content = content.replace(
-    /title:\s*'Maps',\s*\n\s*items:\s*\[[\s\S]*?\]/,
-    newMapsSection
-  )
 
   writeFileSync(filePath, content)
 }
@@ -512,16 +545,16 @@ function convertMap(
   const slug = toSlug(mapId)
   const kebab = camelToKebab(mapId)
 
-  // Check if already converted
-  const dataFile = resolve(ROOT, `registry/shadcnmaps/map-data/${kebab}.ts`)
-  if (existsSync(dataFile)) {
-    console.warn(`  ⚠ Already converted: ${mapId} (skipping)`)
-    return null
-  }
-
   // Parse source
   const data = parseJSMapsFile(sourceFile)
   const regionCount = data.paths.length
+
+  // Check if already converted (still return entry so registries get updated)
+  const dataFile = resolve(ROOT, `registry/shadcnmaps/map-data/${kebab}.ts`)
+  if (existsSync(dataFile)) {
+    console.warn(`  ⚠ Already converted: ${mapId} (updating registries only)`)
+    return { mapId, regionCount }
+  }
 
   if (dryRun) {
     console.log(`  [dry-run] Would create:`)

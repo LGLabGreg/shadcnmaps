@@ -1,3 +1,15 @@
+import { africaMapData } from '@/registry/shadcnmaps/map-data/africa'
+import { alabamaMapData } from '@/registry/shadcnmaps/map-data/alabama'
+import { alaskaMapData } from '@/registry/shadcnmaps/map-data/alaska'
+import { algeriaMapData } from '@/registry/shadcnmaps/map-data/algeria'
+import { angolaMapData } from '@/registry/shadcnmaps/map-data/angola'
+import { argentinaMapData } from '@/registry/shadcnmaps/map-data/argentina'
+import { arizonaMapData } from '@/registry/shadcnmaps/map-data/arizona'
+import { arkansasMapData } from '@/registry/shadcnmaps/map-data/arkansas'
+import { asiaMapData } from '@/registry/shadcnmaps/map-data/asia'
+import { australiaMapData } from '@/registry/shadcnmaps/map-data/australia'
+import { austriaMapData } from '@/registry/shadcnmaps/map-data/austria'
+import { azerbaijanMapData } from '@/registry/shadcnmaps/map-data/azerbaijan'
 import { franceMapData } from '@/registry/shadcnmaps/map-data/france'
 import { usaMapData } from '@/registry/shadcnmaps/map-data/usa'
 import { worldMapData } from '@/registry/shadcnmaps/map-data/world'
@@ -5,6 +17,18 @@ import { worldMapData } from '@/registry/shadcnmaps/map-data/world'
 import type { MapData } from '@/registry/shadcnmaps/types'
 
 export const MAPS: Record<string, { data: MapData; label: string }> = {
+  africa: { data: africaMapData, label: 'Africa' },
+  alabama: { data: alabamaMapData, label: 'Alabama' },
+  alaska: { data: alaskaMapData, label: 'Alaska' },
+  algeria: { data: algeriaMapData, label: 'Algeria' },
+  angola: { data: angolaMapData, label: 'Angola' },
+  argentina: { data: argentinaMapData, label: 'Argentina' },
+  arizona: { data: arizonaMapData, label: 'Arizona' },
+  arkansas: { data: arkansasMapData, label: 'Arkansas' },
+  asia: { data: asiaMapData, label: 'Asia' },
+  australia: { data: australiaMapData, label: 'Australia' },
+  austria: { data: austriaMapData, label: 'Austria' },
+  azerbaijan: { data: azerbaijanMapData, label: 'Azerbaijan' },
   france: { data: franceMapData, label: 'France' },
   usa: { data: usaMapData, label: 'United States' },
   world: { data: worldMapData, label: 'World' },
