@@ -35,7 +35,7 @@ function ControlButton({
       onClick={onClick}
       disabled={disabled}
       aria-label={ariaLabel}
-      className='flex h-8 w-8 items-center justify-center rounded-md bg-background text-foreground shadow-sm ring-1 ring-border transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50'
+      className='flex h-8 w-8 items-center justify-center rounded-md border border-border bg-background text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50'
     >
       {children}
     </button>
@@ -45,16 +45,16 @@ function ControlButton({
 function PlusIcon() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='20'
+      height='20'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
     >
-      <line x1='8' y1='3' x2='8' y2='13' />
-      <line x1='3' y1='8' x2='13' y2='8' />
+      <path d='M5 12h14' />
+      <path d='M12 5v14' />
     </svg>
   )
 }
@@ -62,15 +62,15 @@ function PlusIcon() {
 function MinusIcon() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='20'
+      height='20'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
     >
-      <line x1='3' y1='8' x2='13' y2='8' />
+      <path d='M5 12h14' />
     </svg>
   )
 }
@@ -78,16 +78,17 @@ function MinusIcon() {
 function HomeIcon() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='18'
+      height='18'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
-      <path d='M3 6.5L8 2.5L13 6.5V13H10V10H6V13H3V6.5Z' />
+      <path d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8' />
+      <path d='M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' />
     </svg>
   )
 }
@@ -95,16 +96,16 @@ function HomeIcon() {
 function ChevronUp() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
-      <polyline points='4,10 8,6 12,10' />
+      <path d='m18 15-6-6-6 6' />
     </svg>
   )
 }
@@ -112,16 +113,16 @@ function ChevronUp() {
 function ChevronDown() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
-      <polyline points='4,6 8,10 12,6' />
+      <path d='m6 9 6 6 6-6' />
     </svg>
   )
 }
@@ -129,16 +130,16 @@ function ChevronDown() {
 function ChevronLeft() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
-      <polyline points='10,4 6,8 10,12' />
+      <path d='m15 18-6-6 6-6' />
     </svg>
   )
 }
@@ -146,16 +147,16 @@ function ChevronLeft() {
 function ChevronRight() {
   return (
     <svg
-      width='16'
-      height='16'
-      viewBox='0 0 16 16'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     >
-      <polyline points='6,4 10,8 6,12' />
+      <path d='m9 18 6-6-6-6' />
     </svg>
   )
 }
