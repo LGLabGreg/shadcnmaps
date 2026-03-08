@@ -194,7 +194,7 @@ function slugifyName(name: string): string {
 
 function buildRegionId(path: JSMapsPath, seenIds: Set<string>): string {
   let id = path.abbreviation?.trim() || slugifyName(path.name)
-  if (!id) id = slugifyName(path.name)
+  if (!id || /[^a-zA-Z0-9-]/.test(id)) id = slugifyName(path.name)
   // Deduplicate
   const base = id
   let counter = 2

@@ -1,0 +1,23 @@
+import { MapPage } from '@/components/docs/map-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import SimpleExample from './map'
+
+export const metadata = {
+  title: 'Dominican Republic',
+  description: 'Interactive SVG map of Dominican Republic with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.',
+}
+
+<MapPage
+  title="Dominican Republic"
+  description="Interactive SVG map of Dominican Republic with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers."
+  registryName="dominican-republic"
+>
+
+<ExampleLoader
+  filePath='app/(docs)/maps/dominican-republic/map.tsx'
+>
+  <SimpleExample />
+</ExampleLoader>
+
+</MapPage>

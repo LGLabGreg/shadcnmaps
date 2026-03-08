@@ -1,0 +1,23 @@
+import { MapPage } from '@/components/docs/map-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import SimpleExample from './map'
+
+export const metadata = {
+  title: 'Democratic Republic of the Congo',
+  description: 'Interactive SVG map of Democratic Republic of the Congo with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.',
+}
+
+<MapPage
+  title="Democratic Republic of the Congo"
+  description="Interactive SVG map of Democratic Republic of the Congo with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers."
+  registryName="democratic-republic-congo"
+>
+
+<ExampleLoader
+  filePath='app/(docs)/maps/democratic-republic-congo/map.tsx'
+>
+  <SimpleExample />
+</ExampleLoader>
+
+</MapPage>
