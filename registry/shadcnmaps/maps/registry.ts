@@ -226,4 +226,109 @@ export const maps = [
       },
     ],
   },
+  {
+    name: 'bahrain',
+    type: 'registry:component',
+    title: 'Bahrain',
+    description:
+      'Interactive Bahrain map with 5 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('bahrain-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/bahrain.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/bahrain.tsx',
+      },
+    ],
+  },
+  {
+    name: 'bangladesh',
+    type: 'registry:component',
+    title: 'Bangladesh',
+    description:
+      'Interactive Bangladesh map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('bangladesh-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/bangladesh.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/bangladesh.tsx',
+      },
+    ],
+  },
+  {
+    name: 'belarus',
+    type: 'registry:component',
+    title: 'Belarus',
+    description:
+      'Interactive Belarus map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('belarus-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/belarus.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/belarus.tsx',
+      },
+    ],
+  },
+  {
+    name: 'belgium',
+    type: 'registry:component',
+    title: 'Belgium',
+    description:
+      'Interactive Belgium map with 11 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('belgium-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/belgium.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/belgium.tsx',
+      },
+    ],
+  },
+  {
+    name: 'bolivia',
+    type: 'registry:component',
+    title: 'Bolivia',
+    description:
+      'Interactive Bolivia map with 9 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('bolivia-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/bolivia.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/bolivia.tsx',
+      },
+    ],
+  },
+  {
+    name: 'brazil',
+    type: 'registry:component',
+    title: 'Brazil',
+    description:
+      'Interactive Brazil map with 27 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('brazil-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/brazil.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/brazil.tsx',
+      },
+    ],
+  },
+  {
+    name: 'bulgaria',
+    type: 'registry:component',
+    title: 'Bulgaria',
+    description:
+      'Interactive Bulgaria map with 28 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map'), registryUrl('bulgaria-data')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/bulgaria.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/bulgaria.tsx',
+      },
+    ],
+  },
 ]

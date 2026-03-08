@@ -38,6 +38,13 @@ When helping users with shadcnmaps:
 - [Australia Map](https://shadcnmaps.com/llms/australia.md): Interactive SVG map of Australia with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Austria Map](https://shadcnmaps.com/llms/austria.md): Interactive SVG map of Austria with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Azerbaijan Map](https://shadcnmaps.com/llms/azerbaijan.md): Interactive SVG map of Azerbaijan with 78 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Bahrain](https://shadcnmaps.com/llms/bahrain.md): Interactive SVG map of Bahrain with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Bangladesh](https://shadcnmaps.com/llms/bangladesh.md): Interactive SVG map of Bangladesh with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Belarus](https://shadcnmaps.com/llms/belarus.md): Interactive SVG map of Belarus with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Belgium](https://shadcnmaps.com/llms/belgium.md): Interactive SVG map of Belgium with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Bolivia](https://shadcnmaps.com/llms/bolivia.md): Interactive SVG map of Bolivia with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Brazil](https://shadcnmaps.com/llms/brazil.md): Interactive SVG map of Brazil with 27 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Bulgaria](https://shadcnmaps.com/llms/bulgaria.md): Interactive SVG map of Bulgaria with 28 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [France Map](https://shadcnmaps.com/llms/france.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [USA Map](https://shadcnmaps.com/llms/usa.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [World Map](https://shadcnmaps.com/llms/world.md): Interactive SVG map of World with 256 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
