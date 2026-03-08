@@ -1,4 +1,4 @@
-# Tennessee
+# Tennessee Map
 
 Interactive SVG map of Tennessee with 95 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

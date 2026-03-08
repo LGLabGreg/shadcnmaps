@@ -1,4 +1,4 @@
-# Paraguay
+# Paraguay Map
 
 Interactive SVG map of Paraguay with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

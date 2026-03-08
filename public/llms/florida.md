@@ -1,4 +1,4 @@
-# Florida
+# Florida Map
 
 Interactive SVG map of Florida with 67 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Minnesota
+# Minnesota Map
 
 Interactive SVG map of Minnesota with 87 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Thailand
+# Thailand Map
 
 Interactive SVG map of Thailand with 77 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

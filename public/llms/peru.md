@@ -1,4 +1,4 @@
-# Peru
+# Peru Map
 
 Interactive SVG map of Peru with 26 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

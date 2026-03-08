@@ -1,4 +1,4 @@
-# South Dakota
+# South Dakota Map
 
 Interactive SVG map of South Dakota with 66 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

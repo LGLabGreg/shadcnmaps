@@ -1,4 +1,4 @@
-# Dominican Republic
+# Dominican Republic Map
 
 Interactive SVG map of Dominican Republic with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

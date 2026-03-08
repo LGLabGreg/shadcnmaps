@@ -1,4 +1,4 @@
-# Portugal
+# Portugal Map
 
 Interactive SVG map of Portugal with 20 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

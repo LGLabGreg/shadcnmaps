@@ -1,4 +1,4 @@
-# Iowa
+# Iowa Map
 
 Interactive SVG map of Iowa with 99 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

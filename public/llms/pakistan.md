@@ -1,4 +1,4 @@
-# Pakistan
+# Pakistan Map
 
 Interactive SVG map of Pakistan with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

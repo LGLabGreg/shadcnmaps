@@ -1,4 +1,4 @@
-# Luxembourg
+# Luxembourg Map
 
 Interactive SVG map of Luxembourg with 3 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

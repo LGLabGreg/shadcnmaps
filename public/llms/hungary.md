@@ -1,4 +1,4 @@
-# Hungary
+# Hungary Map
 
 Interactive SVG map of Hungary with 43 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

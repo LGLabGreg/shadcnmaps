@@ -1,4 +1,4 @@
-# Connecticut
+# Connecticut Map
 
 Interactive SVG map of Connecticut with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

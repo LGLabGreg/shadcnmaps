@@ -1,4 +1,4 @@
-# Europe
+# Europe Map
 
 Interactive SVG map of Europe with 62 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

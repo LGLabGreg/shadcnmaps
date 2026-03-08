@@ -1,4 +1,4 @@
-# Illinois
+# Illinois Map
 
 Interactive SVG map of Illinois with 102 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

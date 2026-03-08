@@ -1,4 +1,4 @@
-# Montana
+# Montana Map
 
 Interactive SVG map of Montana with 56 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

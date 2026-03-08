@@ -1,4 +1,4 @@
-# Romania
+# Romania Map
 
 Interactive SVG map of Romania with 42 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

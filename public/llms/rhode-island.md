@@ -1,4 +1,4 @@
-# Rhode Island
+# Rhode Island Map
 
 Interactive SVG map of Rhode Island with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

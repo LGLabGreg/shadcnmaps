@@ -1,4 +1,4 @@
-# Texas
+# Texas Map
 
 Interactive SVG map of Texas with 254 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

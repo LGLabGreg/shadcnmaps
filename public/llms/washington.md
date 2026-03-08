@@ -1,4 +1,4 @@
-# Washington
+# Washington Map
 
 Interactive SVG map of Washington with 39 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Middle East
+# Middle East Map
 
 Interactive SVG map of Middle East with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

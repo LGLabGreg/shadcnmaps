@@ -1,4 +1,4 @@
-# Virginia
+# Virginia Map
 
 Interactive SVG map of Virginia with 134 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

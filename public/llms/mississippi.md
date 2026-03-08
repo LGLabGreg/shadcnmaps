@@ -1,4 +1,4 @@
-# Mississippi
+# Mississippi Map
 
 Interactive SVG map of Mississippi with 82 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

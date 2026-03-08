@@ -1,4 +1,4 @@
-# Massachusetts
+# Massachusetts Map
 
 Interactive SVG map of Massachusetts with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

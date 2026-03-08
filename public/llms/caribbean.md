@@ -1,4 +1,4 @@
-# Caribbean
+# Caribbean Map
 
 Interactive SVG map of Caribbean with 35 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

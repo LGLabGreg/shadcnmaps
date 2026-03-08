@@ -1,4 +1,4 @@
-# North Carolina
+# North Carolina Map
 
 Interactive SVG map of North Carolina with 100 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

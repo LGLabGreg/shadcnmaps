@@ -12,6 +12,15 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/maps/slovekia',
+        destination: '/maps/slovakia',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 const withMDX = createMDX({

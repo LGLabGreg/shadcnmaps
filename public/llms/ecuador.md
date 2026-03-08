@@ -1,4 +1,4 @@
-# Ecuador
+# Ecuador Map
 
 Interactive SVG map of Ecuador with 24 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

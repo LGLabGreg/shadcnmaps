@@ -1,4 +1,4 @@
-# South Africa
+# South Africa Map
 
 Interactive SVG map of South Africa with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

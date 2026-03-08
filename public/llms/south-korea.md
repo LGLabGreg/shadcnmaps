@@ -1,4 +1,4 @@
-# South Korea
+# South Korea Map
 
 Interactive SVG map of South Korea with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

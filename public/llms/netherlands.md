@@ -1,4 +1,4 @@
-# Netherlands
+# Netherlands Map
 
 Interactive SVG map of Netherlands with 12 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

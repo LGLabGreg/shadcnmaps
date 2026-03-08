@@ -1,4 +1,4 @@
-# Kansas
+# Kansas Map
 
 Interactive SVG map of Kansas with 105 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

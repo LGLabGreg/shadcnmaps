@@ -1,4 +1,4 @@
-# Maine
+# Maine Map
 
 Interactive SVG map of Maine with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# El Salvador
+# El Salvador Map
 
 Interactive SVG map of El Salvador with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Uruguay
+# Uruguay Map
 
 Interactive SVG map of Uruguay with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

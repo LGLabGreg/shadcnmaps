@@ -1,4 +1,4 @@
-# Zambia
+# Zambia Map
 
 Interactive SVG map of Zambia with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

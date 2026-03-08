@@ -1,6 +1,5 @@
 import { Hero } from '@/components/hero'
 import MainNav from '@/components/main-nav'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import {
   CardContent,
@@ -11,7 +10,16 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { ArrowRight, Brush, Globe, Layers, Zap } from 'lucide-react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: {
+    absolute: 'shadcnmaps — Interactive SVG Map Components for React',
+  },
+  description:
+    '170+ interactive SVG map components for React. Countries, continents, and US states. No dependencies — install via shadcn CLI with pure Tailwind CSS styling.',
+}
 
 const features = [
   {
@@ -30,14 +38,10 @@ const features = [
   },
   {
     icon: Globe,
-    title: (
-      <div className='flex items-start gap-2'>
-        Growing Map Library<Badge>new</Badge>
-      </div>
-    ),
+    title: '170+ Maps',
     description:
-      'More countries and continents coming soon. Install only the maps you need via the shadcn CLI.',
-    href: '/maps/usa',
+      'Countries, continents, and US states. Install only the maps you need via the shadcn CLI.',
+    href: '/maps',
   },
   {
     icon: Brush,

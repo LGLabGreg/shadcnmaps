@@ -1,4 +1,4 @@
-# India
+# India Map
 
 Interactive SVG map of India with 36 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

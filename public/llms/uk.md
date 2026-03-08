@@ -1,4 +1,4 @@
-# United Kingdom
+# United Kingdom Map
 
 Interactive SVG map of United Kingdom with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

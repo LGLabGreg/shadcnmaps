@@ -1,4 +1,4 @@
-# USA & Canada
+# USA & Canada Map
 
 Interactive SVG map of USA & Canada with 63 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

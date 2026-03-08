@@ -1,4 +1,4 @@
-# Jordan
+# Jordan Map
 
 Interactive SVG map of Jordan with 12 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

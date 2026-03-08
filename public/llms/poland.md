@@ -1,4 +1,4 @@
-# Poland
+# Poland Map
 
 Interactive SVG map of Poland with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

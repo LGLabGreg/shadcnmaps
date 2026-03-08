@@ -1,4 +1,4 @@
-# Spain
+# Spain Map
 
 Interactive SVG map of Spain with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

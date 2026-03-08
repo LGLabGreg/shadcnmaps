@@ -1,4 +1,4 @@
-# China
+# China Map
 
 Interactive SVG map of China with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

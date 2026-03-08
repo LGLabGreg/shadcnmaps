@@ -1,4 +1,4 @@
-# Honduras
+# Honduras Map
 
 Interactive SVG map of Honduras with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

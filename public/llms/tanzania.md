@@ -1,4 +1,4 @@
-# Tanzania
+# Tanzania Map
 
 Interactive SVG map of Tanzania with 30 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

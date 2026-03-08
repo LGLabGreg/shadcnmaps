@@ -1,4 +1,4 @@
-# Iran
+# Iran Map
 
 Interactive SVG map of Iran with 31 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

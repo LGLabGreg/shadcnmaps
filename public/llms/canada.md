@@ -1,4 +1,4 @@
-# Canada
+# Canada Map
 
 Interactive SVG map of Canada with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

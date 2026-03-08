@@ -1,4 +1,4 @@
-# Ethiopia
+# Ethiopia Map
 
 Interactive SVG map of Ethiopia with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

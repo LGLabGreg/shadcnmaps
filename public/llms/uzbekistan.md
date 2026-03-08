@@ -1,4 +1,4 @@
-# Uzbekistan
+# Uzbekistan Map
 
 Interactive SVG map of Uzbekistan with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

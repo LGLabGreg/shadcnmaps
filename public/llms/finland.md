@@ -1,4 +1,4 @@
-# Finland
+# Finland Map
 
 Interactive SVG map of Finland with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

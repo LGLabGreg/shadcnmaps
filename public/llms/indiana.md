@@ -1,4 +1,4 @@
-# Indiana
+# Indiana Map
 
 Interactive SVG map of Indiana with 92 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

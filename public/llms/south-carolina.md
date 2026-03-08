@@ -1,4 +1,4 @@
-# South Carolina
+# South Carolina Map
 
 Interactive SVG map of South Carolina with 46 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

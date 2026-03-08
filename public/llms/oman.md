@@ -1,4 +1,4 @@
-# Oman
+# Oman Map
 
 Interactive SVG map of Oman with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

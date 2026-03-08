@@ -1,4 +1,4 @@
-# Georgia
+# Georgia Map
 
 Interactive SVG map of Georgia with 159 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

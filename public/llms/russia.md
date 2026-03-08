@@ -1,4 +1,4 @@
-# Russia
+# Russia Map
 
 Interactive SVG map of Russia with 85 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

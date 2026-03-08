@@ -1,4 +1,4 @@
-# Myanmar
+# Myanmar Map
 
 Interactive SVG map of Myanmar with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

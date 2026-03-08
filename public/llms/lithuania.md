@@ -1,4 +1,4 @@
-# Lithuania
+# Lithuania Map
 
 Interactive SVG map of Lithuania with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

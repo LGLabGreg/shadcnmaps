@@ -1,4 +1,4 @@
-# Venezuela
+# Venezuela Map
 
 Interactive SVG map of Venezuela with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

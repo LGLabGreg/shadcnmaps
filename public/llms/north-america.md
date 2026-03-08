@@ -1,4 +1,4 @@
-# North America
+# North America Map
 
 Interactive SVG map of North America with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

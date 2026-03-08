@@ -1,4 +1,4 @@
-# Wyoming
+# Wyoming Map
 
 Interactive SVG map of Wyoming with 23 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

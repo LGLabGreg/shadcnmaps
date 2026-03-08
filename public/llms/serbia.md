@@ -1,4 +1,4 @@
-# Serbia
+# Serbia Map
 
 Interactive SVG map of Serbia with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

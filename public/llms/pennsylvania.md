@@ -1,4 +1,4 @@
-# Pennsylvania
+# Pennsylvania Map
 
 Interactive SVG map of Pennsylvania with 67 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

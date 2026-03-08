@@ -1,4 +1,4 @@
-# Japan
+# Japan Map
 
 Interactive SVG map of Japan with 47 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

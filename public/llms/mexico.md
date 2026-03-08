@@ -1,4 +1,4 @@
-# Mexico
+# Mexico Map
 
 Interactive SVG map of Mexico with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Qatar
+# Qatar Map
 
 Interactive SVG map of Qatar with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

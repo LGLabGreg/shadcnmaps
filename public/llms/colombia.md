@@ -1,4 +1,4 @@
-# Colombia
+# Colombia Map
 
 Interactive SVG map of Colombia with 33 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

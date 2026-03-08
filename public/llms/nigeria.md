@@ -1,4 +1,4 @@
-# Nigeria
+# Nigeria Map
 
 Interactive SVG map of Nigeria with 37 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
