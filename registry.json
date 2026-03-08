@@ -95,6 +95,210 @@
       ]
     },
     {
+      "name": "africa",
+      "type": "registry:component",
+      "title": "Africa",
+      "description": "Interactive Africa map with 56 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/africa-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/africa.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/africa.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alabama",
+      "type": "registry:component",
+      "title": "Alabama",
+      "description": "Interactive Alabama map with 68 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/alabama-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/alabama.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/alabama.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alaska",
+      "type": "registry:component",
+      "title": "Alaska",
+      "description": "Interactive Alaska map with 30 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/alaska-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/alaska.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/alaska.tsx"
+        }
+      ]
+    },
+    {
+      "name": "algeria",
+      "type": "registry:component",
+      "title": "Algeria",
+      "description": "Interactive Algeria map with 49 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/algeria-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/algeria.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/algeria.tsx"
+        }
+      ]
+    },
+    {
+      "name": "angola",
+      "type": "registry:component",
+      "title": "Angola",
+      "description": "Interactive Angola map with 19 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/angola-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/angola.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/angola.tsx"
+        }
+      ]
+    },
+    {
+      "name": "argentina",
+      "type": "registry:component",
+      "title": "Argentina",
+      "description": "Interactive Argentina map with 25 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/argentina-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/argentina.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/argentina.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arizona",
+      "type": "registry:component",
+      "title": "Arizona",
+      "description": "Interactive Arizona map with 16 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/arizona-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/arizona.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/arizona.tsx"
+        }
+      ]
+    },
+    {
+      "name": "arkansas",
+      "type": "registry:component",
+      "title": "Arkansas",
+      "description": "Interactive Arkansas map with 76 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/arkansas-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/arkansas.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/arkansas.tsx"
+        }
+      ]
+    },
+    {
+      "name": "asia",
+      "type": "registry:component",
+      "title": "Asia",
+      "description": "Interactive Asia map with 54 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/asia-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/asia.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/asia.tsx"
+        }
+      ]
+    },
+    {
+      "name": "australia",
+      "type": "registry:component",
+      "title": "Australia",
+      "description": "Interactive Australia map with 9 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/australia-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/australia.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/australia.tsx"
+        }
+      ]
+    },
+    {
+      "name": "austria",
+      "type": "registry:component",
+      "title": "Austria",
+      "description": "Interactive Austria map with 10 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/austria-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/austria.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/austria.tsx"
+        }
+      ]
+    },
+    {
+      "name": "azerbaijan",
+      "type": "registry:component",
+      "title": "Azerbaijan",
+      "description": "Interactive Azerbaijan map with 79 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/azerbaijan-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/azerbaijan.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/azerbaijan.tsx"
+        }
+      ]
+    },
+    {
       "name": "france",
       "type": "registry:component",
       "title": "France Map",
@@ -129,6 +333,125 @@
       ]
     },
     {
+      "name": "bahrain",
+      "type": "registry:component",
+      "title": "Bahrain",
+      "description": "Interactive Bahrain map with 5 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/bahrain-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/bahrain.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/bahrain.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bangladesh",
+      "type": "registry:component",
+      "title": "Bangladesh",
+      "description": "Interactive Bangladesh map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/bangladesh-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/bangladesh.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/bangladesh.tsx"
+        }
+      ]
+    },
+    {
+      "name": "belarus",
+      "type": "registry:component",
+      "title": "Belarus",
+      "description": "Interactive Belarus map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/belarus-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/belarus.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/belarus.tsx"
+        }
+      ]
+    },
+    {
+      "name": "belgium",
+      "type": "registry:component",
+      "title": "Belgium",
+      "description": "Interactive Belgium map with 11 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/belgium-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/belgium.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/belgium.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bolivia",
+      "type": "registry:component",
+      "title": "Bolivia",
+      "description": "Interactive Bolivia map with 9 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/bolivia-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/bolivia.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/bolivia.tsx"
+        }
+      ]
+    },
+    {
+      "name": "brazil",
+      "type": "registry:component",
+      "title": "Brazil",
+      "description": "Interactive Brazil map with 27 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/brazil-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/brazil.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/brazil.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bulgaria",
+      "type": "registry:component",
+      "title": "Bulgaria",
+      "description": "Interactive Bulgaria map with 28 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json",
+        "http://localhost:3000/r/bulgaria-data.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/bulgaria.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/bulgaria.tsx"
+        }
+      ]
+    },
+    {
       "name": "usa-data",
       "type": "registry:file",
       "title": "USA Map Data",
@@ -138,6 +461,162 @@
           "path": "registry/shadcnmaps/map-data/usa.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-data/usa.ts"
+        }
+      ]
+    },
+    {
+      "name": "africa-data",
+      "type": "registry:file",
+      "title": "Africa Data",
+      "description": "SVG path data for Africa with 56 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/africa.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/africa.ts"
+        }
+      ]
+    },
+    {
+      "name": "alabama-data",
+      "type": "registry:file",
+      "title": "Alabama Data",
+      "description": "SVG path data for Alabama with 68 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/alabama.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/alabama.ts"
+        }
+      ]
+    },
+    {
+      "name": "alaska-data",
+      "type": "registry:file",
+      "title": "Alaska Data",
+      "description": "SVG path data for Alaska with 30 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/alaska.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/alaska.ts"
+        }
+      ]
+    },
+    {
+      "name": "algeria-data",
+      "type": "registry:file",
+      "title": "Algeria Data",
+      "description": "SVG path data for Algeria with 49 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/algeria.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/algeria.ts"
+        }
+      ]
+    },
+    {
+      "name": "angola-data",
+      "type": "registry:file",
+      "title": "Angola Data",
+      "description": "SVG path data for Angola with 19 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/angola.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/angola.ts"
+        }
+      ]
+    },
+    {
+      "name": "argentina-data",
+      "type": "registry:file",
+      "title": "Argentina Data",
+      "description": "SVG path data for Argentina with 25 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/argentina.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/argentina.ts"
+        }
+      ]
+    },
+    {
+      "name": "arizona-data",
+      "type": "registry:file",
+      "title": "Arizona Data",
+      "description": "SVG path data for Arizona with 16 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/arizona.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/arizona.ts"
+        }
+      ]
+    },
+    {
+      "name": "arkansas-data",
+      "type": "registry:file",
+      "title": "Arkansas Data",
+      "description": "SVG path data for Arkansas with 76 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/arkansas.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/arkansas.ts"
+        }
+      ]
+    },
+    {
+      "name": "asia-data",
+      "type": "registry:file",
+      "title": "Asia Data",
+      "description": "SVG path data for Asia with 54 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/asia.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/asia.ts"
+        }
+      ]
+    },
+    {
+      "name": "australia-data",
+      "type": "registry:file",
+      "title": "Australia Data",
+      "description": "SVG path data for Australia with 9 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/australia.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/australia.ts"
+        }
+      ]
+    },
+    {
+      "name": "austria-data",
+      "type": "registry:file",
+      "title": "Austria Data",
+      "description": "SVG path data for Austria with 10 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/austria.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/austria.ts"
+        }
+      ]
+    },
+    {
+      "name": "azerbaijan-data",
+      "type": "registry:file",
+      "title": "Azerbaijan Data",
+      "description": "SVG path data for Azerbaijan with 79 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/azerbaijan.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/azerbaijan.ts"
         }
       ]
     },
@@ -164,6 +643,97 @@
           "path": "registry/shadcnmaps/map-data/world.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-data/world.ts"
+        }
+      ]
+    },
+    {
+      "name": "bahrain-data",
+      "type": "registry:file",
+      "title": "Bahrain Data",
+      "description": "SVG path data for Bahrain with 5 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/bahrain.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/bahrain.ts"
+        }
+      ]
+    },
+    {
+      "name": "bangladesh-data",
+      "type": "registry:file",
+      "title": "Bangladesh Data",
+      "description": "SVG path data for Bangladesh with 7 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/bangladesh.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/bangladesh.ts"
+        }
+      ]
+    },
+    {
+      "name": "belarus-data",
+      "type": "registry:file",
+      "title": "Belarus Data",
+      "description": "SVG path data for Belarus with 7 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/belarus.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/belarus.ts"
+        }
+      ]
+    },
+    {
+      "name": "belgium-data",
+      "type": "registry:file",
+      "title": "Belgium Data",
+      "description": "SVG path data for Belgium with 11 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/belgium.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/belgium.ts"
+        }
+      ]
+    },
+    {
+      "name": "bolivia-data",
+      "type": "registry:file",
+      "title": "Bolivia Data",
+      "description": "SVG path data for Bolivia with 9 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/bolivia.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/bolivia.ts"
+        }
+      ]
+    },
+    {
+      "name": "brazil-data",
+      "type": "registry:file",
+      "title": "Brazil Data",
+      "description": "SVG path data for Brazil with 27 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/brazil.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/brazil.ts"
+        }
+      ]
+    },
+    {
+      "name": "bulgaria-data",
+      "type": "registry:file",
+      "title": "Bulgaria Data",
+      "description": "SVG path data for Bulgaria with 28 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/bulgaria.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/bulgaria.ts"
         }
       ]
     }

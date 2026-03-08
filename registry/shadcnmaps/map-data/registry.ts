@@ -194,4 +194,95 @@ export const mapData = [
       },
     ],
   },
+  {
+    name: 'bahrain-data',
+    type: 'registry:file',
+    title: 'Bahrain Data',
+    description: 'SVG path data for Bahrain with 5 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/bahrain.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bahrain.ts',
+      },
+    ],
+  },
+  {
+    name: 'bangladesh-data',
+    type: 'registry:file',
+    title: 'Bangladesh Data',
+    description: 'SVG path data for Bangladesh with 7 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/bangladesh.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bangladesh.ts',
+      },
+    ],
+  },
+  {
+    name: 'belarus-data',
+    type: 'registry:file',
+    title: 'Belarus Data',
+    description: 'SVG path data for Belarus with 7 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/belarus.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/belarus.ts',
+      },
+    ],
+  },
+  {
+    name: 'belgium-data',
+    type: 'registry:file',
+    title: 'Belgium Data',
+    description: 'SVG path data for Belgium with 11 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/belgium.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/belgium.ts',
+      },
+    ],
+  },
+  {
+    name: 'bolivia-data',
+    type: 'registry:file',
+    title: 'Bolivia Data',
+    description: 'SVG path data for Bolivia with 9 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/bolivia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bolivia.ts',
+      },
+    ],
+  },
+  {
+    name: 'brazil-data',
+    type: 'registry:file',
+    title: 'Brazil Data',
+    description: 'SVG path data for Brazil with 27 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/brazil.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/brazil.ts',
+      },
+    ],
+  },
+  {
+    name: 'bulgaria-data',
+    type: 'registry:file',
+    title: 'Bulgaria Data',
+    description: 'SVG path data for Bulgaria with 28 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/bulgaria.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bulgaria.ts',
+      },
+    ],
+  },
 ]

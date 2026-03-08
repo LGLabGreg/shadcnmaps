@@ -1,5 +1,6 @@
 'use client'
 
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { navigation } from '@/lib/navigation'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
@@ -48,22 +49,21 @@ export function MapsIndex() {
           onChange={(e) => setSearch(e.target.value)}
           className='h-9 rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none sm:w-64'
         />
-        <div className='flex flex-wrap gap-2'>
+        <ToggleGroup
+          value={[activeCategory]}
+          onValueChange={(value) => {
+            const next = value.find((v) => v !== activeCategory)
+            setActiveCategory(next ?? CATEGORY_ALL)
+          }}
+          variant='outline'
+          className='flex-wrap'
+        >
           {[CATEGORY_ALL, ...categories].map((cat) => (
-            <button
-              key={cat}
-              type='button'
-              onClick={() => setActiveCategory(cat)}
-              className={`rounded-md px-3 py-1 text-sm font-medium transition-colors ${
-                activeCategory === cat
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted text-muted-foreground hover:bg-muted/80'
-              }`}
-            >
+            <ToggleGroupItem size='lg' key={cat} value={cat}>
               {cat}
-            </button>
+            </ToggleGroupItem>
           ))}
-        </div>
+        </ToggleGroup>
       </div>
 
       {filtered.length === 0 ? (
@@ -71,7 +71,7 @@ export function MapsIndex() {
           No maps found.
         </p>
       ) : (
-        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
           {filtered.map((map) => (
             <Link
               key={map.href}

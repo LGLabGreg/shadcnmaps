@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function MapsPage() {
   return (
-    <div className='mx-auto max-w-5xl px-6 py-10'>
+    <div className='p-6 md:p-8'>
       <div className='mb-8'>
         <h1 className='text-3xl font-bold tracking-tight'>Maps</h1>
         <p className='mt-2 text-muted-foreground'>

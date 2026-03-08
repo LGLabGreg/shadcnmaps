@@ -10,6 +10,13 @@ import { asiaMapData } from '@/registry/shadcnmaps/map-data/asia'
 import { australiaMapData } from '@/registry/shadcnmaps/map-data/australia'
 import { austriaMapData } from '@/registry/shadcnmaps/map-data/austria'
 import { azerbaijanMapData } from '@/registry/shadcnmaps/map-data/azerbaijan'
+import { bahrainMapData } from '@/registry/shadcnmaps/map-data/bahrain'
+import { bangladeshMapData } from '@/registry/shadcnmaps/map-data/bangladesh'
+import { belarusMapData } from '@/registry/shadcnmaps/map-data/belarus'
+import { belgiumMapData } from '@/registry/shadcnmaps/map-data/belgium'
+import { boliviaMapData } from '@/registry/shadcnmaps/map-data/bolivia'
+import { brazilMapData } from '@/registry/shadcnmaps/map-data/brazil'
+import { bulgariaMapData } from '@/registry/shadcnmaps/map-data/bulgaria'
 import { franceMapData } from '@/registry/shadcnmaps/map-data/france'
 import { usaMapData } from '@/registry/shadcnmaps/map-data/usa'
 import { worldMapData } from '@/registry/shadcnmaps/map-data/world'
@@ -29,6 +36,13 @@ export const MAPS: Record<string, { data: MapData; label: string }> = {
   australia: { data: australiaMapData, label: 'Australia' },
   austria: { data: austriaMapData, label: 'Austria' },
   azerbaijan: { data: azerbaijanMapData, label: 'Azerbaijan' },
+  bahrain: { data: bahrainMapData, label: 'Bahrain' },
+  bangladesh: { data: bangladeshMapData, label: 'Bangladesh' },
+  belarus: { data: belarusMapData, label: 'Belarus' },
+  belgium: { data: belgiumMapData, label: 'Belgium' },
+  bolivia: { data: boliviaMapData, label: 'Bolivia' },
+  brazil: { data: brazilMapData, label: 'Brazil' },
+  bulgaria: { data: bulgariaMapData, label: 'Bulgaria' },
   france: { data: franceMapData, label: 'France' },
   usa: { data: usaMapData, label: 'United States' },
   world: { data: worldMapData, label: 'World' },
