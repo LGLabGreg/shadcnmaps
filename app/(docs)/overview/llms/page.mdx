@@ -2,7 +2,8 @@ import { DocPage } from '@/components/docs/doc-page'
 
 export const metadata = {
   title: 'LLMs',
-  description: 'Machine-readable documentation for AI assistants and LLM tools.',
+  description:
+    'Machine-readable documentation for AI assistants and LLM tools.',
 }
 
 <DocPage>
@@ -13,33 +14,39 @@ shadcnmaps provides machine-readable documentation files for AI assistants, codi
 
 ## Files
 
-| File | Description |
-| --- | --- |
-| [`/llms.txt`](https://shadcnmaps.com/llms.txt) | Concise index — project overview, AI tips, links to all maps and examples |
+| File                                                     | Description                                                                         |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| [`/llms.txt`](https://shadcnmaps.com/llms.txt)           | Concise index — project overview, AI tips, links to all maps and examples           |
 | [`/llms-full.txt`](https://shadcnmaps.com/llms-full.txt) | Full documentation — getting started, API reference, theming, and map/example links |
 
 ## Per-page files
 
 Detailed docs for individual maps and examples are available under `/llms/`:
 
-| File | Description |
-| --- | --- |
-| [`/llms/france.md`](https://shadcnmaps.com/llms/france.md) | France Map — installation, basic usage, props, types, CSS variables |
-| [`/llms/usa.md`](https://shadcnmaps.com/llms/usa.md) | USA Map — installation, basic usage, props, types, CSS variables |
-| [`/llms/choropleth.md`](https://shadcnmaps.com/llms/choropleth.md) | Choropleth example — data-driven region coloring |
-| [`/llms/markers.md`](https://shadcnmaps.com/llms/markers.md) | Markers example — custom SVG marker overlays |
-| [`/llms/region-click.md`](https://shadcnmaps.com/llms/region-click.md) | Region Click example — click-to-select interaction |
+| File                                                                   | Description                                                         |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [`/llms/france.md`](https://shadcnmaps.com/llms/france.md)             | France Map — installation, basic usage, props, types, CSS variables |
+| [`/llms/usa.md`](https://shadcnmaps.com/llms/usa.md)                   | USA Map — installation, basic usage, props, types, CSS variables    |
+| [`/llms/choropleth.md`](https://shadcnmaps.com/llms/choropleth.md)     | Choropleth example — data-driven region coloring                    |
+| [`/llms/markers.md`](https://shadcnmaps.com/llms/markers.md)           | Markers example — custom SVG marker overlays                        |
+| [`/llms/region-click.md`](https://shadcnmaps.com/llms/region-click.md) | Region Click example — click-to-select interaction                  |
 
 ## How to use
 
 Point your AI tool at the appropriate file:
 
-- **Quick context** — use `/llms.txt` for a concise overview
-- **Full reference** — use `/llms-full.txt` for complete documentation in one file
-- **Specific topic** — use `/llms/<slug>.md` for focused detail on a single map or example
+- **Quick context** — use [`/llms.txt`](https://shadcnmaps.com/llms.txt) for a concise overview
+- **Full reference** — use [`/llms-full.txt`](https://shadcnmaps.com/llms-full.txt) for complete documentation in one file
+- **Specific topic** — use [`/llms/<slug>.md`](https://shadcnmaps.com/llms/<slug>.md) for focused detail on a single map or example
 
-## Auto-generation
+Or simply use prompts such as:
 
-These files are auto-generated from the MDX source pages by `scripts/build-llms.ts`. They are rebuilt as part of `pnpm registry:build` and via lint-staged when MDX files are committed.
+```shell
+Install https://www.shadcnmaps.com/maps/world
+```
+
+```sh
+Create a page with https://www.shadcnmaps.com/maps/world including map controls
+```
 
 </DocPage>
