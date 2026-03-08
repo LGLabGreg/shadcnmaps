@@ -67,7 +67,7 @@ export const MAPS: Record<string, { data: MapData; label: string }> = {
   colorado: { data: coloradoMapData, label: 'Colorado' },
   connecticut: { data: connecticutMapData, label: 'Connecticut' },
   'costa-rica': { data: costaRicaMapData, label: 'Costa Rica' },
-  'cote-ivoire': { data: coteIvoireMapData, label: "Côte d'Ivoire" },
+  'cote-ivoire': { data: coteIvoireMapData, label: 'Sud-Comoé' },
   croatia: { data: croatiaMapData, label: 'Croatia' },
   cuba: { data: cubaMapData, label: 'Cuba' },
   'czech-republic': { data: czechRepublicMapData, label: 'Czech Republic' },
