@@ -4,7 +4,7 @@
 
 Color-code regions by a numeric value such as population, GDP, or any metric. Each region gets a fill class based on its value relative to the maximum.
 
-This pattern uses the `states` prop to assign per-region `className` and `tooltipContent` based on a data lookup.
+This pattern uses the `regions` prop to assign per-region `className` and `tooltipContent` based on a data lookup.
 
 ```tsx
 'use client'
@@ -12,7 +12,7 @@ This pattern uses the `states` prop to assign per-region `className` and `toolti
 import { USAMap, type RegionId } from '@/components/shadcnmaps/maps/usa'
 
 // 2020 US Census (approximate)
-const POPULATION: Partial<Record<RegionId, number>> = {
+const POPULATION: Record<RegionId, number> = {
   AK: 733391,
   AL: 5024279,
   AR: 3011524,
@@ -68,6 +68,14 @@ const POPULATION: Partial<Record<RegionId, number>> = {
 
 const MAX_POP = Math.max(...(Object.values(POPULATION) as number[]))
 
+const BUCKETS = [
+  { min: 0.6, label: '> 23M', className: 'fill-sky-900 hover:fill-sky-800', swatch: 'bg-sky-900' },
+  { min: 0.3, label: '12M – 23M', className: 'fill-sky-800 hover:fill-sky-700', swatch: 'bg-sky-800' },
+  { min: 0.15, label: '6M – 12M', className: 'fill-sky-700 hover:fill-sky-600', swatch: 'bg-sky-700' },
+  { min: 0.05, label: '2M – 6M', className: 'fill-sky-600 hover:fill-sky-500', swatch: 'bg-sky-600' },
+  { min: 0, label: '< 2M', className: 'fill-sky-500 hover:fill-sky-400', swatch: 'bg-sky-500' },
+]
+
 function colorClasses(id: RegionId): {
   className: string
   labelClassName?: string
@@ -75,25 +83,8 @@ function colorClasses(id: RegionId): {
   const pop = POPULATION[id]
   if (!pop) return { className: '' }
   const r = pop / MAX_POP
-  if (r > 0.6)
-    return {
-      className: 'fill-sky-900 hover:fill-sky-800',
-    }
-  if (r > 0.3)
-    return {
-      className: 'fill-sky-800 hover:fill-sky-700',
-    }
-  if (r > 0.15)
-    return {
-      className: 'fill-sky-700 hover:fill-sky-600',
-    }
-  if (r > 0.05)
-    return {
-      className: 'fill-sky-600 hover:fill-sky-500',
-    }
-  return {
-    className: 'fill-sky-500 hover:fill-sky-400',
-  }
+  const bucket = BUCKETS.find((b) => r > b.min) ?? BUCKETS[BUCKETS.length - 1]
+  return { className: bucket.className }
 }
 
 export default function ChoroplethExample() {
@@ -104,12 +95,37 @@ export default function ChoroplethExample() {
       <div>
         <p className='font-medium'>{id}</p>
         <p className='text-muted-foreground'>
-          {POPULATION[id]!.toLocaleString()}
+          Pop. {POPULATION[id]!.toLocaleString()}
         </p>
       </div>
     ),
   }))
 
-  return <USAMap regions={regions} />
+  return (
+    <div>
+      <div className='mb-4'>
+        <h3 className='text-lg font-semibold'>
+          US Population by State
+        </h3>
+        <p className='text-sm text-muted-foreground'>
+          2020 Census estimates
+        </p>
+      </div>
+      <div className='grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-5'>
+        <USAMap regions={regions} />
+        <div>
+          <p className='mb-1.5 font-medium'>Population</p>
+          <div className='flex flex-col gap-1 text-xs'>
+            {BUCKETS.map((b) => (
+              <div key={b.label} className='flex items-center gap-1.5'>
+                <span className={`inline-block h-3 w-3 rounded-xs ${b.swatch}`} />
+                <span className='text-muted-foreground'>{b.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 ```
