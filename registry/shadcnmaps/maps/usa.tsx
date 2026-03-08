@@ -3,7 +3,7 @@
 import { Map, type MapProps } from '../map'
 import { usaMapData } from '../map-data/usa'
 
-export type StateId = (typeof usaMapData)['regions'][number]['id']
+export type RegionId = (typeof usaMapData)['regions'][number]['id']
 
 export interface USAMapProps extends Omit<MapProps, 'data'> {}
 

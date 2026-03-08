@@ -9,10 +9,10 @@ This pattern uses the `states` prop to assign per-region `className` and `toolti
 ```tsx
 'use client'
 
-import { USAMap, type StateId } from '@/components/shadcnmaps/maps/usa'
+import { USAMap, type RegionId } from '@/components/shadcnmaps/maps/usa'
 
 // 2020 US Census (approximate)
-const POPULATION: Partial<Record<StateId, number>> = {
+const POPULATION: Partial<Record<RegionId, number>> = {
   AK: 733391,
   AL: 5024279,
   AR: 3011524,
@@ -68,7 +68,7 @@ const POPULATION: Partial<Record<StateId, number>> = {
 
 const MAX_POP = Math.max(...(Object.values(POPULATION) as number[]))
 
-function colorClasses(id: StateId): {
+function colorClasses(id: RegionId): {
   className: string
   labelClassName?: string
 } {
@@ -97,7 +97,7 @@ function colorClasses(id: StateId): {
 }
 
 export default function ChoroplethExample() {
-  const regions = (Object.keys(POPULATION) as StateId[]).map((id) => ({
+  const regions = (Object.keys(POPULATION) as RegionId[]).map((id) => ({
     id,
     ...colorClasses(id),
     tooltipContent: (
