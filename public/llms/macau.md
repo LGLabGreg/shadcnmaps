@@ -1,4 +1,4 @@
-# Macau
+# Macau Map
 
 Interactive SVG map of Macau with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# United Arab Emirates
+# United Arab Emirates Map
 
 Interactive SVG map of United Arab Emirates with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Ohio
+# Ohio Map
 
 Interactive SVG map of Ohio with 88 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

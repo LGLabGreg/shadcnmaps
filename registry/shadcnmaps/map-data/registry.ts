@@ -1223,15 +1223,15 @@ export const mapData = [
     ],
   },
   {
-    name: 'slovekia-data',
+    name: 'slovakia-data',
     type: 'registry:file',
     title: 'Slovakia Data',
     description: 'SVG path data for Slovakia with 8 regions.',
     files: [
       {
-        path: 'registry/shadcnmaps/map-data/slovekia.ts',
+        path: 'registry/shadcnmaps/map-data/slovakia.ts',
         type: 'registry:file',
-        target: 'components/shadcnmaps/map-data/slovekia.ts',
+        target: 'components/shadcnmaps/map-data/slovakia.ts',
       },
     ],
   },

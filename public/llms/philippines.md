@@ -1,4 +1,4 @@
-# Philippines
+# Philippines Map
 
 Interactive SVG map of Philippines with 119 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

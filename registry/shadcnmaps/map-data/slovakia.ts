@@ -1,7 +1,7 @@
 import type { MapData } from '@/registry/shadcnmaps/types'
 
-export const slovekiaMapData = {
-  id: 'slovekia',
+export const slovakiaMapData = {
+  id: 'slovakia',
   name: 'Slovakia',
   viewBox: '0 0 700.4 338.4',
   regions: [

@@ -1,4 +1,4 @@
-# Taiwan
+# Taiwan Map
 
 Interactive SVG map of Taiwan with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

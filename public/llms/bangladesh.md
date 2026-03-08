@@ -1,4 +1,4 @@
-# Bangladesh
+# Bangladesh Map
 
 Interactive SVG map of Bangladesh with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

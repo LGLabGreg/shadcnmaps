@@ -1,4 +1,4 @@
-# Israel
+# Israel Map
 
 Interactive SVG map of Israel with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

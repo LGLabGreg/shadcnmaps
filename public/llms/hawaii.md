@@ -1,4 +1,4 @@
-# Hawaii
+# Hawaii Map
 
 Interactive SVG map of Hawaii with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

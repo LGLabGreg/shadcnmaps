@@ -1,4 +1,4 @@
-# Belarus
+# Belarus Map
 
 Interactive SVG map of Belarus with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

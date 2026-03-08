@@ -1,4 +1,4 @@
-# Sri Lanka
+# Sri Lanka Map
 
 Interactive SVG map of Sri Lanka with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

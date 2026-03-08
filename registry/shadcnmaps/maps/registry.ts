@@ -1882,7 +1882,7 @@ export const maps = [
     ],
   },
   {
-    name: 'slovekia',
+    name: 'slovakia',
     type: 'registry:component',
     title: 'Slovakia',
     description:
@@ -1890,14 +1890,14 @@ export const maps = [
     registryDependencies: [registryUrl('map')],
     files: [
       {
-        path: 'registry/shadcnmaps/maps/slovekia.tsx',
+        path: 'registry/shadcnmaps/maps/slovakia.tsx',
         type: 'registry:file',
-        target: 'components/shadcnmaps/maps/slovekia.tsx',
+        target: 'components/shadcnmaps/maps/slovakia.tsx',
       },
       {
-        path: 'registry/shadcnmaps/map-data/slovekia.ts',
+        path: 'registry/shadcnmaps/map-data/slovakia.ts',
         type: 'registry:file',
-        target: 'components/shadcnmaps/map-data/slovekia.ts',
+        target: 'components/shadcnmaps/map-data/slovakia.ts',
       },
     ],
   },

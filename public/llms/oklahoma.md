@@ -1,4 +1,4 @@
-# Oklahoma
+# Oklahoma Map
 
 Interactive SVG map of Oklahoma with 77 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

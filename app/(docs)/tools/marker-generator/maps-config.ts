@@ -133,7 +133,7 @@ import { russiaMapData } from '@/registry/shadcnmaps/map-data/russia'
 import { saudiArabiaMapData } from '@/registry/shadcnmaps/map-data/saudi-arabia'
 import { serbiaMapData } from '@/registry/shadcnmaps/map-data/serbia'
 import { singaporeMapData } from '@/registry/shadcnmaps/map-data/singapore'
-import { slovekiaMapData } from '@/registry/shadcnmaps/map-data/slovekia'
+import { slovakiaMapData } from '@/registry/shadcnmaps/map-data/slovakia'
 import { sloveniaMapData } from '@/registry/shadcnmaps/map-data/slovenia'
 import { southAfricaMapData } from '@/registry/shadcnmaps/map-data/south-africa'
 import { southAmericaMapData } from '@/registry/shadcnmaps/map-data/south-america'
@@ -332,7 +332,7 @@ export const MAPS: Record<string, { data: MapData; label: string }> = {
   'saudi-arabia': { data: saudiArabiaMapData, label: 'Saudi Arabia' },
   serbia: { data: serbiaMapData, label: 'Serbia' },
   singapore: { data: singaporeMapData, label: 'Singapore' },
-  slovekia: { data: slovekiaMapData, label: 'Slovakia' },
+  slovakia: { data: slovakiaMapData, label: 'Slovakia' },
   slovenia: { data: sloveniaMapData, label: 'Slovenia' },
   'south-africa': { data: southAfricaMapData, label: 'South Africa' },
   'south-america': { data: southAmericaMapData, label: 'South America' },

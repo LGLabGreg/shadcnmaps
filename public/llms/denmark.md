@@ -1,4 +1,4 @@
-# Denmark
+# Denmark Map
 
 Interactive SVG map of Denmark with 98 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

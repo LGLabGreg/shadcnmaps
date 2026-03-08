@@ -1,4 +1,4 @@
-# Kenya
+# Kenya Map
 
 Interactive SVG map of Kenya with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

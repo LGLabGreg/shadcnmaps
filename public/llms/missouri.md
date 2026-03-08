@@ -1,4 +1,4 @@
-# Missouri
+# Missouri Map
 
 Interactive SVG map of Missouri with 115 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

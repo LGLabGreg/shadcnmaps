@@ -1,4 +1,4 @@
-# Turkey
+# Turkey Map
 
 Interactive SVG map of Turkey with 81 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

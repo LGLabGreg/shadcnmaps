@@ -1,4 +1,4 @@
-# Uganda
+# Uganda Map
 
 Interactive SVG map of Uganda with 112 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

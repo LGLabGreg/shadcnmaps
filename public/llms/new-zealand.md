@@ -1,4 +1,4 @@
-# New Zealand
+# New Zealand Map
 
 Interactive SVG map of New Zealand with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

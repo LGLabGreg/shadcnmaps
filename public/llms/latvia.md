@@ -1,4 +1,4 @@
-# Latvia
+# Latvia Map
 
 Interactive SVG map of Latvia with 119 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

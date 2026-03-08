@@ -1,4 +1,4 @@
-# European Union
+# European Union Map
 
 Interactive SVG map of European Union with 28 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

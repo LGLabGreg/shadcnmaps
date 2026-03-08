@@ -1,4 +1,4 @@
-# Colorado
+# Colorado Map
 
 Interactive SVG map of Colorado with 64 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

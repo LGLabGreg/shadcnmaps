@@ -1,4 +1,4 @@
-# Singapore
+# Singapore Map
 
 Interactive SVG map of Singapore with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

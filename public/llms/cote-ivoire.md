@@ -1,4 +1,4 @@
-# Côte d'Ivoire
+# Côte d'Ivoire Map
 
 Interactive SVG map of Côte d'Ivoire with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

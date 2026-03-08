@@ -1,4 +1,4 @@
-# Wisconsin
+# Wisconsin Map
 
 Interactive SVG map of Wisconsin with 72 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

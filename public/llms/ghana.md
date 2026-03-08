@@ -1,4 +1,4 @@
-# Ghana
+# Ghana Map
 
 Interactive SVG map of Ghana with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

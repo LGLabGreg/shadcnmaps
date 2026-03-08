@@ -1,4 +1,4 @@
-# Cameroon
+# Cameroon Map
 
 Interactive SVG map of Cameroon with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Michigan
+# Michigan Map
 
 Interactive SVG map of Michigan with 83 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

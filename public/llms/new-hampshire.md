@@ -1,4 +1,4 @@
-# New Hampshire
+# New Hampshire Map
 
 Interactive SVG map of New Hampshire with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

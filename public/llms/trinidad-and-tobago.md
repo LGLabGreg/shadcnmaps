@@ -1,4 +1,4 @@
-# Trinidad and Tobago
+# Trinidad and Tobago Map
 
 Interactive SVG map of Trinidad and Tobago with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Lebanon
+# Lebanon Map
 
 Interactive SVG map of Lebanon with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

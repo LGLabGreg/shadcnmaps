@@ -1,4 +1,4 @@
-# Guatemala
+# Guatemala Map
 
 Interactive SVG map of Guatemala with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

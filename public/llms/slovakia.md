@@ -1,20 +1,20 @@
-# Slovakia
+# Slovakia Map
 
 Interactive SVG map of Slovakia with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/slovekia.json
+npx shadcn@latest add https://shadcnmaps.com/r/slovakia.json
 ```
 
 ```tsx
 'use client'
 
-import { SlovekiaMap } from '@/components/shadcnmaps/maps/slovekia'
+import { SlovakiaMap } from '@/components/shadcnmaps/maps/slovakia'
 
 export default function SimpleExample() {
-  return <SlovekiaMap />
+  return <SlovakiaMap />
 }
 ```
 

@@ -1,4 +1,4 @@
-# North Dakota
+# North Dakota Map
 
 Interactive SVG map of North Dakota with 53 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

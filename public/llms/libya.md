@@ -1,4 +1,4 @@
-# Libya
+# Libya Map
 
 Interactive SVG map of Libya with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Czech Republic
+# Czech Republic Map
 
 Interactive SVG map of Czech Republic with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Slovenia
+# Slovenia Map
 
 Interactive SVG map of Slovenia with 193 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

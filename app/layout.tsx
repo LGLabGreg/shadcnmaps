@@ -29,16 +29,26 @@ export const metadata: Metadata = {
   },
   description:
     'Interactive SVG map components for React. No dependencies, pure Tailwind.',
-  keywords: ['React', 'Tailwind CSS', 'SVG maps', 'shadcn', 'interactive maps'],
+  keywords: [
+    'React',
+    'Tailwind CSS',
+    'SVG maps',
+    'shadcn',
+    'interactive maps',
+    'map component',
+    'React map',
+    'SVG map component',
+    'interactive map component',
+  ],
   openGraph: {
     type: 'website',
     url: BASE_URL,
     siteName: 'shadcnmaps',
-    images: [{ url: '/og/home', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/og/home'],
+    images: ['/og.jpg'],
   },
   alternates: { canonical: BASE_URL },
   icons: {

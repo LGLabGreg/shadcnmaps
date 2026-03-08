@@ -1,4 +1,4 @@
-# Monaco
+# Monaco Map
 
 Interactive SVG map of Monaco with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# New Jersey
+# New Jersey Map
 
 Interactive SVG map of New Jersey with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

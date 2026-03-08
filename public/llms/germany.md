@@ -1,4 +1,4 @@
-# Germany
+# Germany Map
 
 Interactive SVG map of Germany with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

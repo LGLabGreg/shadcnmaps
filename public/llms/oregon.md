@@ -1,4 +1,4 @@
-# Oregon
+# Oregon Map
 
 Interactive SVG map of Oregon with 36 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

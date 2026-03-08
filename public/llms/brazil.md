@@ -1,4 +1,4 @@
-# Brazil
+# Brazil Map
 
 Interactive SVG map of Brazil with 27 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

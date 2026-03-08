@@ -15,15 +15,13 @@ export function Hero() {
       <div className='relative z-10 flex flex-col items-center'>
         <div className='mb-6 flex flex-col items-center gap-3'>
           <Link
-            href='/overview/getting-started'
+            href='/maps'
             className='mx-auto inline-flex items-center gap-3 rounded-full border bg-background px-2 py-1 text-sm shadow-xs'
           >
             <span className='inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground'>
-              Beta
+              170+ maps
             </span>
-            <span className='font-medium'>
-              Introducing <span className='font-semibold'>shadcnmaps</span>
-            </span>
+            <span className='font-medium'>Browse the full map library</span>
             <span className='flex size-7 items-center justify-center rounded-full bg-muted'>
               <ArrowRight className='size-4' />
             </span>

@@ -1,4 +1,4 @@
-# Kuwait
+# Kuwait Map
 
 Interactive SVG map of Kuwait with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

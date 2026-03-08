@@ -1,4 +1,4 @@
-# Costa Rica
+# Costa Rica Map
 
 Interactive SVG map of Costa Rica with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

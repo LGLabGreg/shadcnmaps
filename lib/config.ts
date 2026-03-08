@@ -14,5 +14,15 @@ export const siteConfig = {
   url: 'https://shadcnmaps.com',
   description:
     'Interactive SVG map components for React. No dependencies, pure Tailwind.',
-  keywords: ['React', 'Tailwind CSS', 'SVG maps', 'shadcn', 'interactive maps'],
+  keywords: [
+    'React',
+    'Tailwind CSS',
+    'SVG maps',
+    'shadcn',
+    'interactive maps',
+    'map component',
+    'React map',
+    'SVG map component',
+    'interactive map component',
+  ],
 }

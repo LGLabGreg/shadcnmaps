@@ -1,4 +1,4 @@
-# California
+# California Map
 
 Interactive SVG map of California with 58 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

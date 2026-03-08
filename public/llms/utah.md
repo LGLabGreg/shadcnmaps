@@ -1,4 +1,4 @@
-# Utah
+# Utah Map
 
 Interactive SVG map of Utah with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

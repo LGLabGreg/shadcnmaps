@@ -1,4 +1,4 @@
-# Vermont
+# Vermont Map
 
 Interactive SVG map of Vermont with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

@@ -1,4 +1,4 @@
-# Sweden
+# Sweden Map
 
 Interactive SVG map of Sweden with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

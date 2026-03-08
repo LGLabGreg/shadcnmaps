@@ -2052,7 +2052,7 @@
       ]
     },
     {
-      "name": "slovekia",
+      "name": "slovakia",
       "type": "registry:component",
       "title": "Slovakia",
       "description": "Interactive Slovakia map with 8 regions. Supports click, hover, selection, tooltips, and custom markers.",
@@ -2061,14 +2061,14 @@
       ],
       "files": [
         {
-          "path": "registry/shadcnmaps/maps/slovekia.tsx",
+          "path": "registry/shadcnmaps/maps/slovakia.tsx",
           "type": "registry:file",
-          "target": "components/shadcnmaps/maps/slovekia.tsx"
+          "target": "components/shadcnmaps/maps/slovakia.tsx"
         },
         {
-          "path": "registry/shadcnmaps/map-data/slovekia.ts",
+          "path": "registry/shadcnmaps/map-data/slovakia.ts",
           "type": "registry:file",
-          "target": "components/shadcnmaps/map-data/slovekia.ts"
+          "target": "components/shadcnmaps/map-data/slovakia.ts"
         }
       ]
     },
@@ -5080,15 +5080,15 @@
       ]
     },
     {
-      "name": "slovekia-data",
+      "name": "slovakia-data",
       "type": "registry:file",
       "title": "Slovakia Data",
       "description": "SVG path data for Slovakia with 8 regions.",
       "files": [
         {
-          "path": "registry/shadcnmaps/map-data/slovekia.ts",
+          "path": "registry/shadcnmaps/map-data/slovakia.ts",
           "type": "registry:file",
-          "target": "components/shadcnmaps/map-data/slovekia.ts"
+          "target": "components/shadcnmaps/map-data/slovakia.ts"
         }
       ]
     },

@@ -1,4 +1,4 @@
-# Turkmenistan
+# Turkmenistan Map
 
 Interactive SVG map of Turkmenistan with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

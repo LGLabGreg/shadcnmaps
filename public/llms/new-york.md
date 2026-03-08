@@ -1,4 +1,4 @@
-# New York
+# New York Map
 
 Interactive SVG map of New York with 62 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

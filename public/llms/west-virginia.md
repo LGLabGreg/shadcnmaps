@@ -1,4 +1,4 @@
-# West Virginia
+# West Virginia Map
 
 Interactive SVG map of West Virginia with 55 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

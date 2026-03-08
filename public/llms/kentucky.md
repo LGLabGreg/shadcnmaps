@@ -1,4 +1,4 @@
-# Kentucky
+# Kentucky Map
 
 Interactive SVG map of Kentucky with 120 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

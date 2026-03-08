@@ -1,4 +1,4 @@
-# Malaysia
+# Malaysia Map
 
 Interactive SVG map of Malaysia with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

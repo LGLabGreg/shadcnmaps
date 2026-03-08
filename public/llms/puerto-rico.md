@@ -1,4 +1,4 @@
-# Puerto Rico
+# Puerto Rico Map
 
 Interactive SVG map of Puerto Rico with 78 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

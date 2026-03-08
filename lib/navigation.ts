@@ -141,7 +141,7 @@ export const navigation: NavSection[] = [
           { title: 'Saudi Arabia', href: '/maps/saudi-arabia' },
           { title: 'Serbia', href: '/maps/serbia' },
           { title: 'Singapore', href: '/maps/singapore' },
-          { title: 'Slovakia', href: '/maps/slovekia' },
+          { title: 'Slovakia', href: '/maps/slovakia' },
           { title: 'Slovenia', href: '/maps/slovenia' },
           { title: 'South Africa', href: '/maps/south-africa' },
           { title: 'South Korea', href: '/maps/south-korea' },

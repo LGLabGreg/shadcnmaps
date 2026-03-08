@@ -1,4 +1,4 @@
-# Democratic Republic of the Congo
+# Democratic Republic of the Congo Map
 
 Interactive SVG map of Democratic Republic of the Congo with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

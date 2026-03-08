@@ -1,4 +1,4 @@
-# Nebraska
+# Nebraska Map
 
 Interactive SVG map of Nebraska with 93 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

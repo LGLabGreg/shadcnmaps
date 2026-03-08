@@ -1,4 +1,4 @@
-# Estonia
+# Estonia Map
 
 Interactive SVG map of Estonia with 15 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

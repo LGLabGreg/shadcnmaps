@@ -1,4 +1,4 @@
-# Bulgaria
+# Bulgaria Map
 
 Interactive SVG map of Bulgaria with 28 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 

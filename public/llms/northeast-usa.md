@@ -1,4 +1,4 @@
-# Northeast USA
+# Northeast USA Map
 
 Interactive SVG map of Northeast USA with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
