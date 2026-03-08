@@ -1,0 +1,23 @@
+import { MapPage } from '@/components/docs/map-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import SimpleExample from './map'
+
+export const metadata = {
+  title: 'World (Jammu & Kashmir)',
+  description: 'Interactive SVG map of World (Jammu & Kashmir) with 257 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.',
+}
+
+<MapPage
+  title="World (Jammu & Kashmir)"
+  description="Interactive SVG map of World (Jammu & Kashmir) with 257 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers."
+  registryName="world-jammu-kashmir"
+>
+
+<ExampleLoader
+  filePath='app/(docs)/maps/world-jammu-kashmir/map.tsx'
+>
+  <SimpleExample />
+</ExampleLoader>
+
+</MapPage>

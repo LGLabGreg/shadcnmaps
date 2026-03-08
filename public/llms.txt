@@ -54,14 +54,158 @@ When helping users with shadcnmaps:
 - [Colombia](https://shadcnmaps.com/llms/colombia.md): Interactive SVG map of Colombia with 33 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Colorado](https://shadcnmaps.com/llms/colorado.md): Interactive SVG map of Colorado with 64 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Connecticut](https://shadcnmaps.com/llms/connecticut.md): Interactive SVG map of Connecticut with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Continents](https://shadcnmaps.com/llms/continents.md): Interactive SVG map of Continents with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Costa Rica](https://shadcnmaps.com/llms/costa-rica.md): Interactive SVG map of Costa Rica with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Côte d'Ivoire](https://shadcnmaps.com/llms/cote-ivoire.md): Interactive SVG map of Côte d'Ivoire with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Croatia](https://shadcnmaps.com/llms/croatia.md): Interactive SVG map of Croatia with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Cuba](https://shadcnmaps.com/llms/cuba.md): Interactive SVG map of Cuba with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Czech Republic](https://shadcnmaps.com/llms/czech-republic.md): Interactive SVG map of Czech Republic with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Delaware](https://shadcnmaps.com/llms/delaware.md): Interactive SVG map of Delaware with 3 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Democratic Republic of the Congo](https://shadcnmaps.com/llms/democratic-republic-congo.md): Interactive SVG map of Democratic Republic of the Congo with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Denmark](https://shadcnmaps.com/llms/denmark.md): Interactive SVG map of Denmark with 98 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Dominican Republic](https://shadcnmaps.com/llms/dominican-republic.md): Interactive SVG map of Dominican Republic with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ecuador](https://shadcnmaps.com/llms/ecuador.md): Interactive SVG map of Ecuador with 24 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Egypt](https://shadcnmaps.com/llms/egypt.md): Interactive SVG map of Egypt with 27 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [El Salvador](https://shadcnmaps.com/llms/el-salvador.md): Interactive SVG map of El Salvador with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Estonia](https://shadcnmaps.com/llms/estonia.md): Interactive SVG map of Estonia with 15 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ethiopia](https://shadcnmaps.com/llms/ethiopia.md): Interactive SVG map of Ethiopia with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Europe](https://shadcnmaps.com/llms/europe.md): Interactive SVG map of Europe with 62 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [European Union](https://shadcnmaps.com/llms/european-union.md): Interactive SVG map of European Union with 28 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Finland](https://shadcnmaps.com/llms/finland.md): Interactive SVG map of Finland with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Florida](https://shadcnmaps.com/llms/florida.md): Interactive SVG map of Florida with 67 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [France Map](https://shadcnmaps.com/llms/france.md): Interactive SVG map of France with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [France Départements](https://shadcnmaps.com/llms/france-departements.md): Interactive SVG map of France Départements with 101 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Georgia](https://shadcnmaps.com/llms/georgia.md): Interactive SVG map of Georgia with 159 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Germany](https://shadcnmaps.com/llms/germany.md): Interactive SVG map of Germany with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ghana](https://shadcnmaps.com/llms/ghana.md): Interactive SVG map of Ghana with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Greece](https://shadcnmaps.com/llms/greece.md): Interactive SVG map of Greece with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Guatemala](https://shadcnmaps.com/llms/guatemala.md): Interactive SVG map of Guatemala with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Hawaii](https://shadcnmaps.com/llms/hawaii.md): Interactive SVG map of Hawaii with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Honduras](https://shadcnmaps.com/llms/honduras.md): Interactive SVG map of Honduras with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Hungary](https://shadcnmaps.com/llms/hungary.md): Interactive SVG map of Hungary with 43 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Idaho](https://shadcnmaps.com/llms/idaho.md): Interactive SVG map of Idaho with 44 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Illinois](https://shadcnmaps.com/llms/illinois.md): Interactive SVG map of Illinois with 102 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [India](https://shadcnmaps.com/llms/india.md): Interactive SVG map of India with 36 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Indiana](https://shadcnmaps.com/llms/indiana.md): Interactive SVG map of Indiana with 92 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Indonesia](https://shadcnmaps.com/llms/indonesia.md): Interactive SVG map of Indonesia with 33 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Iowa](https://shadcnmaps.com/llms/iowa.md): Interactive SVG map of Iowa with 99 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Iran](https://shadcnmaps.com/llms/iran.md): Interactive SVG map of Iran with 31 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Iraq](https://shadcnmaps.com/llms/iraq.md): Interactive SVG map of Iraq with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ireland](https://shadcnmaps.com/llms/ireland.md): Interactive SVG map of Ireland with 34 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Israel](https://shadcnmaps.com/llms/israel.md): Interactive SVG map of Israel with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Italy](https://shadcnmaps.com/llms/italy.md): Interactive SVG map of Italy with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Japan](https://shadcnmaps.com/llms/japan.md): Interactive SVG map of Japan with 47 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Jordan](https://shadcnmaps.com/llms/jordan.md): Interactive SVG map of Jordan with 12 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Kansas](https://shadcnmaps.com/llms/kansas.md): Interactive SVG map of Kansas with 105 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Kazakhstan](https://shadcnmaps.com/llms/kazakhstan.md): Interactive SVG map of Kazakhstan with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Kentucky](https://shadcnmaps.com/llms/kentucky.md): Interactive SVG map of Kentucky with 120 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Kenya](https://shadcnmaps.com/llms/kenya.md): Interactive SVG map of Kenya with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Kuwait](https://shadcnmaps.com/llms/kuwait.md): Interactive SVG map of Kuwait with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Latvia](https://shadcnmaps.com/llms/latvia.md): Interactive SVG map of Latvia with 119 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Lebanon](https://shadcnmaps.com/llms/lebanon.md): Interactive SVG map of Lebanon with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Libya](https://shadcnmaps.com/llms/libya.md): Interactive SVG map of Libya with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Lithuania](https://shadcnmaps.com/llms/lithuania.md): Interactive SVG map of Lithuania with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [London Boroughs](https://shadcnmaps.com/llms/london-boroughs.md): Interactive SVG map of London Boroughs with 33 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Louisiana](https://shadcnmaps.com/llms/louisiana.md): Interactive SVG map of Louisiana with 64 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Luxembourg](https://shadcnmaps.com/llms/luxembourg.md): Interactive SVG map of Luxembourg with 3 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Macau](https://shadcnmaps.com/llms/macau.md): Interactive SVG map of Macau with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Maine](https://shadcnmaps.com/llms/maine.md): Interactive SVG map of Maine with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Malaysia](https://shadcnmaps.com/llms/malaysia.md): Interactive SVG map of Malaysia with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Maryland](https://shadcnmaps.com/llms/maryland.md): Interactive SVG map of Maryland with 24 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Massachusetts](https://shadcnmaps.com/llms/massachusetts.md): Interactive SVG map of Massachusetts with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Mexico](https://shadcnmaps.com/llms/mexico.md): Interactive SVG map of Mexico with 32 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Michigan](https://shadcnmaps.com/llms/michigan.md): Interactive SVG map of Michigan with 83 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Middle East](https://shadcnmaps.com/llms/middle-east.md): Interactive SVG map of Middle East with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Minnesota](https://shadcnmaps.com/llms/minnesota.md): Interactive SVG map of Minnesota with 87 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Mississippi](https://shadcnmaps.com/llms/mississippi.md): Interactive SVG map of Mississippi with 82 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Missouri](https://shadcnmaps.com/llms/missouri.md): Interactive SVG map of Missouri with 115 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Monaco](https://shadcnmaps.com/llms/monaco.md): Interactive SVG map of Monaco with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Montana](https://shadcnmaps.com/llms/montana.md): Interactive SVG map of Montana with 56 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Morocco](https://shadcnmaps.com/llms/morocco.md): Interactive SVG map of Morocco with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Myanmar](https://shadcnmaps.com/llms/myanmar.md): Interactive SVG map of Myanmar with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Nebraska](https://shadcnmaps.com/llms/nebraska.md): Interactive SVG map of Nebraska with 93 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Nepal](https://shadcnmaps.com/llms/nepal.md): Interactive SVG map of Nepal with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Netherlands](https://shadcnmaps.com/llms/netherlands.md): Interactive SVG map of Netherlands with 12 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Nevada](https://shadcnmaps.com/llms/nevada.md): Interactive SVG map of Nevada with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New Hampshire](https://shadcnmaps.com/llms/new-hampshire.md): Interactive SVG map of New Hampshire with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New Jersey](https://shadcnmaps.com/llms/new-jersey.md): Interactive SVG map of New Jersey with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New Mexico](https://shadcnmaps.com/llms/new-mexico.md): Interactive SVG map of New Mexico with 33 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New York](https://shadcnmaps.com/llms/new-york.md): Interactive SVG map of New York with 62 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New York City Boroughs](https://shadcnmaps.com/llms/new-york-city-boroughs.md): Interactive SVG map of New York City Boroughs with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [New Zealand](https://shadcnmaps.com/llms/new-zealand.md): Interactive SVG map of New Zealand with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Nigeria](https://shadcnmaps.com/llms/nigeria.md): Interactive SVG map of Nigeria with 37 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [North Africa](https://shadcnmaps.com/llms/north-africa.md): Interactive SVG map of North Africa with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [North America](https://shadcnmaps.com/llms/north-america.md): Interactive SVG map of North America with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [North Carolina](https://shadcnmaps.com/llms/north-carolina.md): Interactive SVG map of North Carolina with 100 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [North Dakota](https://shadcnmaps.com/llms/north-dakota.md): Interactive SVG map of North Dakota with 53 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Northeast USA](https://shadcnmaps.com/llms/northeast-usa.md): Interactive SVG map of Northeast USA with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Norway](https://shadcnmaps.com/llms/norway.md): Interactive SVG map of Norway with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ohio](https://shadcnmaps.com/llms/ohio.md): Interactive SVG map of Ohio with 88 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Oklahoma](https://shadcnmaps.com/llms/oklahoma.md): Interactive SVG map of Oklahoma with 77 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Oman](https://shadcnmaps.com/llms/oman.md): Interactive SVG map of Oman with 11 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Oregon](https://shadcnmaps.com/llms/oregon.md): Interactive SVG map of Oregon with 36 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Pakistan](https://shadcnmaps.com/llms/pakistan.md): Interactive SVG map of Pakistan with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Palestine & Israel](https://shadcnmaps.com/llms/palestine-israel.md): Interactive SVG map of Palestine & Israel with 23 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Panama](https://shadcnmaps.com/llms/panama.md): Interactive SVG map of Panama with 12 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Paraguay](https://shadcnmaps.com/llms/paraguay.md): Interactive SVG map of Paraguay with 18 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Pennsylvania](https://shadcnmaps.com/llms/pennsylvania.md): Interactive SVG map of Pennsylvania with 67 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Peru](https://shadcnmaps.com/llms/peru.md): Interactive SVG map of Peru with 26 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Philippines](https://shadcnmaps.com/llms/philippines.md): Interactive SVG map of Philippines with 119 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Poland](https://shadcnmaps.com/llms/poland.md): Interactive SVG map of Poland with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Portugal](https://shadcnmaps.com/llms/portugal.md): Interactive SVG map of Portugal with 20 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Puerto Rico](https://shadcnmaps.com/llms/puerto-rico.md): Interactive SVG map of Puerto Rico with 78 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Qatar](https://shadcnmaps.com/llms/qatar.md): Interactive SVG map of Qatar with 7 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Rhode Island](https://shadcnmaps.com/llms/rhode-island.md): Interactive SVG map of Rhode Island with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Romania](https://shadcnmaps.com/llms/romania.md): Interactive SVG map of Romania with 42 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Russia](https://shadcnmaps.com/llms/russia.md): Interactive SVG map of Russia with 85 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Saudi Arabia](https://shadcnmaps.com/llms/saudi-arabia.md): Interactive SVG map of Saudi Arabia with 13 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Serbia](https://shadcnmaps.com/llms/serbia.md): Interactive SVG map of Serbia with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Singapore](https://shadcnmaps.com/llms/singapore.md): Interactive SVG map of Singapore with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Slovakia](https://shadcnmaps.com/llms/slovekia.md): Interactive SVG map of Slovakia with 8 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Slovenia](https://shadcnmaps.com/llms/slovenia.md): Interactive SVG map of Slovenia with 193 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [South Africa](https://shadcnmaps.com/llms/south-africa.md): Interactive SVG map of South Africa with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [South America](https://shadcnmaps.com/llms/south-america.md): Interactive SVG map of South America with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [South Carolina](https://shadcnmaps.com/llms/south-carolina.md): Interactive SVG map of South Carolina with 46 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [South Dakota](https://shadcnmaps.com/llms/south-dakota.md): Interactive SVG map of South Dakota with 66 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [South Korea](https://shadcnmaps.com/llms/south-korea.md): Interactive SVG map of South Korea with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Spain](https://shadcnmaps.com/llms/spain.md): Interactive SVG map of Spain with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Sri Lanka](https://shadcnmaps.com/llms/sri-lanka.md): Interactive SVG map of Sri Lanka with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Sudan](https://shadcnmaps.com/llms/sudan.md): Interactive SVG map of Sudan with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Sweden](https://shadcnmaps.com/llms/sweden.md): Interactive SVG map of Sweden with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Switzerland](https://shadcnmaps.com/llms/switzerland.md): Interactive SVG map of Switzerland with 26 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Syria](https://shadcnmaps.com/llms/syria.md): Interactive SVG map of Syria with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Taiwan](https://shadcnmaps.com/llms/taiwan.md): Interactive SVG map of Taiwan with 22 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Tanzania](https://shadcnmaps.com/llms/tanzania.md): Interactive SVG map of Tanzania with 30 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Tennessee](https://shadcnmaps.com/llms/tennessee.md): Interactive SVG map of Tennessee with 95 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Texas](https://shadcnmaps.com/llms/texas.md): Interactive SVG map of Texas with 254 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Thailand](https://shadcnmaps.com/llms/thailand.md): Interactive SVG map of Thailand with 77 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Trinidad and Tobago](https://shadcnmaps.com/llms/trinidad-and-tobago.md): Interactive SVG map of Trinidad and Tobago with 16 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Tunisia](https://shadcnmaps.com/llms/tunisia.md): Interactive SVG map of Tunisia with 23 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Turkey](https://shadcnmaps.com/llms/turkey.md): Interactive SVG map of Turkey with 81 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Turkmenistan](https://shadcnmaps.com/llms/turkmenistan.md): Interactive SVG map of Turkmenistan with 5 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [United Arab Emirates](https://shadcnmaps.com/llms/uae.md): Interactive SVG map of United Arab Emirates with 9 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Uganda](https://shadcnmaps.com/llms/uganda.md): Interactive SVG map of Uganda with 112 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [United Kingdom](https://shadcnmaps.com/llms/uk.md): Interactive SVG map of United Kingdom with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Ukraine](https://shadcnmaps.com/llms/ukraine.md): Interactive SVG map of Ukraine with 27 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Uruguay](https://shadcnmaps.com/llms/uruguay.md): Interactive SVG map of Uruguay with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [USA Map](https://shadcnmaps.com/llms/usa.md): Interactive SVG map of the United States with all 50 states and DC. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [USA & Canada](https://shadcnmaps.com/llms/usa-canada.md): Interactive SVG map of USA & Canada with 63 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [USA Territories](https://shadcnmaps.com/llms/usa-territories.md): Interactive SVG map of USA Territories with 60 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Utah](https://shadcnmaps.com/llms/utah.md): Interactive SVG map of Utah with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Uzbekistan](https://shadcnmaps.com/llms/uzbekistan.md): Interactive SVG map of Uzbekistan with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Venezuela](https://shadcnmaps.com/llms/venezuela.md): Interactive SVG map of Venezuela with 25 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Vermont](https://shadcnmaps.com/llms/vermont.md): Interactive SVG map of Vermont with 14 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Vietnam](https://shadcnmaps.com/llms/vietnam.md): Interactive SVG map of Vietnam with 63 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Virginia](https://shadcnmaps.com/llms/virginia.md): Interactive SVG map of Virginia with 134 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Washington](https://shadcnmaps.com/llms/washington.md): Interactive SVG map of Washington with 39 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [West Virginia](https://shadcnmaps.com/llms/west-virginia.md): Interactive SVG map of West Virginia with 55 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Wisconsin](https://shadcnmaps.com/llms/wisconsin.md): Interactive SVG map of Wisconsin with 72 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [World Map](https://shadcnmaps.com/llms/world.md): Interactive SVG map of World with 256 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [World (Jammu & Kashmir)](https://shadcnmaps.com/llms/world-jammu-kashmir.md): Interactive SVG map of World (Jammu & Kashmir) with 257 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Wyoming](https://shadcnmaps.com/llms/wyoming.md): Interactive SVG map of Wyoming with 23 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Yemen](https://shadcnmaps.com/llms/yemen.md): Interactive SVG map of Yemen with 21 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Zambia](https://shadcnmaps.com/llms/zambia.md): Interactive SVG map of Zambia with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Zimbabwe](https://shadcnmaps.com/llms/zimbabwe.md): Interactive SVG map of Zimbabwe with 10 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 
 ## Examples
 
