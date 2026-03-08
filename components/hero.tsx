@@ -1,70 +1,51 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Globe, Map } from 'lucide-react'
+import { WorldMap } from '@/registry/shadcnmaps/maps/world'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-
-import { SquareGrid } from './square-grid'
 
 export function Hero() {
   return (
-    <section className='relative flex flex-col items-center gap-8 overflow-hidden px-5 py-8 text-center md:py-12'>
-      <div className='absolute inset-0 flex h-full w-full items-center justify-center opacity-100'>
-        <SquareGrid className='mask-[radial-gradient(75%_75%_at_center,white,transparent)] opacity-50' />
-      </div>
-      <div className='relative z-10 flex flex-col items-center'>
-        <div className='mb-6 flex flex-col items-center gap-3'>
-          <Link
-            href='/maps'
-            className='mx-auto inline-flex items-center gap-3 rounded-full border bg-background px-2 py-1 text-sm shadow-xs'
-          >
-            <span className='inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground'>
-              170+ maps
-            </span>
-            <span className='font-medium'>Browse the full map library</span>
-            <span className='flex size-7 items-center justify-center rounded-full bg-muted'>
-              <ArrowRight className='size-4' />
-            </span>
-          </Link>
-          <h1 className='leading-tighter max-w-4xl text-4xl font-semibold tracking-tight text-balance lg:leading-[1.2] lg:font-semibold xl:text-5xl xl:tracking-tighter'>
-            Interactive SVG Maps for React
-          </h1>
-          <p className='max-w-3xl text-base text-foreground sm:text-lg'>
-            Beautiful map components powered by pure SVG. No dependencies — just
-            install via shadcn CLI and start building.
-          </p>
+    <section className='relative container mx-auto max-w-7xl px-6 pt-16 pb-12 md:pt-24 md:pb-16'>
+      {/* World map background */}
+      <div className='absolute inset-0 flex items-end justify-center overflow-hidden'>
+        <div className='w-full min-w-[1000px] translate-y-[15%] opacity-[0.12] blur-[2px] filter **:data-[slot=map-region]:fill-foreground **:data-[slot=map-region]:stroke-foreground'>
+          <WorldMap showLabels={false} showTooltips={false} />
         </div>
-        <div className='flex flex-wrap justify-center gap-4'>
-          <Button
-            size='lg'
-            render={
-              <Link href='/overview/getting-started'>
-                Get Started
-                <ArrowRight />
-              </Link>
-            }
-            nativeButton={false}
-          />
-          <Button
-            variant='outline'
-            size='lg'
-            render={
-              <Link href='/maps'>
-                <Map /> Maps
-              </Link>
-            }
-            nativeButton={false}
-          />
-          <Button
-            variant='outline'
-            size='lg'
-            render={
-              <Link href='/examples/region-click'>
-                <Globe /> Examples
-              </Link>
-            }
-            nativeButton={false}
-          />
+      </div>
+
+      {/* Text */}
+      <div className='relative z-10'>
+        <h1 className='text-6xl font-bold tracking-tight sm:text-7xl md:text-8xl lg:text-9xl'>
+          Interactive
+          <br />
+          SVG maps
+        </h1>
+
+        <div className='mt-8 flex flex-col gap-4 md:mt-10'>
+          <p className='max-w-md text-lg'>
+            Drop-in map components for React. Hover tooltips, region selection,
+            map controls — all built in. One CLI command to install.
+          </p>
+          <div className='flex flex-wrap items-center gap-3'>
+            <Button
+              size='lg'
+              render={
+                <Link href='/overview/getting-started'>
+                  Get Started
+                  <ArrowRight />
+                </Link>
+              }
+              nativeButton={false}
+            />
+            <Button
+              variant='outline'
+              size='lg'
+              render={<Link href='/maps'>Browse 170+ maps</Link>}
+              nativeButton={false}
+            />
+          </div>
         </div>
       </div>
     </section>

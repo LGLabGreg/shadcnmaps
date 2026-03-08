@@ -1,17 +1,8 @@
+import { FeatureStrip } from '@/components/feature-strip'
 import { Hero } from '@/components/hero'
 import MainNav from '@/components/main-nav'
-import { Button } from '@/components/ui/button'
-import {
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  Card,
-  CardTitle,
-} from '@/components/ui/card'
-import { ArrowRight, Brush, Globe, Layers, Zap } from 'lucide-react'
+import { MapShowcase } from '@/components/map-showcase'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: {
@@ -21,72 +12,13 @@ export const metadata: Metadata = {
     '170+ interactive SVG map components for React. Countries, continents, and US states. No dependencies — install via shadcn CLI with pure Tailwind CSS styling.',
 }
 
-const features = [
-  {
-    icon: Zap,
-    title: 'Zero Dependencies',
-    description:
-      'Pure React SVG — no d3, no Raphael, no jQuery. Lightweight and tree-shakeable.',
-    href: '/overview/getting-started',
-  },
-  {
-    icon: Layers,
-    title: 'Drop-in Ready',
-    description:
-      'One component per map with tooltips, selection, markers, and labels built in.',
-    href: '/overview/api-reference',
-  },
-  {
-    icon: Globe,
-    title: '170+ Maps',
-    description:
-      'Countries, continents, and US states. Install only the maps you need via the shadcn CLI.',
-    href: '/maps',
-  },
-  {
-    icon: Brush,
-    title: 'Themeable',
-    description:
-      'CSS variables for every map color. Light and dark mode work automatically with Tailwind.',
-    href: '/overview/theming',
-  },
-]
-
 export default function Home() {
   return (
-    <div className='flex flex-col pb-10'>
+    <div className='flex flex-col'>
       <MainNav />
       <Hero />
-      <div className='container mx-auto max-w-7xl px-6'>
-        <div className='mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
-          {features.map((feature) => (
-            <Card key={feature.href} className='flex flex-col'>
-              <CardHeader>
-                <CardTitle className='flex items-center gap-2'>
-                  <feature.icon className='size-6' />
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className='flex-1'>
-                <CardDescription>{feature.description}</CardDescription>
-              </CardContent>
-              <CardFooter className='bg-background'>
-                <Button
-                  size='sm'
-                  variant='outline'
-                  className='ml-auto'
-                  render={
-                    <Link href={feature.href}>
-                      Learn more <ArrowRight className='size-4' />
-                    </Link>
-                  }
-                  nativeButton={false}
-                />
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <FeatureStrip />
+      <MapShowcase />
     </div>
   )
 }

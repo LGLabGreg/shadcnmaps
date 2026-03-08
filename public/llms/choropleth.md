@@ -69,11 +69,36 @@ const POPULATION: Record<RegionId, number> = {
 const MAX_POP = Math.max(...(Object.values(POPULATION) as number[]))
 
 const BUCKETS = [
-  { min: 0.6, label: '> 23M', className: 'fill-sky-900 hover:fill-sky-800', swatch: 'bg-sky-900' },
-  { min: 0.3, label: '12M – 23M', className: 'fill-sky-800 hover:fill-sky-700', swatch: 'bg-sky-800' },
-  { min: 0.15, label: '6M – 12M', className: 'fill-sky-700 hover:fill-sky-600', swatch: 'bg-sky-700' },
-  { min: 0.05, label: '2M – 6M', className: 'fill-sky-600 hover:fill-sky-500', swatch: 'bg-sky-600' },
-  { min: 0, label: '< 2M', className: 'fill-sky-500 hover:fill-sky-400', swatch: 'bg-sky-500' },
+  {
+    min: 0.6,
+    label: '> 23M',
+    className: 'fill-sky-900 hover:fill-sky-800',
+    swatch: 'bg-sky-900',
+  },
+  {
+    min: 0.3,
+    label: '12M – 23M',
+    className: 'fill-sky-800 hover:fill-sky-700',
+    swatch: 'bg-sky-800',
+  },
+  {
+    min: 0.15,
+    label: '6M – 12M',
+    className: 'fill-sky-700 hover:fill-sky-600',
+    swatch: 'bg-sky-700',
+  },
+  {
+    min: 0.05,
+    label: '2M – 6M',
+    className: 'fill-sky-600 hover:fill-sky-500',
+    swatch: 'bg-sky-600',
+  },
+  {
+    min: 0,
+    label: '< 2M',
+    className: 'fill-sky-500 hover:fill-sky-400',
+    swatch: 'bg-sky-500',
+  },
 ]
 
 function colorClasses(id: RegionId): {
@@ -104,21 +129,19 @@ export default function ChoroplethExample() {
   return (
     <div>
       <div className='mb-4'>
-        <h3 className='text-lg font-semibold'>
-          US Population by State
-        </h3>
-        <p className='text-sm text-muted-foreground'>
-          2020 Census estimates
-        </p>
+        <h3 className='text-lg font-semibold'>US Population by State</h3>
+        <p className='text-sm text-muted-foreground'>2020 Census estimates</p>
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-5'>
+      <div className='grid grid-cols-1 gap-5 sm:grid-cols-[1fr_auto]'>
         <USAMap regions={regions} />
         <div>
           <p className='mb-1.5 font-medium'>Population</p>
           <div className='flex flex-col gap-1 text-xs'>
             {BUCKETS.map((b) => (
               <div key={b.label} className='flex items-center gap-1.5'>
-                <span className={`inline-block h-3 w-3 rounded-xs ${b.swatch}`} />
+                <span
+                  className={`inline-block h-3 w-3 rounded-xs ${b.swatch}`}
+                />
                 <span className='text-muted-foreground'>{b.label}</span>
               </div>
             ))}
