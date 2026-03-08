@@ -1,0 +1,23 @@
+import { MapPage } from '@/components/docs/map-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import SimpleExample from './map'
+
+export const metadata = {
+  title: 'Côte d'Ivoire',
+  description: 'Interactive SVG map of Côte d'Ivoire with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.',
+}
+
+<MapPage
+  title="Côte d'Ivoire"
+  description="Interactive SVG map of Côte d'Ivoire with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers."
+  registryName="cote-ivoire"
+>
+
+<ExampleLoader
+  filePath='app/(docs)/maps/cote-ivoire/map.tsx'
+>
+  <SimpleExample />
+</ExampleLoader>
+
+</MapPage>
