@@ -17,6 +17,20 @@ import { belgiumMapData } from '@/registry/shadcnmaps/map-data/belgium'
 import { boliviaMapData } from '@/registry/shadcnmaps/map-data/bolivia'
 import { brazilMapData } from '@/registry/shadcnmaps/map-data/brazil'
 import { bulgariaMapData } from '@/registry/shadcnmaps/map-data/bulgaria'
+import { californiaMapData } from '@/registry/shadcnmaps/map-data/california'
+import { cameroonMapData } from '@/registry/shadcnmaps/map-data/cameroon'
+import { canadaMapData } from '@/registry/shadcnmaps/map-data/canada'
+import { caribbeanMapData } from '@/registry/shadcnmaps/map-data/caribbean'
+import { centralAmericaMapData } from '@/registry/shadcnmaps/map-data/central-america'
+import { chinaMapData } from '@/registry/shadcnmaps/map-data/china'
+import { colombiaMapData } from '@/registry/shadcnmaps/map-data/colombia'
+import { coloradoMapData } from '@/registry/shadcnmaps/map-data/colorado'
+import { connecticutMapData } from '@/registry/shadcnmaps/map-data/connecticut'
+import { costaRicaMapData } from '@/registry/shadcnmaps/map-data/costa-rica'
+import { coteIvoireMapData } from '@/registry/shadcnmaps/map-data/cote-ivoire'
+import { croatiaMapData } from '@/registry/shadcnmaps/map-data/croatia'
+import { cubaMapData } from '@/registry/shadcnmaps/map-data/cuba'
+import { czechRepublicMapData } from '@/registry/shadcnmaps/map-data/czech-republic'
 import { franceMapData } from '@/registry/shadcnmaps/map-data/france'
 import { usaMapData } from '@/registry/shadcnmaps/map-data/usa'
 import { worldMapData } from '@/registry/shadcnmaps/map-data/world'
@@ -43,6 +57,20 @@ export const MAPS: Record<string, { data: MapData; label: string }> = {
   bolivia: { data: boliviaMapData, label: 'Bolivia' },
   brazil: { data: brazilMapData, label: 'Brazil' },
   bulgaria: { data: bulgariaMapData, label: 'Bulgaria' },
+  california: { data: californiaMapData, label: 'California' },
+  cameroon: { data: cameroonMapData, label: 'Cameroon' },
+  canada: { data: canadaMapData, label: 'Canada' },
+  caribbean: { data: caribbeanMapData, label: 'Caribbean' },
+  'central-america': { data: centralAmericaMapData, label: 'Central America' },
+  china: { data: chinaMapData, label: 'China' },
+  colombia: { data: colombiaMapData, label: 'Colombia' },
+  colorado: { data: coloradoMapData, label: 'Colorado' },
+  connecticut: { data: connecticutMapData, label: 'Connecticut' },
+  'costa-rica': { data: costaRicaMapData, label: 'Costa Rica' },
+  'cote-ivoire': { data: coteIvoireMapData, label: 'Sud-Comoé' },
+  croatia: { data: croatiaMapData, label: 'Croatia' },
+  cuba: { data: cubaMapData, label: 'Cuba' },
+  'czech-republic': { data: czechRepublicMapData, label: 'Czech Republic' },
   france: { data: franceMapData, label: 'France' },
   usa: { data: usaMapData, label: 'United States' },
   world: { data: worldMapData, label: 'World' },

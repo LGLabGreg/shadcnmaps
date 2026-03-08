@@ -141,7 +141,7 @@ export default function MarkerGeneratorPage() {
   const code = generateCode(markers)
 
   return (
-    <div className='mx-auto max-w-5xl px-6 py-10'>
+    <div className='p-6 md:p-8'>
       <h1 className='text-3xl font-bold tracking-tight'>Marker Generator</h1>
       <p className='mt-2 text-muted-foreground'>
         Click on the map to place markers and get their SVG coordinates. Copy

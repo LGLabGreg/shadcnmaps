@@ -409,12 +409,13 @@ function getMapCategory(mapId: string): MapCategory {
   const trackingPath = resolve(ROOT, 'docs/MAP-TRACKING.md')
   const content = readFileSync(trackingPath, 'utf-8')
 
-  // Split by section headers and find which section contains the mapId
+  // Append sentinel so every section has \n## after it (avoids $ matching end-of-line in multiline)
+  const contentWithSentinel = content + '\n## '
   const sections: Array<{ category: MapCategory; body: string }> = []
   const sectionRegex =
-    /^## (Countries|Regions & Continents|US States|Multi-country \/ Special)[^\n]*\n([\s\S]*?)(?=^## |$)/gm
+    /^## (Countries|Regions & Continents|US States|Multi-country \/ Special)[^\n]*\n+([\s\S]*?)(?=\n## )/gm
   let m: RegExpExecArray | null
-  while ((m = sectionRegex.exec(content)) !== null) {
+  while ((m = sectionRegex.exec(contentWithSentinel)) !== null) {
     const header = m[1]
     let category: MapCategory
     if (header === 'Countries') category = 'Countries'
@@ -463,12 +464,15 @@ function updateNavigation(entries: Array<{ mapId: string }>): void {
 
     const existingItemsStr = groupMatch[2]
 
-    // Parse existing items
-    const itemRegex = /\{\s*title:\s*'([^']+)',\s*href:\s*'([^']+)'\s*\}/g
+    // Parse existing items (handle escaped quotes in titles)
+    const itemRegex =
+      /\{\s*title:\s*'((?:[^'\\]|\\.)*)',\s*href:\s*'([^']+)'\s*\}/g
     const items: Array<{ title: string; href: string }> = []
     let im: RegExpExecArray | null
     while ((im = itemRegex.exec(existingItemsStr)) !== null) {
-      items.push({ title: im[1], href: im[2] })
+      // Unescape any escaped quotes in the title
+      const parsedTitle = im[1].replace(/\\'/g, "'")
+      items.push({ title: parsedTitle, href: im[2] })
     }
 
     items.push({ title, href })
@@ -476,7 +480,8 @@ function updateNavigation(entries: Array<{ mapId: string }>): void {
 
     const newItemsStr = items
       .map(
-        (item) => `          { title: '${item.title}', href: '${item.href}' }`
+        (item) =>
+          `          { title: '${item.title.replace(/'/g, "\\'")}', href: '${item.href}' }`
       )
       .join(',\n')
 

@@ -285,4 +285,186 @@ export const mapData = [
       },
     ],
   },
+  {
+    name: 'california-data',
+    type: 'registry:file',
+    title: 'California Data',
+    description: 'SVG path data for California with 58 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/california.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/california.ts',
+      },
+    ],
+  },
+  {
+    name: 'colorado-data',
+    type: 'registry:file',
+    title: 'Colorado Data',
+    description: 'SVG path data for Colorado with 64 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/colorado.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/colorado.ts',
+      },
+    ],
+  },
+  {
+    name: 'cameroon-data',
+    type: 'registry:file',
+    title: 'Cameroon Data',
+    description: 'SVG path data for Cameroon with 10 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/cameroon.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/cameroon.ts',
+      },
+    ],
+  },
+  {
+    name: 'central-america-data',
+    type: 'registry:file',
+    title: 'Central America Data',
+    description: 'SVG path data for Central America with 7 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/central-america.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/central-america.ts',
+      },
+    ],
+  },
+  {
+    name: 'canada-data',
+    type: 'registry:file',
+    title: 'Canada Data',
+    description: 'SVG path data for Canada with 13 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/canada.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/canada.ts',
+      },
+    ],
+  },
+  {
+    name: 'caribbean-data',
+    type: 'registry:file',
+    title: 'Caribbean Data',
+    description: 'SVG path data for Caribbean with 35 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/caribbean.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/caribbean.ts',
+      },
+    ],
+  },
+  {
+    name: 'china-data',
+    type: 'registry:file',
+    title: 'China Data',
+    description: 'SVG path data for China with 32 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/china.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/china.ts',
+      },
+    ],
+  },
+  {
+    name: 'colombia-data',
+    type: 'registry:file',
+    title: 'Colombia Data',
+    description: 'SVG path data for Colombia with 33 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/colombia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/colombia.ts',
+      },
+    ],
+  },
+  {
+    name: 'connecticut-data',
+    type: 'registry:file',
+    title: 'Connecticut Data',
+    description: 'SVG path data for Connecticut with 8 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/connecticut.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/connecticut.ts',
+      },
+    ],
+  },
+  {
+    name: 'costa-rica-data',
+    type: 'registry:file',
+    title: 'Costa Rica Data',
+    description: 'SVG path data for Costa Rica with 7 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/costa-rica.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/costa-rica.ts',
+      },
+    ],
+  },
+  {
+    name: 'cote-ivoire-data',
+    type: 'registry:file',
+    title: "Côte d'Ivoire Data",
+    description: "SVG path data for Côte d'Ivoire with 19 regions.",
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/cote-ivoire.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/cote-ivoire.ts',
+      },
+    ],
+  },
+  {
+    name: 'croatia-data',
+    type: 'registry:file',
+    title: 'Croatia Data',
+    description: 'SVG path data for Croatia with 21 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/croatia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/croatia.ts',
+      },
+    ],
+  },
+  {
+    name: 'cuba-data',
+    type: 'registry:file',
+    title: 'Cuba Data',
+    description: 'SVG path data for Cuba with 16 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/cuba.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/cuba.ts',
+      },
+    ],
+  },
+  {
+    name: 'czech-republic-data',
+    type: 'registry:file',
+    title: 'Czech Republic Data',
+    description: 'SVG path data for Czech Republic with 14 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/czech-republic.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/czech-republic.ts',
+      },
+    ],
+  },
 ]
