@@ -339,12 +339,17 @@ function updateMapsRegistry(
     title: '${title}',
     description:
       '${description}',
-    registryDependencies: [registryUrl('map'), registryUrl('${kebab}-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/${slug}.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/${slug}.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/${kebab}.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/${kebab}.ts',
       },
     ],
   },`
