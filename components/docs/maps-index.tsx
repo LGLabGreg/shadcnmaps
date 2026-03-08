@@ -76,7 +76,7 @@ export function MapsIndex() {
             <Link
               key={map.href}
               href={map.href}
-              className='rounded-lg border border-border p-4 transition-colors hover:bg-accent'
+              className='rounded-lg border border-border bg-card p-4 transition-colors hover:bg-accent'
             >
               <div className='font-medium'>{map.title}</div>
               <div className='text-xs text-muted-foreground'>
