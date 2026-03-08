@@ -1,7 +1,7 @@
 'use client'
 
-import { Map, type MapProps } from '@/registry/shadcnmaps/map'
-import { azerbaijanMapData } from '@/registry/shadcnmaps/map-data/azerbaijan'
+import { Map, type MapProps } from '../map'
+import { azerbaijanMapData } from '../map-data/azerbaijan'
 
 export type RegionId = (typeof azerbaijanMapData)['regions'][number]['id']
 

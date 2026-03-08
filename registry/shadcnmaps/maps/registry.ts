@@ -7,12 +7,17 @@ export const maps = [
     title: 'USA Map',
     description:
       'Interactive United States map with all 50 states and DC. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('usa-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/usa.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/usa.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/usa.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/usa.ts',
       },
     ],
   },
@@ -22,12 +27,17 @@ export const maps = [
     title: 'Africa',
     description:
       'Interactive Africa map with 56 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('africa-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/africa.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/africa.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/africa.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/africa.ts',
       },
     ],
   },
@@ -37,12 +47,17 @@ export const maps = [
     title: 'Alabama',
     description:
       'Interactive Alabama map with 68 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('alabama-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/alabama.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/alabama.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/alabama.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/alabama.ts',
       },
     ],
   },
@@ -52,12 +67,17 @@ export const maps = [
     title: 'Alaska',
     description:
       'Interactive Alaska map with 30 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('alaska-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/alaska.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/alaska.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/alaska.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/alaska.ts',
       },
     ],
   },
@@ -67,12 +87,17 @@ export const maps = [
     title: 'Algeria',
     description:
       'Interactive Algeria map with 49 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('algeria-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/algeria.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/algeria.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/algeria.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/algeria.ts',
       },
     ],
   },
@@ -82,12 +107,17 @@ export const maps = [
     title: 'Angola',
     description:
       'Interactive Angola map with 19 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('angola-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/angola.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/angola.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/angola.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/angola.ts',
       },
     ],
   },
@@ -97,12 +127,17 @@ export const maps = [
     title: 'Argentina',
     description:
       'Interactive Argentina map with 25 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('argentina-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/argentina.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/argentina.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/argentina.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/argentina.ts',
       },
     ],
   },
@@ -112,12 +147,17 @@ export const maps = [
     title: 'Arizona',
     description:
       'Interactive Arizona map with 16 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('arizona-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/arizona.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/arizona.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/arizona.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/arizona.ts',
       },
     ],
   },
@@ -127,12 +167,17 @@ export const maps = [
     title: 'Arkansas',
     description:
       'Interactive Arkansas map with 76 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('arkansas-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/arkansas.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/arkansas.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/arkansas.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/arkansas.ts',
       },
     ],
   },
@@ -142,12 +187,17 @@ export const maps = [
     title: 'Asia',
     description:
       'Interactive Asia map with 54 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('asia-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/asia.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/asia.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/asia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/asia.ts',
       },
     ],
   },
@@ -157,12 +207,17 @@ export const maps = [
     title: 'Australia',
     description:
       'Interactive Australia map with 9 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('australia-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/australia.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/australia.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/australia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/australia.ts',
       },
     ],
   },
@@ -172,12 +227,17 @@ export const maps = [
     title: 'Austria',
     description:
       'Interactive Austria map with 10 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('austria-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/austria.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/austria.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/austria.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/austria.ts',
       },
     ],
   },
@@ -187,12 +247,17 @@ export const maps = [
     title: 'Azerbaijan',
     description:
       'Interactive Azerbaijan map with 79 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('azerbaijan-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/azerbaijan.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/azerbaijan.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/azerbaijan.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/azerbaijan.ts',
       },
     ],
   },
@@ -202,12 +267,17 @@ export const maps = [
     title: 'France Map',
     description:
       'Interactive France map with 13 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('france-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/france.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/france.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/france.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/france.ts',
       },
     ],
   },
@@ -217,12 +287,17 @@ export const maps = [
     title: 'World Map',
     description:
       'Interactive World map with 256 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('world-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/world.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/world.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/world.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/world.ts',
       },
     ],
   },
@@ -232,12 +307,17 @@ export const maps = [
     title: 'Bahrain',
     description:
       'Interactive Bahrain map with 5 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('bahrain-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/bahrain.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/bahrain.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/bahrain.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bahrain.ts',
       },
     ],
   },
@@ -247,12 +327,17 @@ export const maps = [
     title: 'Bangladesh',
     description:
       'Interactive Bangladesh map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('bangladesh-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/bangladesh.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/bangladesh.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/bangladesh.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bangladesh.ts',
       },
     ],
   },
@@ -262,12 +347,17 @@ export const maps = [
     title: 'Belarus',
     description:
       'Interactive Belarus map with 7 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('belarus-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/belarus.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/belarus.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/belarus.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/belarus.ts',
       },
     ],
   },
@@ -277,12 +367,17 @@ export const maps = [
     title: 'Belgium',
     description:
       'Interactive Belgium map with 11 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('belgium-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/belgium.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/belgium.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/belgium.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/belgium.ts',
       },
     ],
   },
@@ -292,12 +387,17 @@ export const maps = [
     title: 'Bolivia',
     description:
       'Interactive Bolivia map with 9 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('bolivia-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/bolivia.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/bolivia.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/bolivia.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bolivia.ts',
       },
     ],
   },
@@ -307,12 +407,17 @@ export const maps = [
     title: 'Brazil',
     description:
       'Interactive Brazil map with 27 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('brazil-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/brazil.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/brazil.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/brazil.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/brazil.ts',
       },
     ],
   },
@@ -322,12 +427,17 @@ export const maps = [
     title: 'Bulgaria',
     description:
       'Interactive Bulgaria map with 28 regions. Supports click, hover, selection, tooltips, and custom markers.',
-    registryDependencies: [registryUrl('map'), registryUrl('bulgaria-data')],
+    registryDependencies: [registryUrl('map')],
     files: [
       {
         path: 'registry/shadcnmaps/maps/bulgaria.tsx',
         type: 'registry:file',
         target: 'components/shadcnmaps/maps/bulgaria.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/bulgaria.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/bulgaria.ts',
       },
     ],
   },
