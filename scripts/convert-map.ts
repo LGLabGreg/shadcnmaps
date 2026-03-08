@@ -252,8 +252,8 @@ function generateMapComponent(mapId: string): string {
 
   return `'use client'
 
-import { Map, type MapProps } from '@/registry/shadcnmaps/map'
-import { ${dataExport} } from '@/registry/shadcnmaps/map-data/${kebab}'
+import { Map, type MapProps } from '../map'
+import { ${dataExport} } from '../map-data/${kebab}'
 
 export type RegionId = (typeof ${dataExport})['regions'][number]['id']
 
