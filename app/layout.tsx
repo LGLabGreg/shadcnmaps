@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const BASE_URL = 'https://shadcnmaps.com'
+const BASE_URL = 'https://www.shadcnmaps.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
