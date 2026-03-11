@@ -34,7 +34,7 @@ export default function SimpleExample() {
 | `showTooltips` | `boolean` | `true` | Enable tooltip on hover and click. |
 | `className` | `string` | — | Class applied to the root SVG element. |
 | `aria-label` | `string` | `Map name` | Accessible label for the map. |
-| `enableZoom` | `boolean` | `false` | Enable zoom and pan gestures (wheel, drag, pinch, keyboard). |
+| `enableZoom` | `boolean` | `false` | Enable zoom and pan gestures (wheel, drag, pinch). |
 | `zoomConfig` | `Partial<ZoomConfig>` | — | Override default zoom configuration. See Zoom & Pan docs. |
 | `controls` | `ReactNode` | — | Control overlay rendered inside the map container (e.g. MapControls). |
 

@@ -62,3 +62,4 @@ Always use [shadcn/ui](https://ui.shadcn.com/) components for the docs site UI. 
 - The installed shadcn Select component uses Base UI (`@base-ui/react/select`), not Radix — `onValueChange` has signature `(value: string | null, eventDetails) => void`, so handlers must accept `string | null`.
 - Run `pnpm lint` after every file change to catch type errors early.
 - The shadcn Combobox uses Base UI (`@base-ui/react/combobox`). For string item values, the input displays the raw `value` prop by default — use `itemToStringLabel` on the Root to map values to display labels (also fixes filtering).
+- Run `pnpm vitest run` after any change to registry components
