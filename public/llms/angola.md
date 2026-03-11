@@ -5,7 +5,7 @@ Interactive SVG map of Angola with 18 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/angola.json
+npx shadcn@latest add @shadcnmaps/angola
 ```
 
 ```tsx

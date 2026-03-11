@@ -5,7 +5,7 @@ Interactive SVG map of Yemen with 21 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/yemen.json
+npx shadcn@latest add @shadcnmaps/yemen
 ```
 
 ```tsx

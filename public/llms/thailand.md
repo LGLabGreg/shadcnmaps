@@ -5,7 +5,7 @@ Interactive SVG map of Thailand with 77 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/thailand.json
+npx shadcn@latest add @shadcnmaps/thailand
 ```
 
 ```tsx

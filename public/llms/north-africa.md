@@ -5,7 +5,7 @@ Interactive SVG map of North Africa with 6 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/north-africa.json
+npx shadcn@latest add @shadcnmaps/north-africa
 ```
 
 ```tsx

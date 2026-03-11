@@ -5,7 +5,7 @@ Interactive SVG map of Monaco with 10 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/monaco.json
+npx shadcn@latest add @shadcnmaps/monaco
 ```
 
 ```tsx

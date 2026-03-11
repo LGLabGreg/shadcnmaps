@@ -5,7 +5,7 @@ Interactive SVG map of Egypt with 27 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/egypt.json
+npx shadcn@latest add @shadcnmaps/egypt
 ```
 
 ```tsx

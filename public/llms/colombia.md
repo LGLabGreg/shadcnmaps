@@ -5,7 +5,7 @@ Interactive SVG map of Colombia with 33 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/colombia.json
+npx shadcn@latest add @shadcnmaps/colombia
 ```
 
 ```tsx

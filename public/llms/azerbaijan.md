@@ -5,7 +5,7 @@ Interactive SVG map of Azerbaijan with 78 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/azerbaijan.json
+npx shadcn@latest add @shadcnmaps/azerbaijan
 ```
 
 ```tsx

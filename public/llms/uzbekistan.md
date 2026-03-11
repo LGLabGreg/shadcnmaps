@@ -5,7 +5,7 @@ Interactive SVG map of Uzbekistan with 14 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/uzbekistan.json
+npx shadcn@latest add @shadcnmaps/uzbekistan
 ```
 
 ```tsx

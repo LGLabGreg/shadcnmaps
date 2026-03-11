@@ -5,7 +5,7 @@ Interactive SVG map of USA & Canada with 63 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/usa-canada.json
+npx shadcn@latest add @shadcnmaps/usa-canada
 ```
 
 ```tsx

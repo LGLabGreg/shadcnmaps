@@ -5,7 +5,7 @@ Interactive SVG map of Kuwait with 6 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/kuwait.json
+npx shadcn@latest add @shadcnmaps/kuwait
 ```
 
 ```tsx

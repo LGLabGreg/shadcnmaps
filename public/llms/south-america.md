@@ -5,7 +5,7 @@ Interactive SVG map of South America with 14 regions. Supports click, hover, key
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/south-america.json
+npx shadcn@latest add @shadcnmaps/south-america
 ```
 
 ```tsx

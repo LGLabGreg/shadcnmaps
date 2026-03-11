@@ -5,7 +5,7 @@ Interactive SVG map of Bangladesh with 7 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/bangladesh.json
+npx shadcn@latest add @shadcnmaps/bangladesh
 ```
 
 ```tsx

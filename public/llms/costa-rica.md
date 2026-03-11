@@ -5,7 +5,7 @@ Interactive SVG map of Costa Rica with 7 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/costa-rica.json
+npx shadcn@latest add @shadcnmaps/costa-rica
 ```
 
 ```tsx

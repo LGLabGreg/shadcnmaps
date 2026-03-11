@@ -5,7 +5,7 @@ Interactive SVG map of Libya with 22 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/libya.json
+npx shadcn@latest add @shadcnmaps/libya
 ```
 
 ```tsx

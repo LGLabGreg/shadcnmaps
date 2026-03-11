@@ -5,7 +5,7 @@ Interactive SVG map of Portugal with 20 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/portugal.json
+npx shadcn@latest add @shadcnmaps/portugal
 ```
 
 ```tsx

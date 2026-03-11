@@ -5,7 +5,7 @@ Interactive SVG map of Qatar with 7 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/qatar.json
+npx shadcn@latest add @shadcnmaps/qatar
 ```
 
 ```tsx

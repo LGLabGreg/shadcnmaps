@@ -5,7 +5,7 @@ Interactive SVG map of Luxembourg with 3 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/luxembourg.json
+npx shadcn@latest add @shadcnmaps/luxembourg
 ```
 
 ```tsx

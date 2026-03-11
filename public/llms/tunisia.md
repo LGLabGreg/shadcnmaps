@@ -5,7 +5,7 @@ Interactive SVG map of Tunisia with 23 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/tunisia.json
+npx shadcn@latest add @shadcnmaps/tunisia
 ```
 
 ```tsx

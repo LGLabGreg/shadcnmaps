@@ -5,7 +5,7 @@ Interactive SVG map of Alaska with 29 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/alaska.json
+npx shadcn@latest add @shadcnmaps/alaska
 ```
 
 ```tsx

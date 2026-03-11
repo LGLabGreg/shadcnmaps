@@ -5,7 +5,7 @@ Interactive SVG map of Mexico with 32 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/mexico.json
+npx shadcn@latest add @shadcnmaps/mexico
 ```
 
 ```tsx

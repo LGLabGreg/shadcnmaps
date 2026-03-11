@@ -5,7 +5,7 @@ Interactive SVG map of North America with 29 regions. Supports click, hover, key
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/north-america.json
+npx shadcn@latest add @shadcnmaps/north-america
 ```
 
 ```tsx

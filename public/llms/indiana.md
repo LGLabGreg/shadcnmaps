@@ -5,7 +5,7 @@ Interactive SVG map of Indiana with 92 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/indiana.json
+npx shadcn@latest add @shadcnmaps/indiana
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Belgium with 11 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/belgium.json
+npx shadcn@latest add @shadcnmaps/belgium
 ```
 
 ```tsx

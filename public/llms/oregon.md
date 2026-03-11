@@ -5,7 +5,7 @@ Interactive SVG map of Oregon with 36 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/oregon.json
+npx shadcn@latest add @shadcnmaps/oregon
 ```
 
 ```tsx

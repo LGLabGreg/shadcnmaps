@@ -5,7 +5,7 @@ Interactive SVG map of Northeast USA with 9 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/northeast-usa.json
+npx shadcn@latest add @shadcnmaps/northeast-usa
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Sweden with 21 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/sweden.json
+npx shadcn@latest add @shadcnmaps/sweden
 ```
 
 ```tsx

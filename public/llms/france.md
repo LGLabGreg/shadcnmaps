@@ -5,7 +5,7 @@ Interactive SVG map of France with 13 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/france.json
+npx shadcn@latest add @shadcnmaps/france
 ```
 
 ```tsx

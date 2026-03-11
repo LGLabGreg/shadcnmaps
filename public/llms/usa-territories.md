@@ -5,7 +5,7 @@ Interactive SVG map of USA Territories with 60 regions. Supports click, hover, k
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/usa-territories.json
+npx shadcn@latest add @shadcnmaps/usa-territories
 ```
 
 ```tsx

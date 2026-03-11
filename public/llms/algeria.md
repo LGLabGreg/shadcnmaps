@@ -5,7 +5,7 @@ Interactive SVG map of Algeria with 48 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/algeria.json
+npx shadcn@latest add @shadcnmaps/algeria
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Nebraska with 93 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/nebraska.json
+npx shadcn@latest add @shadcnmaps/nebraska
 ```
 
 ```tsx

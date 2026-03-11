@@ -5,7 +5,7 @@ Interactive SVG map of Maine with 16 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/maine.json
+npx shadcn@latest add @shadcnmaps/maine
 ```
 
 ```tsx

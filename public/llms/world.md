@@ -5,7 +5,7 @@ Interactive SVG map of World with 256 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/world.json
+npx shadcn@latest add @shadcnmaps/world
 ```
 
 ```tsx

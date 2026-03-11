@@ -5,7 +5,7 @@ Interactive SVG map of Nepal with 14 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/nepal.json
+npx shadcn@latest add @shadcnmaps/nepal
 ```
 
 ```tsx

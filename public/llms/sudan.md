@@ -5,7 +5,7 @@ Interactive SVG map of Sudan with 17 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/sudan.json
+npx shadcn@latest add @shadcnmaps/sudan
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Caribbean with 35 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/caribbean.json
+npx shadcn@latest add @shadcnmaps/caribbean
 ```
 
 ```tsx

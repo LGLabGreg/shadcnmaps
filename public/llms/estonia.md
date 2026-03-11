@@ -5,7 +5,7 @@ Interactive SVG map of Estonia with 15 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/estonia.json
+npx shadcn@latest add @shadcnmaps/estonia
 ```
 
 ```tsx

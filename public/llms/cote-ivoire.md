@@ -5,7 +5,7 @@ Interactive SVG map of Côte d'Ivoire with 19 regions. Supports click, hover, ke
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/cote-ivoire.json
+npx shadcn@latest add @shadcnmaps/cote-ivoire
 ```
 
 ```tsx

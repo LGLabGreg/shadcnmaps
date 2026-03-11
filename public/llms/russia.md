@@ -5,7 +5,7 @@ Interactive SVG map of Russia with 85 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/russia.json
+npx shadcn@latest add @shadcnmaps/russia
 ```
 
 ```tsx

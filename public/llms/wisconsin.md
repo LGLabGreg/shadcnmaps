@@ -5,7 +5,7 @@ Interactive SVG map of Wisconsin with 72 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/wisconsin.json
+npx shadcn@latest add @shadcnmaps/wisconsin
 ```
 
 ```tsx

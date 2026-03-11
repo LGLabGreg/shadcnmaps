@@ -5,7 +5,7 @@ Interactive SVG map of Latvia with 119 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/latvia.json
+npx shadcn@latest add @shadcnmaps/latvia
 ```
 
 ```tsx

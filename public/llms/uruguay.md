@@ -5,7 +5,7 @@ Interactive SVG map of Uruguay with 19 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/uruguay.json
+npx shadcn@latest add @shadcnmaps/uruguay
 ```
 
 ```tsx

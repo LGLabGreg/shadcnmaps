@@ -5,7 +5,7 @@ Interactive SVG map of Wyoming with 23 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/wyoming.json
+npx shadcn@latest add @shadcnmaps/wyoming
 ```
 
 ```tsx

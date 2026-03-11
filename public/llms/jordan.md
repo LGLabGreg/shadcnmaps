@@ -5,7 +5,7 @@ Interactive SVG map of Jordan with 12 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/jordan.json
+npx shadcn@latest add @shadcnmaps/jordan
 ```
 
 ```tsx

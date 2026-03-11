@@ -5,7 +5,7 @@ Interactive SVG map of Tanzania with 30 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/tanzania.json
+npx shadcn@latest add @shadcnmaps/tanzania
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Florida with 67 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/florida.json
+npx shadcn@latest add @shadcnmaps/florida
 ```
 
 ```tsx

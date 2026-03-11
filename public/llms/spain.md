@@ -5,7 +5,7 @@ Interactive SVG map of Spain with 17 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/spain.json
+npx shadcn@latest add @shadcnmaps/spain
 ```
 
 ```tsx

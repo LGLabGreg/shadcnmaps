@@ -5,7 +5,7 @@ Interactive SVG map of Palestine & Israel with 23 regions. Supports click, hover
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/palestine-israel.json
+npx shadcn@latest add @shadcnmaps/palestine-israel
 ```
 
 ```tsx

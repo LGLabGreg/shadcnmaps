@@ -5,7 +5,7 @@ Interactive SVG map of Saudi Arabia with 13 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/saudi-arabia.json
+npx shadcn@latest add @shadcnmaps/saudi-arabia
 ```
 
 ```tsx

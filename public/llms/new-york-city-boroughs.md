@@ -5,7 +5,7 @@ Interactive SVG map of New York City Boroughs with 6 regions. Supports click, ho
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-york-city-boroughs.json
+npx shadcn@latest add @shadcnmaps/new-york-city-boroughs
 ```
 
 ```tsx

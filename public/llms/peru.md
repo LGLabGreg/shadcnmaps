@@ -5,7 +5,7 @@ Interactive SVG map of Peru with 26 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/peru.json
+npx shadcn@latest add @shadcnmaps/peru
 ```
 
 ```tsx

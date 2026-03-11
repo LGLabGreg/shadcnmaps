@@ -5,7 +5,7 @@ Interactive SVG map of Continents with 6 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/continents.json
+npx shadcn@latest add @shadcnmaps/continents
 ```
 
 ```tsx

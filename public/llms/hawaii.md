@@ -5,7 +5,7 @@ Interactive SVG map of Hawaii with 5 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/hawaii.json
+npx shadcn@latest add @shadcnmaps/hawaii
 ```
 
 ```tsx

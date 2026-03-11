@@ -5,7 +5,7 @@ Interactive SVG map of Maryland with 24 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/maryland.json
+npx shadcn@latest add @shadcnmaps/maryland
 ```
 
 ```tsx

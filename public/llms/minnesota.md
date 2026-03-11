@@ -5,7 +5,7 @@ Interactive SVG map of Minnesota with 87 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/minnesota.json
+npx shadcn@latest add @shadcnmaps/minnesota
 ```
 
 ```tsx

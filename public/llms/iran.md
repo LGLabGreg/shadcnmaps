@@ -5,7 +5,7 @@ Interactive SVG map of Iran with 31 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/iran.json
+npx shadcn@latest add @shadcnmaps/iran
 ```
 
 ```tsx

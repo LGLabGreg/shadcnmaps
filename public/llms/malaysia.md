@@ -5,7 +5,7 @@ Interactive SVG map of Malaysia with 16 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/malaysia.json
+npx shadcn@latest add @shadcnmaps/malaysia
 ```
 
 ```tsx

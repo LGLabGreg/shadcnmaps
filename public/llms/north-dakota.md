@@ -5,7 +5,7 @@ Interactive SVG map of North Dakota with 53 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/north-dakota.json
+npx shadcn@latest add @shadcnmaps/north-dakota
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of London Boroughs with 33 regions. Supports click, hover, k
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/london-boroughs.json
+npx shadcn@latest add @shadcnmaps/london-boroughs
 ```
 
 ```tsx

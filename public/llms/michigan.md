@@ -5,7 +5,7 @@ Interactive SVG map of Michigan with 83 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/michigan.json
+npx shadcn@latest add @shadcnmaps/michigan
 ```
 
 ```tsx

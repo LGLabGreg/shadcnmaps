@@ -5,7 +5,7 @@ Interactive SVG map of Massachusetts with 14 regions. Supports click, hover, key
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/massachusetts.json
+npx shadcn@latest add @shadcnmaps/massachusetts
 ```
 
 ```tsx

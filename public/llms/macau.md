@@ -5,7 +5,7 @@ Interactive SVG map of Macau with 8 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/macau.json
+npx shadcn@latest add @shadcnmaps/macau
 ```
 
 ```tsx

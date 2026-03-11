@@ -5,7 +5,7 @@ Interactive SVG map of Singapore with 5 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/singapore.json
+npx shadcn@latest add @shadcnmaps/singapore
 ```
 
 ```tsx

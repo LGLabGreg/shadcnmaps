@@ -5,7 +5,7 @@ Interactive SVG map of Turkmenistan with 5 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/turkmenistan.json
+npx shadcn@latest add @shadcnmaps/turkmenistan
 ```
 
 ```tsx

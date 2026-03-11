@@ -5,7 +5,7 @@ Interactive SVG map of Brazil with 27 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/brazil.json
+npx shadcn@latest add @shadcnmaps/brazil
 ```
 
 ```tsx

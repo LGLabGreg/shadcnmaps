@@ -5,7 +5,7 @@ Interactive SVG map of Arizona with 15 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/arizona.json
+npx shadcn@latest add @shadcnmaps/arizona
 ```
 
 ```tsx

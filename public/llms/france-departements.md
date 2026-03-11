@@ -5,7 +5,7 @@ Interactive SVG map of France Départements with 101 regions. Supports click, ho
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/france-departements.json
+npx shadcn@latest add @shadcnmaps/france-departements
 ```
 
 ```tsx

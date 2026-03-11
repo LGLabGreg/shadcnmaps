@@ -5,7 +5,7 @@ Interactive SVG map of Oman with 11 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/oman.json
+npx shadcn@latest add @shadcnmaps/oman
 ```
 
 ```tsx

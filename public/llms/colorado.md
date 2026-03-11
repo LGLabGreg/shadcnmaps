@@ -5,7 +5,7 @@ Interactive SVG map of Colorado with 64 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/colorado.json
+npx shadcn@latest add @shadcnmaps/colorado
 ```
 
 ```tsx

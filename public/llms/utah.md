@@ -5,7 +5,7 @@ Interactive SVG map of Utah with 29 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/utah.json
+npx shadcn@latest add @shadcnmaps/utah
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Vietnam with 63 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/vietnam.json
+npx shadcn@latest add @shadcnmaps/vietnam
 ```
 
 ```tsx

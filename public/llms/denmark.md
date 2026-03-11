@@ -5,7 +5,7 @@ Interactive SVG map of Denmark with 98 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/denmark.json
+npx shadcn@latest add @shadcnmaps/denmark
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Trinidad and Tobago with 16 regions. Supports click, hove
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/trinidad-and-tobago.json
+npx shadcn@latest add @shadcnmaps/trinidad-and-tobago
 ```
 
 ```tsx

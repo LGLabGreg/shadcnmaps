@@ -5,7 +5,7 @@ Interactive SVG map of Belarus with 7 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/belarus.json
+npx shadcn@latest add @shadcnmaps/belarus
 ```
 
 ```tsx

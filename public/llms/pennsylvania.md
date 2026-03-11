@@ -5,7 +5,7 @@ Interactive SVG map of Pennsylvania with 67 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/pennsylvania.json
+npx shadcn@latest add @shadcnmaps/pennsylvania
 ```
 
 ```tsx

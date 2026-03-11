@@ -5,7 +5,7 @@ Interactive SVG map of Guatemala with 22 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/guatemala.json
+npx shadcn@latest add @shadcnmaps/guatemala
 ```
 
 ```tsx

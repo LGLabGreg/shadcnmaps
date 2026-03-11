@@ -5,7 +5,7 @@ Interactive SVG map of India with 36 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/india.json
+npx shadcn@latest add @shadcnmaps/india
 ```
 
 ```tsx

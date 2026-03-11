@@ -5,7 +5,7 @@ Interactive SVG map of Taiwan with 22 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/taiwan.json
+npx shadcn@latest add @shadcnmaps/taiwan
 ```
 
 ```tsx

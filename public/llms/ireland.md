@@ -5,7 +5,7 @@ Interactive SVG map of Ireland with 34 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ireland.json
+npx shadcn@latest add @shadcnmaps/ireland
 ```
 
 ```tsx

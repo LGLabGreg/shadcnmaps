@@ -5,7 +5,7 @@ Interactive SVG map of Lithuania with 10 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/lithuania.json
+npx shadcn@latest add @shadcnmaps/lithuania
 ```
 
 ```tsx

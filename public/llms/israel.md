@@ -5,7 +5,7 @@ Interactive SVG map of Israel with 6 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/israel.json
+npx shadcn@latest add @shadcnmaps/israel
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of South Dakota with 66 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/south-dakota.json
+npx shadcn@latest add @shadcnmaps/south-dakota
 ```
 
 ```tsx

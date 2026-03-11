@@ -5,7 +5,7 @@ Interactive SVG map of Venezuela with 25 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/venezuela.json
+npx shadcn@latest add @shadcnmaps/venezuela
 ```
 
 ```tsx
