@@ -5,7 +5,7 @@ Interactive SVG map of United Arab Emirates with 9 regions. Supports click, hove
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/uae.json
+npx shadcn@latest add @shadcnmaps/uae
 ```
 
 ```tsx

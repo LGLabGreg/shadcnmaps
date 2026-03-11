@@ -5,7 +5,7 @@ Interactive SVG map of Tennessee with 95 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/tennessee.json
+npx shadcn@latest add @shadcnmaps/tennessee
 ```
 
 ```tsx

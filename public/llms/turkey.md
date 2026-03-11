@@ -5,7 +5,7 @@ Interactive SVG map of Turkey with 81 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/turkey.json
+npx shadcn@latest add @shadcnmaps/turkey
 ```
 
 ```tsx

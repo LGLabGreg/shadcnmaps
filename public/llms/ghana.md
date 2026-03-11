@@ -5,7 +5,7 @@ Interactive SVG map of Ghana with 10 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ghana.json
+npx shadcn@latest add @shadcnmaps/ghana
 ```
 
 ```tsx

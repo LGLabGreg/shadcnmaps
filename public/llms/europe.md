@@ -5,7 +5,7 @@ Interactive SVG map of Europe with 62 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/europe.json
+npx shadcn@latest add @shadcnmaps/europe
 ```
 
 ```tsx

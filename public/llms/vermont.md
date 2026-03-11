@@ -5,7 +5,7 @@ Interactive SVG map of Vermont with 14 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/vermont.json
+npx shadcn@latest add @shadcnmaps/vermont
 ```
 
 ```tsx

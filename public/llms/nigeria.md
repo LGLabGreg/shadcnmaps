@@ -5,7 +5,7 @@ Interactive SVG map of Nigeria with 37 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/nigeria.json
+npx shadcn@latest add @shadcnmaps/nigeria
 ```
 
 ```tsx

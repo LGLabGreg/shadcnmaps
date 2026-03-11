@@ -5,7 +5,7 @@ Interactive SVG map of Canada with 13 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/canada.json
+npx shadcn@latest add @shadcnmaps/canada
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Ethiopia with 11 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ethiopia.json
+npx shadcn@latest add @shadcnmaps/ethiopia
 ```
 
 ```tsx

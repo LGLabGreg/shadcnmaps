@@ -5,7 +5,7 @@ Interactive SVG map of Dominican Republic with 32 regions. Supports click, hover
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/dominican-republic.json
+npx shadcn@latest add @shadcnmaps/dominican-republic
 ```
 
 ```tsx

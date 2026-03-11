@@ -16,7 +16,7 @@
 Install a map using the shadcn CLI. Here we'll use the USA map as an example, but the same command works for [any map](/maps). This pulls the component directly into your project — no npm package, no version lock.
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/usa.json
+npx shadcn@latest add @shadcnmaps/usa
 ```
 
 This installs the following files:

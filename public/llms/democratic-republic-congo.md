@@ -5,7 +5,7 @@ Interactive SVG map of Democratic Republic of the Congo with 11 regions. Support
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/democratic-republic-congo.json
+npx shadcn@latest add @shadcnmaps/democratic-republic-congo
 ```
 
 ```tsx

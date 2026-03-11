@@ -5,7 +5,7 @@ Interactive SVG map of Georgia with 159 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/georgia.json
+npx shadcn@latest add @shadcnmaps/georgia
 ```
 
 ```tsx

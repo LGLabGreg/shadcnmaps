@@ -5,7 +5,7 @@ Interactive SVG map of Bulgaria with 28 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/bulgaria.json
+npx shadcn@latest add @shadcnmaps/bulgaria
 ```
 
 ```tsx

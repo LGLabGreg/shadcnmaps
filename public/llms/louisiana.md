@@ -5,7 +5,7 @@ Interactive SVG map of Louisiana with 64 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/louisiana.json
+npx shadcn@latest add @shadcnmaps/louisiana
 ```
 
 ```tsx

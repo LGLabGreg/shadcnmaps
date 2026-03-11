@@ -5,7 +5,7 @@ Interactive SVG map of Iowa with 99 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/iowa.json
+npx shadcn@latest add @shadcnmaps/iowa
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Rhode Island with 5 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/rhode-island.json
+npx shadcn@latest add @shadcnmaps/rhode-island
 ```
 
 ```tsx

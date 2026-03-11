@@ -5,7 +5,7 @@ Interactive SVG map of New Hampshire with 10 regions. Supports click, hover, key
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-hampshire.json
+npx shadcn@latest add @shadcnmaps/new-hampshire
 ```
 
 ```tsx

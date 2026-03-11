@@ -5,7 +5,7 @@ Interactive SVG map of the United States with all 50 states and DC. Supports cli
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/usa.json
+npx shadcn@latest add @shadcnmaps/usa
 ```
 
 ```tsx

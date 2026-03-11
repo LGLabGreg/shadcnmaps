@@ -5,7 +5,7 @@ Interactive SVG map of Argentina with 24 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/argentina.json
+npx shadcn@latest add @shadcnmaps/argentina
 ```
 
 ```tsx

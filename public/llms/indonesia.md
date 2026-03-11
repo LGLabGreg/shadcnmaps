@@ -5,7 +5,7 @@ Interactive SVG map of Indonesia with 33 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/indonesia.json
+npx shadcn@latest add @shadcnmaps/indonesia
 ```
 
 ```tsx

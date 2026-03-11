@@ -5,7 +5,7 @@ Interactive SVG map of Cameroon with 10 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/cameroon.json
+npx shadcn@latest add @shadcnmaps/cameroon
 ```
 
 ```tsx

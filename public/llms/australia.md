@@ -5,7 +5,7 @@ Interactive SVG map of Australia with 8 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/australia.json
+npx shadcn@latest add @shadcnmaps/australia
 ```
 
 ```tsx

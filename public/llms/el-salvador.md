@@ -5,7 +5,7 @@ Interactive SVG map of El Salvador with 14 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/el-salvador.json
+npx shadcn@latest add @shadcnmaps/el-salvador
 ```
 
 ```tsx

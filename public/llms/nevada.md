@@ -5,7 +5,7 @@ Interactive SVG map of Nevada with 17 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/nevada.json
+npx shadcn@latest add @shadcnmaps/nevada
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Ukraine with 27 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ukraine.json
+npx shadcn@latest add @shadcnmaps/ukraine
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of California with 58 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/california.json
+npx shadcn@latest add @shadcnmaps/california
 ```
 
 ```tsx

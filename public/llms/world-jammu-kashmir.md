@@ -5,7 +5,7 @@ Interactive SVG map of World (Jammu & Kashmir) with 257 regions. Supports click,
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/world-jammu-kashmir.json
+npx shadcn@latest add @shadcnmaps/world-jammu-kashmir
 ```
 
 ```tsx

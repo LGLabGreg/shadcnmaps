@@ -5,7 +5,7 @@ Interactive SVG map of Romania with 42 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/romania.json
+npx shadcn@latest add @shadcnmaps/romania
 ```
 
 ```tsx

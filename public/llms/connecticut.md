@@ -5,7 +5,7 @@ Interactive SVG map of Connecticut with 8 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/connecticut.json
+npx shadcn@latest add @shadcnmaps/connecticut
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Illinois with 102 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/illinois.json
+npx shadcn@latest add @shadcnmaps/illinois
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Texas with 254 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/texas.json
+npx shadcn@latest add @shadcnmaps/texas
 ```
 
 ```tsx

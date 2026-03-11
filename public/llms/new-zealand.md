@@ -5,7 +5,7 @@ Interactive SVG map of New Zealand with 19 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-zealand.json
+npx shadcn@latest add @shadcnmaps/new-zealand
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of European Union with 28 regions. Supports click, hover, ke
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/european-union.json
+npx shadcn@latest add @shadcnmaps/european-union
 ```
 
 ```tsx

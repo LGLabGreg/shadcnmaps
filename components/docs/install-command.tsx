@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 export function InstallCommand({ registryName }: { registryName: string }) {
   const [copied, setCopied] = useState(false)
-  const command = `npx shadcn@latest add https://shadcnmaps.com/r/${registryName}.json`
+  const command = `npx shadcn@latest add @shadcnmaps/${registryName}`
 
   function copy() {
     navigator.clipboard.writeText(command)
@@ -17,7 +17,7 @@ export function InstallCommand({ registryName }: { registryName: string }) {
   return (
     <Button variant='outline' size='sm' onClick={copy}>
       <Terminal />
-      npx shadcn@latest add
+      {`add @shadcnmaps/${registryName}`}
       {copied ? <Check className='ml-1' /> : <Copy className='ml-1' />}
     </Button>
   )

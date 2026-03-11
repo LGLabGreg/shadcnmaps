@@ -5,7 +5,7 @@ Interactive SVG map of Virginia with 134 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/virginia.json
+npx shadcn@latest add @shadcnmaps/virginia
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of South Korea with 17 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/south-korea.json
+npx shadcn@latest add @shadcnmaps/south-korea
 ```
 
 ```tsx

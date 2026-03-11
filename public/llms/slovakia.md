@@ -5,7 +5,7 @@ Interactive SVG map of Slovakia with 8 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/slovakia.json
+npx shadcn@latest add @shadcnmaps/slovakia
 ```
 
 ```tsx

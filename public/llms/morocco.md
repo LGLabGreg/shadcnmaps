@@ -5,7 +5,7 @@ Interactive SVG map of Morocco with 16 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/morocco.json
+npx shadcn@latest add @shadcnmaps/morocco
 ```
 
 ```tsx

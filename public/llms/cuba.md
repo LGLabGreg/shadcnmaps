@@ -5,7 +5,7 @@ Interactive SVG map of Cuba with 16 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/cuba.json
+npx shadcn@latest add @shadcnmaps/cuba
 ```
 
 ```tsx

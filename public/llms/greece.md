@@ -5,7 +5,7 @@ Interactive SVG map of Greece with 14 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/greece.json
+npx shadcn@latest add @shadcnmaps/greece
 ```
 
 ```tsx

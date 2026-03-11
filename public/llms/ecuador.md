@@ -5,7 +5,7 @@ Interactive SVG map of Ecuador with 24 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ecuador.json
+npx shadcn@latest add @shadcnmaps/ecuador
 ```
 
 ```tsx

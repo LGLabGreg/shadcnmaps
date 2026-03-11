@@ -5,7 +5,7 @@ Interactive SVG map of Syria with 14 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/syria.json
+npx shadcn@latest add @shadcnmaps/syria
 ```
 
 ```tsx

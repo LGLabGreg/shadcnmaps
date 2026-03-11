@@ -5,7 +5,7 @@ Interactive SVG map of Bolivia with 9 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/bolivia.json
+npx shadcn@latest add @shadcnmaps/bolivia
 ```
 
 ```tsx

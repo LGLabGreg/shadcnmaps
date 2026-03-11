@@ -5,7 +5,7 @@ Interactive SVG map of Sri Lanka with 25 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/sri-lanka.json
+npx shadcn@latest add @shadcnmaps/sri-lanka
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Netherlands with 12 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/netherlands.json
+npx shadcn@latest add @shadcnmaps/netherlands
 ```
 
 ```tsx

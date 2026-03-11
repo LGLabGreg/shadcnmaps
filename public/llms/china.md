@@ -5,7 +5,7 @@ Interactive SVG map of China with 32 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/china.json
+npx shadcn@latest add @shadcnmaps/china
 ```
 
 ```tsx

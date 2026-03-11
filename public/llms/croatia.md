@@ -5,7 +5,7 @@ Interactive SVG map of Croatia with 21 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/croatia.json
+npx shadcn@latest add @shadcnmaps/croatia
 ```
 
 ```tsx

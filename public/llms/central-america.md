@@ -5,7 +5,7 @@ Interactive SVG map of Central America with 7 regions. Supports click, hover, ke
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/central-america.json
+npx shadcn@latest add @shadcnmaps/central-america
 ```
 
 ```tsx

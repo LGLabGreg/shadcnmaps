@@ -5,7 +5,7 @@ Interactive SVG map of Kazakhstan with 16 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/kazakhstan.json
+npx shadcn@latest add @shadcnmaps/kazakhstan
 ```
 
 ```tsx

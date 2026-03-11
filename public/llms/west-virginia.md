@@ -5,7 +5,7 @@ Interactive SVG map of West Virginia with 55 regions. Supports click, hover, key
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/west-virginia.json
+npx shadcn@latest add @shadcnmaps/west-virginia
 ```
 
 ```tsx

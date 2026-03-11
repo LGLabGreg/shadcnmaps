@@ -5,7 +5,7 @@ Interactive SVG map of Switzerland with 26 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/switzerland.json
+npx shadcn@latest add @shadcnmaps/switzerland
 ```
 
 ```tsx

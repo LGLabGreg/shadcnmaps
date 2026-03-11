@@ -5,7 +5,7 @@ Interactive SVG map of New York with 62 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-york.json
+npx shadcn@latest add @shadcnmaps/new-york
 ```
 
 ```tsx

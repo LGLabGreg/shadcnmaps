@@ -5,7 +5,7 @@ Interactive SVG map of Poland with 16 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/poland.json
+npx shadcn@latest add @shadcnmaps/poland
 ```
 
 ```tsx

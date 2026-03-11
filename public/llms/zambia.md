@@ -5,7 +5,7 @@ Interactive SVG map of Zambia with 10 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/zambia.json
+npx shadcn@latest add @shadcnmaps/zambia
 ```
 
 ```tsx

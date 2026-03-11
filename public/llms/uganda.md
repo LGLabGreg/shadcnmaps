@@ -5,7 +5,7 @@ Interactive SVG map of Uganda with 112 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/uganda.json
+npx shadcn@latest add @shadcnmaps/uganda
 ```
 
 ```tsx

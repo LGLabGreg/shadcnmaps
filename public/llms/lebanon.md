@@ -5,7 +5,7 @@ Interactive SVG map of Lebanon with 6 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/lebanon.json
+npx shadcn@latest add @shadcnmaps/lebanon
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Honduras with 18 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/honduras.json
+npx shadcn@latest add @shadcnmaps/honduras
 ```
 
 ```tsx

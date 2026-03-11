@@ -5,7 +5,7 @@ Interactive SVG map of North Carolina with 100 regions. Supports click, hover, k
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/north-carolina.json
+npx shadcn@latest add @shadcnmaps/north-carolina
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of Bahrain with 5 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/bahrain.json
+npx shadcn@latest add @shadcnmaps/bahrain
 ```
 
 ```tsx

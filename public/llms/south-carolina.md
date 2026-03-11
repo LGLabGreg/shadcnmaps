@@ -5,7 +5,7 @@ Interactive SVG map of South Carolina with 46 regions. Supports click, hover, ke
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/south-carolina.json
+npx shadcn@latest add @shadcnmaps/south-carolina
 ```
 
 ```tsx

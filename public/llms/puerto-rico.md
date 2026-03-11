@@ -5,7 +5,7 @@ Interactive SVG map of Puerto Rico with 78 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/puerto-rico.json
+npx shadcn@latest add @shadcnmaps/puerto-rico
 ```
 
 ```tsx

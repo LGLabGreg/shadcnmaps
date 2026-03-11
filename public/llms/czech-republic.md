@@ -5,7 +5,7 @@ Interactive SVG map of Czech Republic with 14 regions. Supports click, hover, ke
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/czech-republic.json
+npx shadcn@latest add @shadcnmaps/czech-republic
 ```
 
 ```tsx

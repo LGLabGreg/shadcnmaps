@@ -5,7 +5,7 @@ Interactive SVG map of Missouri with 115 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/missouri.json
+npx shadcn@latest add @shadcnmaps/missouri
 ```
 
 ```tsx

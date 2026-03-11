@@ -5,7 +5,7 @@ Interactive SVG map of Kentucky with 120 regions. Supports click, hover, keyboar
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/kentucky.json
+npx shadcn@latest add @shadcnmaps/kentucky
 ```
 
 ```tsx

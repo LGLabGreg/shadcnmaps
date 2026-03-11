@@ -5,7 +5,7 @@ Interactive SVG map of Asia with 53 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/asia.json
+npx shadcn@latest add @shadcnmaps/asia
 ```
 
 ```tsx

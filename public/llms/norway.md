@@ -5,7 +5,7 @@ Interactive SVG map of Norway with 21 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/norway.json
+npx shadcn@latest add @shadcnmaps/norway
 ```
 
 ```tsx

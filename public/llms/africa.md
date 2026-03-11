@@ -5,7 +5,7 @@ Interactive SVG map of Africa with 55 regions. Supports click, hover, keyboard n
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/africa.json
+npx shadcn@latest add @shadcnmaps/africa
 ```
 
 ```tsx

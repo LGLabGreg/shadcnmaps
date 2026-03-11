@@ -5,7 +5,7 @@ Interactive SVG map of Ohio with 88 regions. Supports click, hover, keyboard nav
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/ohio.json
+npx shadcn@latest add @shadcnmaps/ohio
 ```
 
 ```tsx

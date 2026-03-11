@@ -5,7 +5,7 @@ Interactive SVG map of Montana with 56 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/montana.json
+npx shadcn@latest add @shadcnmaps/montana
 ```
 
 ```tsx

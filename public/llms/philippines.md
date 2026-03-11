@@ -5,7 +5,7 @@ Interactive SVG map of Philippines with 119 regions. Supports click, hover, keyb
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/philippines.json
+npx shadcn@latest add @shadcnmaps/philippines
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of South Africa with 9 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/south-africa.json
+npx shadcn@latest add @shadcnmaps/south-africa
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of New Jersey with 21 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-jersey.json
+npx shadcn@latest add @shadcnmaps/new-jersey
 ```
 
 ```tsx

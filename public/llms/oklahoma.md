@@ -5,7 +5,7 @@ Interactive SVG map of Oklahoma with 77 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/oklahoma.json
+npx shadcn@latest add @shadcnmaps/oklahoma
 ```
 
 ```tsx

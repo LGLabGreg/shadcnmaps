@@ -5,7 +5,7 @@ Interactive SVG map of Washington with 39 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/washington.json
+npx shadcn@latest add @shadcnmaps/washington
 ```
 
 ```tsx

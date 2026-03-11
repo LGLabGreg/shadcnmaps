@@ -5,7 +5,7 @@ Interactive SVG map of Italy with 21 regions. Supports click, hover, keyboard na
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/italy.json
+npx shadcn@latest add @shadcnmaps/italy
 ```
 
 ```tsx

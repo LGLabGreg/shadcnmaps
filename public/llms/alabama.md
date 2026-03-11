@@ -5,7 +5,7 @@ Interactive SVG map of Alabama with 67 regions. Supports click, hover, keyboard 
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/alabama.json
+npx shadcn@latest add @shadcnmaps/alabama
 ```
 
 ```tsx

@@ -5,7 +5,7 @@ Interactive SVG map of New Mexico with 33 regions. Supports click, hover, keyboa
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/new-mexico.json
+npx shadcn@latest add @shadcnmaps/new-mexico
 ```
 
 ```tsx

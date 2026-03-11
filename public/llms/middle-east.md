@@ -5,7 +5,7 @@ Interactive SVG map of Middle East with 17 regions. Supports click, hover, keybo
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/middle-east.json
+npx shadcn@latest add @shadcnmaps/middle-east
 ```
 
 ```tsx

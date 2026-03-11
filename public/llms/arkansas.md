@@ -5,7 +5,7 @@ Interactive SVG map of Arkansas with 75 regions. Supports click, hover, keyboard
 ## Installation
 
 ```bash
-npx shadcn@latest add https://shadcnmaps.com/r/arkansas.json
+npx shadcn@latest add @shadcnmaps/arkansas
 ```
 
 ```tsx
