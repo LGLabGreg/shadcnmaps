@@ -121,9 +121,6 @@ function MapInner({
     zoomState,
     setZoomState,
     zoomConfig,
-    zoomIn,
-    zoomOut,
-    resetZoom,
   } = useMapContext()
   const descId = useId()
   const [announcement, setAnnouncement] = useState('')
@@ -350,29 +347,6 @@ function MapInner({
     }
   }, [enableZoom, zoomConfig, zoomState.scale, setZoomState])
 
-  // Keyboard shortcuts
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent<SVGSVGElement>) => {
-      if (!enableZoom) return
-      switch (e.key) {
-        case '+':
-        case '=':
-          e.preventDefault()
-          zoomIn()
-          break
-        case '-':
-          e.preventDefault()
-          zoomOut()
-          break
-        case '0':
-          e.preventDefault()
-          resetZoom()
-          break
-      }
-    },
-    [enableZoom, zoomIn, zoomOut, resetZoom]
-  )
-
   const shouldSuppressClick = useCallback(() => {
     return enableZoom && isPanningRef.current
   }, [enableZoom])
@@ -524,7 +498,6 @@ function MapInner({
             : undefined
         }
         onPointerDown={enableZoom ? handlePointerDown : undefined}
-        onKeyDown={enableZoom ? handleKeyDown : undefined}
         onPointerLeave={() => {
           if (showTooltips) {
             setTooltipState((current) => ({ ...current, visible: false }))

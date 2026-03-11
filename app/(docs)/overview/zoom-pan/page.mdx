@@ -10,9 +10,7 @@ export const metadata = {
 
 # Zoom & Pan
 
-All map components support opt-in zoom and pan via the `enableZoom` prop. When enabled, users can zoom with mouse wheel, pinch gestures, or keyboard shortcuts, and pan by clicking and dragging.
-
-An optional `MapControls` component renders a UI overlay with zoom and pan buttons.
+All map components support opt-in zoom and pan via the `enableZoom` prop. When enabled, users can zoom with mouse wheel or pinch gestures, and pan by clicking and dragging. An optional `MapControls` component provides accessible zoom buttons.
 
 ## Quick start
 
@@ -35,7 +33,7 @@ export function MyMap() {
 These props are available on all map components (`USAMap`, `WorldMap`, `FranceMap`, etc.):
 
 <ApiTable data={[
-  { prop: 'enableZoom', type: 'boolean', default: 'false', description: 'Enable zoom and pan gestures (wheel, drag, pinch, keyboard).' },
+  { prop: 'enableZoom', type: 'boolean', default: 'false', description: 'Enable zoom and pan gestures (wheel, drag, pinch).' },
   { prop: 'zoomConfig', type: 'Partial<ZoomConfig>', default: '—', description: 'Override default zoom configuration.' },
   { prop: 'controls', type: 'ReactNode', default: '—', description: 'Control overlay rendered inside the map container. Typically a MapControls component.' },
 ]} />
@@ -64,9 +62,6 @@ These props are available on all map components (`USAMap`, `WorldMap`, `FranceMa
 | Mouse wheel | Zoom toward cursor |
 | Click + drag | Pan the map |
 | Pinch (touch) | Zoom in/out |
-| `+` or `=` key | Zoom in |
-| `-` key | Zoom out |
-| `0` key | Reset to original view |
 
 ## Notes
 
