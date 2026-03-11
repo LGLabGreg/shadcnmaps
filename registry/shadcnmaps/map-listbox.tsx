@@ -22,6 +22,8 @@ export function MapListbox({
     useMapContext()
   const typeaheadRef = useRef('')
   const typeaheadTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const optionRefs = useRef(new Map<string, HTMLDivElement>())
+  const listboxRef = useRef<HTMLDivElement>(null)
   const id = useId()
 
   useEffect(() => {
@@ -32,6 +34,46 @@ export function MapListbox({
 
   const activeRegions = regions.filter((r) => !disabledRegions.has(r.id))
   const focusedIndex = activeRegions.findIndex((r) => r.id === focusedRegion)
+
+  // The option that should be tabbable (tabIndex=0)
+  const focusableId =
+    focusedRegion && !disabledRegions.has(focusedRegion)
+      ? focusedRegion
+      : selectedRegion && !disabledRegions.has(selectedRegion)
+        ? selectedRegion
+        : activeRegions[0]?.id
+
+  // Move DOM focus when focusedRegion changes
+  useEffect(() => {
+    if (!focusedRegion) return
+    const el = optionRefs.current.get(focusedRegion)
+    if (el && document.activeElement !== el) {
+      el.focus()
+    }
+  }, [focusedRegion])
+
+  // If focusedRegion becomes disabled, move to nearest active region
+  useEffect(() => {
+    if (!focusedRegion) return
+    if (!disabledRegions.has(focusedRegion)) return
+
+    // Find nearest active region
+    const allIndex = regions.findIndex((r) => r.id === focusedRegion)
+    if (allIndex < 0) {
+      setFocusedRegion(activeRegions[0]?.id ?? null)
+      return
+    }
+
+    // Search forward then backward for nearest active
+    for (let offset = 1; offset < regions.length; offset++) {
+      const fwd = regions[(allIndex + offset) % regions.length]
+      if (fwd && !disabledRegions.has(fwd.id)) {
+        setFocusedRegion(fwd.id)
+        return
+      }
+    }
+    setFocusedRegion(null)
+  }, [focusedRegion, disabledRegions, regions, activeRegions, setFocusedRegion])
 
   function moveTo(index: number) {
     const region = activeRegions[index]
@@ -95,39 +137,53 @@ export function MapListbox({
     }
   }
 
+  function handleBlur(event: React.FocusEvent<HTMLDivElement>) {
+    // Only clear focus when focus leaves the listbox entirely
+    if (
+      !listboxRef.current ||
+      !event.relatedTarget ||
+      !listboxRef.current.contains(event.relatedTarget as Node)
+    ) {
+      setFocusedRegion(null)
+    }
+  }
+
   return (
     <div
+      ref={listboxRef}
       data-slot='map-listbox'
       role='listbox'
       aria-label={label}
-      aria-activedescendant={
-        focusedRegion ? `${id}-${focusedRegion}` : undefined
-      }
-      tabIndex={0}
+      tabIndex={-1}
       className='sr-only'
       onKeyDown={handleKeyDown}
-      onFocus={() => {
-        if (!focusedRegion) {
-          const init =
-            selectedRegion && !disabledRegions.has(selectedRegion)
-              ? selectedRegion
-              : activeRegions[0]?.id
-          if (init) setFocusedRegion(init)
-        }
-      }}
-      onBlur={() => setFocusedRegion(null)}
+      onBlur={handleBlur}
     >
-      {regions.map((region) => (
-        <div
-          key={region.id}
-          id={`${id}-${region.id}`}
-          role='option'
-          aria-selected={selectedRegion === region.id}
-          aria-disabled={disabledRegions.has(region.id) || undefined}
-        >
-          {region.name}
-        </div>
-      ))}
+      {regions.map((region) => {
+        const isDisabled = disabledRegions.has(region.id)
+        return (
+          <div
+            key={region.id}
+            id={`${id}-${region.id}`}
+            ref={(el) => {
+              if (el) {
+                optionRefs.current.set(region.id, el)
+              } else {
+                optionRefs.current.delete(region.id)
+              }
+            }}
+            role='option'
+            aria-selected={selectedRegion === region.id}
+            aria-disabled={isDisabled || undefined}
+            tabIndex={
+              isDisabled ? undefined : region.id === focusableId ? 0 : -1
+            }
+            onFocus={isDisabled ? undefined : () => setFocusedRegion(region.id)}
+          >
+            {region.name}
+          </div>
+        )
+      })}
     </div>
   )
 }
