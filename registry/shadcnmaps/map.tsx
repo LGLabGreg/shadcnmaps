@@ -186,6 +186,11 @@ function MapInner({
         )
         if (newScale === prev.scale) return prev
 
+        // Auto-center when fully zoomed out
+        if (newScale === zoomConfig.minZoom) {
+          return { scale: newScale, translateX: 0, translateY: 0 }
+        }
+
         // Zoom toward cursor position
         const rect = svg.getBoundingClientRect()
         const cursorX = e.clientX - rect.left

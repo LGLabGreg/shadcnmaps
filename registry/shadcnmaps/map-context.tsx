@@ -114,8 +114,12 @@ export function MapProvider({
         prev.scale - zoomConfig.zoomStep,
         zoomConfig.minZoom
       )
-      if (!viewBox || newScale === prev.scale)
-        return { ...prev, scale: newScale }
+      if (newScale === prev.scale) return prev
+      // Auto-center when fully zoomed out
+      if (newScale === zoomConfig.minZoom) {
+        return { scale: newScale, translateX: 0, translateY: 0 }
+      }
+      if (!viewBox) return { ...prev, scale: newScale }
       return zoomTowardCenter(prev, newScale, viewBox)
     })
   }, [zoomConfig, viewBox])
