@@ -51,7 +51,7 @@ function generateCode(markers: PlacedMarker[]): string {
   const items = markers
     .map(
       (m) =>
-        `  {\n    id: '${m.id}',\n    x: ${m.x},\n    y: ${m.y},\n    content: <circle cx={0} cy={0} r={8} className="fill-primary stroke-background stroke-[1.5]" />,\n    label: '${m.id}',\n  }`
+        `  {\n    id: '${m.id}',\n    x: ${m.x},\n    y: ${m.y},\n    content: (\n      <g>\n        <circle cx={0} cy={0} r={8} className="fill-emerald-500">\n          <animate attributeName="r" values="8;24" dur="1s" repeatCount="indefinite" />\n          <animate attributeName="opacity" values="0.5;0" dur="1s" repeatCount="indefinite" />\n        </circle>\n        <circle cx={0} cy={0} r={8} className="fill-emerald-500" />\n      </g>\n    ),\n    label: '${m.id}',\n  }`
     )
     .join(',\n')
 
@@ -126,12 +126,23 @@ export default function MarkerGeneratorPage() {
     x: m.x,
     y: m.y,
     content: (
-      <circle
-        cx={0}
-        cy={0}
-        r={6}
-        className='fill-primary stroke-background stroke-[1.5]'
-      />
+      <g>
+        <circle cx={0} cy={0} r={8} className='fill-emerald-500'>
+          <animate
+            attributeName='r'
+            values='8;24'
+            dur='1s'
+            repeatCount='indefinite'
+          />
+          <animate
+            attributeName='opacity'
+            values='0.5;0'
+            dur='1s'
+            repeatCount='indefinite'
+          />
+        </circle>
+        <circle cx={0} cy={0} r={8} className='fill-emerald-500' />
+      </g>
     ),
     label: m.id,
   }))
