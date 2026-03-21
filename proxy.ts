@@ -9,12 +9,18 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
     return NextResponse.next()
   }
 
+  // Umami uses the `isbot` package and silently drops bot user agents.
+  // Send a generic browser UA so the event is recorded, and pass the
+  // real user agent as custom event data instead.
+  const realUA = request.headers.get('user-agent') ?? ''
+
   event.waitUntil(
     fetch(UMAMI_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': request.headers.get('user-agent') ?? '',
+        'User-Agent':
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
       },
       body: JSON.stringify({
         type: 'event',
@@ -25,6 +31,8 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
           referrer: request.headers.get('referer') ?? '',
           language: request.headers.get('accept-language')?.split(',')[0] ?? '',
           title: `LLM Doc: ${request.nextUrl.pathname}`,
+          name: 'llm-doc-view',
+          data: { userAgent: realUA },
         },
       }),
     }).catch(() => {}) // silent — never block doc serving
