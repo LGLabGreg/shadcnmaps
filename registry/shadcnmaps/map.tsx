@@ -29,6 +29,7 @@ import type {
 
 export interface MapProps {
   data: MapData
+  selectedRegion?: string | null
   regions?: RegionOverride[]
   markers?: MapMarkerData[]
   disabledRegions?: string[]
@@ -593,13 +594,23 @@ function MapTooltipContainer() {
   )
 }
 
-function MapRoot({ enableZoom, zoomConfig, controls, ...props }: MapProps) {
+function MapRoot({
+  enableZoom,
+  zoomConfig,
+  controls,
+  selectedRegion: selectedRegionProp,
+  ...props
+}: MapProps) {
   const viewBox = useMemo(
     () => parseViewBox(props.data.viewBox),
     [props.data.viewBox]
   )
   return (
-    <MapProvider zoomConfig={zoomConfig} viewBox={viewBox}>
+    <MapProvider
+      zoomConfig={zoomConfig}
+      viewBox={viewBox}
+      selectedRegion={selectedRegionProp}
+    >
       <div data-slot='map-container' className='relative'>
         <MapInner enableZoom={enableZoom} {...props} />
         {controls}

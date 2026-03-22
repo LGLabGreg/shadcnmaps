@@ -251,6 +251,7 @@ export const navigation: NavSection[] = [
       { title: 'Choropleth', href: '/examples/choropleth' },
       { title: 'Markers', href: '/examples/markers' },
       { title: 'Zoom & Pan', href: '/examples/zoom-pan' },
+      { title: 'Controlled', href: '/examples/controlled' },
     ],
   },
 ]

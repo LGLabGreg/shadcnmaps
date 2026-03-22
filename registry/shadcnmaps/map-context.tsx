@@ -56,6 +56,7 @@ const MapContext = createContext<MapContextValue | null>(null)
 
 interface MapProviderProps {
   children: ReactNode
+  selectedRegion?: string | null
   zoomConfig?: Partial<ZoomConfig>
   viewBox?: { x: number; y: number; width: number; height: number }
 }
@@ -77,10 +78,19 @@ function zoomTowardCenter(
 
 export function MapProvider({
   children,
+  selectedRegion: selectedRegionProp,
   zoomConfig: zoomConfigProp,
   viewBox,
 }: MapProviderProps) {
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
+  const isControlled = selectedRegionProp !== undefined
+  const [uncontrolledRegion, setUncontrolledRegion] = useState<string | null>(
+    null
+  )
+  const selectedRegion = isControlled ? selectedRegionProp : uncontrolledRegion
+  const noop = useCallback<
+    Dispatch<SetStateAction<string | null>>
+  >(() => {}, [])
+  const setSelectedRegion = isControlled ? noop : setUncontrolledRegion
   const [hoveredRegion, setHoveredRegion] = useState<string | null>(null)
   const [focusedRegion, setFocusedRegion] = useState<string | null>(null)
   const [tooltipState, setTooltipState] = useState<TooltipState>({
@@ -150,6 +160,7 @@ export function MapProvider({
       focusedRegion,
       hoveredRegion,
       selectedRegion,
+      setSelectedRegion,
       tooltipState,
       zoomState,
       zoomConfig,
