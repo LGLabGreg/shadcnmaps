@@ -23,6 +23,7 @@ export default function SimpleExample() {
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
+| `selectedRegion` | `string | null` | — | Controlled selected region ID. When set, the map does not manage selection internally — the parent owns the state. |
 | `regions` | `RegionOverride[]` | `[]` | Per-region overrides for className, tooltipContent, disabled, and display fields. |
 | `disabledRegions` | `string[]` | `[]` | Region IDs to mark as non-interactive. |
 | `onRegionClick` | `(event: RegionEvent) => void` | — | Fired on click or keyboard Enter/Space. |

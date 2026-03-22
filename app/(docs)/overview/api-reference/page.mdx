@@ -15,6 +15,7 @@ All map components share a common set of props inherited from the core `Map` com
 ## Map Props
 
 <ApiTable data={[
+  { prop: 'selectedRegion', type: 'string | null', default: '—', description: 'Controlled selected region ID. When set, the map does not manage selection internally — the parent owns the state.' },
   { prop: 'regions', type: 'RegionOverride[]', default: '[]', description: 'Per-region overrides for className, tooltipContent, disabled, and display fields.' },
   { prop: 'disabledRegions', type: 'string[]', default: '[]', description: 'Region IDs to mark as non-interactive.' },
   { prop: 'onRegionClick', type: '(event: RegionEvent) => void', default: '—', description: 'Fired on click or keyboard Enter/Space.' },
