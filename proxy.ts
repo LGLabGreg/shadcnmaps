@@ -32,7 +32,7 @@ export function proxy(request: NextRequest, event: NextFetchEvent) {
           language: request.headers.get('accept-language')?.split(',')[0] ?? '',
           title: `LLM Doc: ${request.nextUrl.pathname}`,
           name: 'llm-doc-view',
-          data: { userAgent: realUA },
+          data: { userAgent: realUA, page: request.nextUrl.pathname },
         },
       }),
     }).catch(() => {}) // silent — never block doc serving
