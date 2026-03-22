@@ -1,0 +1,21 @@
+import { DocPage } from '@/components/docs/doc-page'
+import { ExampleLoader } from '@/components/docs/example-loader'
+
+import ControlledExample from './example'
+
+export const metadata = {
+  title: 'Controlled',
+  description: 'Control the selected region externally with a combobox and sidebar.',
+}
+
+<DocPage llmsSlug="controlled">
+
+# Controlled
+
+Select a state from the combobox or click a region on the map. The sidebar updates with region-specific content and the selection stays in sync.
+
+<ExampleLoader filePath="app/(docs)/examples/controlled/example.tsx">
+  <ControlledExample />
+</ExampleLoader>
+
+</DocPage>

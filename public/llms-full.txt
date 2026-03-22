@@ -92,6 +92,7 @@ All map components share a common set of props inherited from the core `Map` com
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
+| `selectedRegion` | `string | null` | — | Controlled selected region ID. When set, the map does not manage selection internally — the parent owns the state. |
 | `regions` | `RegionOverride[]` | `[]` | Per-region overrides for className, tooltipContent, disabled, and display fields. |
 | `disabledRegions` | `string[]` | `[]` | Region IDs to mark as non-interactive. |
 | `onRegionClick` | `(event: RegionEvent) => void` | — | Fired on click or keyboard Enter/Space. |
@@ -444,6 +445,7 @@ const regions = data.map(({ id, value }) => ({
 ## Examples
 
 - [Choropleth](https://shadcnmaps.com/llms/choropleth.md): Color-code map regions by data values.
+- [Controlled](https://shadcnmaps.com/llms/controlled.md): Control the selected region externally with a combobox and sidebar.
 - [Markers](https://shadcnmaps.com/llms/markers.md): Overlay custom SVG markers on the map.
 - [Region Click](https://shadcnmaps.com/llms/region-click.md): Respond to region clicks on the map.
 - [Zoom & Pan](https://shadcnmaps.com/llms/zoom-pan.md): Add zoom and pan controls to any map.

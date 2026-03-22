@@ -116,10 +116,15 @@ export function MapListbox({
         break
       }
 
-      case 'Escape':
+      case 'Escape': {
         event.preventDefault()
+        const selected = selectedRegion
+          ? activeRegions.find((r) => r.id === selectedRegion)
+          : undefined
         setSelectedRegion(null)
+        if (selected) onSelect(selected)
         break
+      }
 
       default:
         if (event.key.length === 1) {

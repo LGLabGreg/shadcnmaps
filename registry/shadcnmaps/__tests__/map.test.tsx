@@ -1,9 +1,9 @@
 import { act, fireEvent, render, screen, within } from '@testing-library/react'
 
-import type { MapProps } from '../map'
+import { Map, type MapProps } from '../map'
 import { useMapContext } from '../map-context'
 import { MapControls } from '../map-controls'
-import { renderMap, testMarkers } from './test-utils'
+import { renderMap, testMapData, testMarkers } from './test-utils'
 
 // ─── Group 1: Rendering ─────────────────────────────────────────────────────
 
@@ -518,6 +518,146 @@ describe('Keyboard Navigation via Listbox', () => {
     expect(handler).toHaveBeenCalledWith(
       expect.objectContaining({ nativeEvent: null })
     )
+  })
+})
+
+// ─── Group 6b: Controlled Selection ──────────────────────────────────────────
+
+describe('Controlled Selection', () => {
+  it('selectedRegion prop highlights region', () => {
+    renderMap({ selectedRegion: 'A' })
+    const regionA = screen.getByRole('button', {
+      name: 'Region A',
+      hidden: true,
+    })
+    expect(regionA).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('selectedRegion=null shows no selection', () => {
+    renderMap({ selectedRegion: null })
+    const regionA = screen.getByRole('button', {
+      name: 'Region A',
+      hidden: true,
+    })
+    expect(regionA).toHaveAttribute('aria-pressed', 'false')
+  })
+
+  it('changing selectedRegion prop updates highlight', () => {
+    const { rerender } = renderMap({ selectedRegion: 'A' })
+    const regionA = screen.getByRole('button', {
+      name: 'Region A',
+      hidden: true,
+    })
+    const regionB = screen.getByRole('button', {
+      name: 'Region B',
+      hidden: true,
+    })
+    expect(regionA).toHaveAttribute('aria-pressed', 'true')
+    expect(regionB).toHaveAttribute('aria-pressed', 'false')
+
+    rerender(<Map data={testMapData} selectedRegion='B' />)
+    expect(regionA).toHaveAttribute('aria-pressed', 'false')
+    expect(regionB).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('click does not change selection internally (parent owns state)', async () => {
+    const handler = vi.fn()
+    const { user } = renderMap({ selectedRegion: 'A', onRegionClick: handler })
+    const regionB = screen.getByRole('button', {
+      name: 'Region B',
+      hidden: true,
+    })
+    await user.click(regionB)
+    // onRegionClick fires so parent can update
+    expect(handler).toHaveBeenCalledWith(
+      expect.objectContaining({
+        region: expect.objectContaining({ id: 'B' }),
+      })
+    )
+    // But internal state did not change — A is still selected
+    const regionA = screen.getByRole('button', {
+      name: 'Region A',
+      hidden: true,
+    })
+    expect(regionA).toHaveAttribute('aria-pressed', 'true')
+    expect(regionB).toHaveAttribute('aria-pressed', 'false')
+  })
+
+  it('keyboard Enter fires onRegionClick in controlled mode', () => {
+    const handler = vi.fn()
+    renderMap({ selectedRegion: null, onRegionClick: handler })
+    const listbox = screen.getByRole('listbox')
+    const firstOption = listbox.querySelector('[tabindex="0"]') as HTMLElement
+    act(() => firstOption.focus())
+    fireEvent.keyDown(listbox, { key: 'Enter' })
+    expect(handler).toHaveBeenCalledWith(
+      expect.objectContaining({
+        region: expect.objectContaining({ id: 'A' }),
+      })
+    )
+  })
+
+  it('Escape fires onRegionClick with selected region in controlled mode', () => {
+    const handler = vi.fn()
+    renderMap({ selectedRegion: 'A', onRegionClick: handler })
+    const listbox = screen.getByRole('listbox')
+    const focusedOption = listbox.querySelector('[tabindex="0"]') as HTMLElement
+    act(() => focusedOption.focus())
+    fireEvent.keyDown(listbox, { key: 'Escape' })
+    expect(handler).toHaveBeenCalledWith(
+      expect.objectContaining({
+        region: expect.objectContaining({ id: 'A' }),
+        nativeEvent: null,
+      })
+    )
+  })
+
+  it('Escape with no selection does not fire onRegionClick', () => {
+    const handler = vi.fn()
+    renderMap({ selectedRegion: null, onRegionClick: handler })
+    const listbox = screen.getByRole('listbox')
+    const firstOption = listbox.querySelector('[tabindex="0"]') as HTMLElement
+    act(() => firstOption.focus())
+    fireEvent.keyDown(listbox, { key: 'Escape' })
+    expect(handler).not.toHaveBeenCalled()
+  })
+})
+
+// ─── Group 6c: Escape fires onRegionClick (uncontrolled) ────────────────────
+
+describe('Escape fires onRegionClick (uncontrolled)', () => {
+  it('Escape fires onRegionClick with the deselected region', async () => {
+    const handler = vi.fn()
+    const { user } = renderMap({ onRegionClick: handler })
+    const regionA = screen.getByRole('button', {
+      name: 'Region A',
+      hidden: true,
+    })
+    await user.click(regionA)
+    handler.mockClear()
+
+    const listbox = screen.getByRole('listbox')
+    const focusedOption = listbox.querySelector('[tabindex="0"]') as HTMLElement
+    act(() => focusedOption.focus())
+    fireEvent.keyDown(listbox, { key: 'Escape' })
+
+    expect(handler).toHaveBeenCalledWith(
+      expect.objectContaining({
+        region: expect.objectContaining({ id: 'A' }),
+        nativeEvent: null,
+      })
+    )
+    expect(regionA).toHaveAttribute('aria-pressed', 'false')
+  })
+
+  it('Escape with no selection does not fire onRegionClick', () => {
+    const handler = vi.fn()
+    renderMap({ onRegionClick: handler })
+    const listbox = screen.getByRole('listbox')
+    const firstOption = listbox.querySelector('[tabindex="0"]') as HTMLElement
+    act(() => firstOption.focus())
+    fireEvent.keyDown(listbox, { key: 'Escape' })
+    expect(handler).not.toHaveBeenCalled()
   })
 })
 

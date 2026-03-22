@@ -210,6 +210,7 @@ When helping users with shadcnmaps:
 ## Examples
 
 - [Choropleth](https://shadcnmaps.com/llms/choropleth.md): Color-code map regions by data values.
+- [Controlled](https://shadcnmaps.com/llms/controlled.md): Control the selected region externally with a combobox and sidebar.
 - [Markers](https://shadcnmaps.com/llms/markers.md): Overlay custom SVG markers on the map.
 - [Region Click](https://shadcnmaps.com/llms/region-click.md): Respond to region clicks on the map.
 - [Zoom & Pan](https://shadcnmaps.com/llms/zoom-pan.md): Add zoom and pan controls to any map.
