@@ -1,9 +1,10 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Github, Moon, Sun } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
+import { GithubIcon } from './icons/github'
 import { Logo } from './logo'
 
 export default function MainNav() {
@@ -34,7 +35,7 @@ export default function MainNav() {
             size='icon'
             render={
               <a href='https://github.com/LGLabGreg/shadcnmaps' target='_blank'>
-                <Github />
+                <GithubIcon />
               </a>
             }
             nativeButton={false}
