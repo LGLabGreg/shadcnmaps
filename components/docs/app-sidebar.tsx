@@ -176,11 +176,10 @@ export function AppSidebar() {
               <LightbulbIcon className='size-4' />
               Have an idea?
             </div>
-            <p className='text-xs text-muted-foreground'>
+            <p className='text-sm text-muted-foreground'>
               Request a feature or suggest a new map.
             </p>
             <Button
-              size='sm'
               className='w-full'
               render={
                 <a
