@@ -351,14 +351,14 @@ describe('Region Overrides', () => {
 
 // ─── Group 6: Keyboard Navigation via Listbox ────────────────────────────────
 
-describe('Keyboard Navigation via Listbox', () => {
-  // Helper: get the focused option's text content
-  function focusedOptionText() {
-    const listbox = screen.getByRole('listbox')
-    const focused = listbox.querySelector('[tabindex="0"]')
-    return focused?.textContent ?? null
-  }
+// Helper: get the focused option's text content
+function focusedOptionText() {
+  const listbox = screen.getByRole('listbox')
+  const focused = listbox.querySelector('[tabindex="0"]')
+  return focused?.textContent ?? null
+}
 
+describe('Keyboard Navigation via Listbox', () => {
   it('first option is tabbable by default', () => {
     renderMap()
     expect(focusedOptionText()).toBe('Region A')
@@ -760,15 +760,15 @@ describe('Markers', () => {
 
 // ─── Group 8: MapControls — Zoom Buttons ─────────────────────────────────────
 
-describe('MapControls — Zoom Buttons', () => {
-  function renderWithControls(overrides: Partial<MapProps> = {}) {
-    return renderMap({
-      enableZoom: true,
-      controls: <MapControls />,
-      ...overrides,
-    })
-  }
+function renderWithControls(overrides: Partial<MapProps> = {}) {
+  return renderMap({
+    enableZoom: true,
+    controls: <MapControls />,
+    ...overrides,
+  })
+}
 
+describe('MapControls — Zoom Buttons', () => {
   it('renders zoom in/out/reset buttons', () => {
     renderWithControls()
     expect(screen.getByRole('button', { name: 'Zoom in' })).toBeInTheDocument()
@@ -825,12 +825,13 @@ describe('MapControls — Zoom Buttons', () => {
 
 // ─── Group 10: Context Error ─────────────────────────────────────────────────
 
+function BadComponent() {
+  useMapContext()
+  return null
+}
+
 describe('Context Error', () => {
   it('useMapContext() outside provider throws', () => {
-    function BadComponent() {
-      useMapContext()
-      return null
-    }
     expect(() => render(<BadComponent />)).toThrow(
       'useMapContext must be used within a MapProvider'
     )
