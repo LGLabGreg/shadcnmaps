@@ -23,7 +23,7 @@ export const slovakiaMapData = {
     },
     {
       id: 'ZI',
-      name: 'ilinský',
+      name: 'Žilinský',
       abbreviation: 'ZI',
       labelX: 290,
       labelY: 77,
@@ -39,7 +39,7 @@ export const slovakiaMapData = {
     },
     {
       id: 'TC',
-      name: 'Trenciansky',
+      name: 'Trenčiansky',
       abbreviation: 'TC',
       labelX: 171,
       labelY: 130,
@@ -55,7 +55,7 @@ export const slovakiaMapData = {
     },
     {
       id: 'KI',
-      name: 'Koický',
+      name: 'Košický',
       abbreviation: 'KI',
       labelX: 539,
       labelY: 170,
@@ -63,7 +63,7 @@ export const slovakiaMapData = {
     },
     {
       id: 'PV',
-      name: 'Preov',
+      name: 'Prešovský',
       abbreviation: 'PV',
       labelX: 531,
       labelY: 90,
