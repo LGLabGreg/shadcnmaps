@@ -63,3 +63,13 @@ Always use [shadcn/ui](https://ui.shadcn.com/) components for the docs site UI. 
 - Run `pnpm lint` after every file change to catch type errors early.
 - The shadcn Combobox uses Base UI (`@base-ui/react/combobox`). For string item values, the input displays the raw `value` prop by default — use `itemToStringLabel` on the Root to map values to display labels (also fixes filtering).
 - Run `pnpm vitest run` after any change to registry components
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
