@@ -1,7 +1,5 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import {
   Collapsible,
   CollapsibleContent,
@@ -24,12 +22,13 @@ import {
 } from '@/components/ui/sidebar'
 import type { NavSection } from '@/lib/navigation'
 import { navigation } from '@/lib/navigation'
-import { ChevronRightIcon, LightbulbIcon } from 'lucide-react'
+import { ChevronRightIcon } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCallback, useState } from 'react'
 
 import { Logo } from '../logo'
+import { ShadcnBlocksAd } from './shadcnblocks-ad'
 
 function FlatSection({
   section,
@@ -170,30 +169,7 @@ export function AppSidebar() {
         )}
       </SidebarContent>
       <SidebarFooter>
-        <Card size='sm'>
-          <CardContent className='flex flex-col items-start gap-2'>
-            <div className='flex items-center gap-2 font-medium'>
-              <LightbulbIcon className='size-4' />
-              Have an idea?
-            </div>
-            <p className='text-sm text-muted-foreground'>
-              Request a feature or suggest a new map.
-            </p>
-            <Button
-              className='w-full'
-              render={
-                <a
-                  href='https://github.com/LGLabGreg/shadcnmaps/discussions/categories/ideas'
-                  target='_blank'
-                  data-umami-event='Feature request'
-                />
-              }
-              nativeButton={false}
-            >
-              Request a feature
-            </Button>
-          </CardContent>
-        </Card>
+        <ShadcnBlocksAd />
       </SidebarFooter>
     </Sidebar>
   )
