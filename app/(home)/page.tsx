@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   },
   description:
     '170+ interactive SVG map components for React. Countries, continents, and US states. No dependencies — install via shadcn CLI with pure Tailwind CSS styling.',
+  alternates: { canonical: '/' },
 }
 
 export default function Home() {
