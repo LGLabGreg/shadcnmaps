@@ -11,7 +11,7 @@ export function registryUrl(componentName: string): string {
 
 export const siteConfig = {
   name: 'shadcnmaps',
-  url: 'https://shadcnmaps.com',
+  url: 'https://www.shadcnmaps.com',
   description:
     'Interactive SVG map components for React. No dependencies, pure Tailwind.',
   keywords: [

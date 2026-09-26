@@ -1,5 +1,5 @@
 import { TooltipProvider } from '@/components/ui/tooltip'
-import { IS_PRODUCTION } from '@/lib/config'
+import { IS_PRODUCTION, siteConfig } from '@/lib/config'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
@@ -19,10 +19,8 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
-const BASE_URL = 'https://www.shadcnmaps.com'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: 'shadcnmaps',
     template: '%s — shadcnmaps',
@@ -42,7 +40,6 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: 'website',
-    url: BASE_URL,
     siteName: 'shadcnmaps',
     images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
@@ -50,7 +47,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/og.jpg'],
   },
-  alternates: { canonical: BASE_URL },
   icons: {
     icon: [
       { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },

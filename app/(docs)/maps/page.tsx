@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Maps',
   description:
     'Browse all available interactive SVG map components. Search by name or filter by category.',
+  alternates: { canonical: '/maps' },
 }
 
 export default function MapsPage() {
