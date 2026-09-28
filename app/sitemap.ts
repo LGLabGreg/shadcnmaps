@@ -4,6 +4,8 @@ import path from 'path'
 import { siteConfig } from '@/lib/config'
 import type { MetadataRoute } from 'next'
 
+export const dynamic = 'force-static'
+
 function getDocPages(): { slug: string; lastModified: Date }[] {
   const docsDir = path.join(process.cwd(), 'app', '(docs)')
   const pages: { slug: string; lastModified: Date }[] = []
