@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/maps/slovekia",
+      "destination": "/maps/slovakia",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    { "source": "/maps/:map.md", "destination": "/llms/:map.md" }
+  ]
+}

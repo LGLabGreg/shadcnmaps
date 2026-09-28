@@ -15,13 +15,7 @@ export function InstallCommand({ registryName }: { registryName: string }) {
   }
 
   return (
-    <Button
-      variant='outline'
-      size='sm'
-      onClick={copy}
-      data-umami-event='Install command'
-      data-umami-event-map={registryName}
-    >
+    <Button variant='outline' size='sm' onClick={copy}>
       <Terminal />
       {`add @shadcnmaps/${registryName}`}
       {copied ? <Check className='ml-1' /> : <Copy className='ml-1' />}

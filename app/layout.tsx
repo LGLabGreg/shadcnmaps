@@ -1,11 +1,10 @@
 import { TooltipProvider } from '@/components/ui/tooltip'
-import { IS_PRODUCTION, siteConfig } from '@/lib/config'
+import { siteConfig } from '@/lib/config'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
 import './globals.css'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -78,12 +77,6 @@ export default function RootLayout({
         >
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
-        {IS_PRODUCTION && (
-          <Script
-            src='https://cloud.umami.is/script.js'
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
-          />
-        )}
       </body>
     </html>
   )

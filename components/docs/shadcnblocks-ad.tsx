@@ -53,8 +53,6 @@ export function ShadcnBlocksAd({ className }: { className?: string }) {
       target='_blank'
       rel='noopener sponsored'
       aria-label='shadcnblocks: hundreds of premium blocks and templates built with shadcn/ui (ad)'
-      data-umami-event='Shadcnblocks affiliate'
-      data-umami-event-placement='sidebar'
       className={cn(
         'group/ad relative isolate flex flex-col gap-3 overflow-hidden rounded-xl bg-card p-3 text-card-foreground ring-1 ring-foreground/10 transition-all duration-300 ease-out outline-none',
         'hover:shadow-md hover:shadow-foreground/5 hover:ring-foreground/20 focus-visible:ring-2 focus-visible:ring-ring',
