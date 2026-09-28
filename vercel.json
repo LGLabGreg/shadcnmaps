@@ -7,7 +7,5 @@
       "permanent": true
     }
   ],
-  "rewrites": [
-    { "source": "/maps/:map.md", "destination": "/llms/:map.md" }
-  ]
+  "rewrites": [{ "source": "/maps/:map.md", "destination": "/llms/:map.md" }]
 }
