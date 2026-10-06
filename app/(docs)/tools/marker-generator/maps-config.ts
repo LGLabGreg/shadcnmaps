@@ -105,6 +105,7 @@ import { newMexicoMapData } from '@/registry/shadcnmaps/map-data/new-mexico'
 import { newYorkMapData } from '@/registry/shadcnmaps/map-data/new-york'
 import { newYorkCityBoroughsMapData } from '@/registry/shadcnmaps/map-data/new-york-city-boroughs'
 import { newZealandMapData } from '@/registry/shadcnmaps/map-data/new-zealand'
+import { nicaraguaMapData } from '@/registry/shadcnmaps/map-data/nicaragua'
 import { nigeriaMapData } from '@/registry/shadcnmaps/map-data/nigeria'
 import { northAfricaMapData } from '@/registry/shadcnmaps/map-data/north-africa'
 import { northAmericaMapData } from '@/registry/shadcnmaps/map-data/north-america'
@@ -301,6 +302,7 @@ export const MAPS: Record<string, { data: MapData; label: string }> = {
   },
   'new-york': { data: newYorkMapData, label: 'New York' },
   'new-zealand': { data: newZealandMapData, label: 'New Zealand' },
+  nicaragua: { data: nicaraguaMapData, label: 'Nicaragua' },
   nigeria: { data: nigeriaMapData, label: 'Nigeria' },
   'north-africa': { data: northAfricaMapData, label: 'North Africa' },
   'north-america': { data: northAmericaMapData, label: 'North America' },

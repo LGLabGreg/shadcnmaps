@@ -124,6 +124,7 @@ export const navigation: NavSection[] = [
           { title: 'Nepal', href: '/maps/nepal' },
           { title: 'Netherlands', href: '/maps/netherlands' },
           { title: 'New Zealand', href: '/maps/new-zealand' },
+          { title: 'Nicaragua', href: '/maps/nicaragua' },
           { title: 'Nigeria', href: '/maps/nigeria' },
           { title: 'Norway', href: '/maps/norway' },
           { title: 'Oman', href: '/maps/oman' },

@@ -1015,6 +1015,19 @@ export const mapData = [
     ],
   },
   {
+    name: 'nicaragua-data',
+    type: 'registry:file',
+    title: 'Nicaragua Data',
+    description: 'SVG path data for Nicaragua with 17 regions.',
+    files: [
+      {
+        path: 'registry/shadcnmaps/map-data/nicaragua.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/nicaragua.ts',
+      },
+    ],
+  },
+  {
     name: 'norway-data',
     type: 'registry:file',
     title: 'Norway Data',
