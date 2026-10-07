@@ -1562,6 +1562,26 @@ export const maps = [
     ],
   },
   {
+    name: 'nicaragua',
+    type: 'registry:component',
+    title: 'Nicaragua',
+    description:
+      'Interactive Nicaragua map with 17 regions. Supports click, hover, selection, tooltips, and custom markers.',
+    registryDependencies: [registryUrl('map')],
+    files: [
+      {
+        path: 'registry/shadcnmaps/maps/nicaragua.tsx',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/maps/nicaragua.tsx',
+      },
+      {
+        path: 'registry/shadcnmaps/map-data/nicaragua.ts',
+        type: 'registry:file',
+        target: 'components/shadcnmaps/map-data/nicaragua.ts',
+      },
+    ],
+  },
+  {
     name: 'norway',
     type: 'registry:component',
     title: 'Norway',

@@ -1716,6 +1716,27 @@
       ]
     },
     {
+      "name": "nicaragua",
+      "type": "registry:component",
+      "title": "Nicaragua",
+      "description": "Interactive Nicaragua map with 17 regions. Supports click, hover, selection, tooltips, and custom markers.",
+      "registryDependencies": [
+        "http://localhost:3000/r/map.json"
+      ],
+      "files": [
+        {
+          "path": "registry/shadcnmaps/maps/nicaragua.tsx",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/maps/nicaragua.tsx"
+        },
+        {
+          "path": "registry/shadcnmaps/map-data/nicaragua.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/nicaragua.ts"
+        }
+      ]
+    },
+    {
       "name": "norway",
       "type": "registry:component",
       "title": "Norway",
@@ -4868,6 +4889,19 @@
           "path": "registry/shadcnmaps/map-data/nigeria.ts",
           "type": "registry:file",
           "target": "components/shadcnmaps/map-data/nigeria.ts"
+        }
+      ]
+    },
+    {
+      "name": "nicaragua-data",
+      "type": "registry:file",
+      "title": "Nicaragua Data",
+      "description": "SVG path data for Nicaragua with 17 regions.",
+      "files": [
+        {
+          "path": "registry/shadcnmaps/map-data/nicaragua.ts",
+          "type": "registry:file",
+          "target": "components/shadcnmaps/map-data/nicaragua.ts"
         }
       ]
     },

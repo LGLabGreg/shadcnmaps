@@ -133,6 +133,7 @@ When helping users with shadcnmaps:
 - [New York Map](https://shadcnmaps.com/llms/new-york.md): Interactive SVG map of New York with 62 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [New York City Boroughs](https://shadcnmaps.com/llms/new-york-city-boroughs.md): Interactive SVG map of New York City Boroughs with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [New Zealand Map](https://shadcnmaps.com/llms/new-zealand.md): Interactive SVG map of New Zealand with 19 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
+- [Nicaragua Map](https://shadcnmaps.com/llms/nicaragua.md): Interactive SVG map of Nicaragua with 17 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [Nigeria Map](https://shadcnmaps.com/llms/nigeria.md): Interactive SVG map of Nigeria with 37 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [North Africa Map](https://shadcnmaps.com/llms/north-africa.md): Interactive SVG map of North Africa with 6 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
 - [North America Map](https://shadcnmaps.com/llms/north-america.md): Interactive SVG map of North America with 29 regions. Supports click, hover, keyboard navigation, tooltips, and custom markers.
