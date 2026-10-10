@@ -28,7 +28,7 @@ import { usePathname } from 'next/navigation'
 import { useCallback, useState } from 'react'
 
 import { Logo } from '../logo'
-import { ShadcnBlocksAd } from './shadcnblocks-ad'
+import { DashboardBlocksPromo } from './dashboardblocks-promo'
 
 function FlatSection({
   section,
@@ -169,7 +169,7 @@ export function AppSidebar() {
         )}
       </SidebarContent>
       <SidebarFooter>
-        <ShadcnBlocksAd />
+        <DashboardBlocksPromo />
       </SidebarFooter>
     </Sidebar>
   )
