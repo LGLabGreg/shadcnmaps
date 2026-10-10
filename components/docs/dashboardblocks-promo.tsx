@@ -1,5 +1,6 @@
+import { DashboardBlocksIcon } from '@/components/icons/dashboardblocks'
 import { cn } from '@/lib/utils'
-import { ArrowUpRightIcon, LayoutDashboardIcon } from 'lucide-react'
+import { ArrowUpRightIcon } from 'lucide-react'
 
 export const DASHBOARDBLOCKS_URL = 'https://www.dashboardblocks.com/'
 
@@ -68,7 +69,7 @@ export function DashboardBlocksPromo({ className }: { className?: string }) {
 
       <div className='relative flex items-start'>
         <div className='flex size-9 items-center justify-center rounded-lg bg-foreground text-background shadow-sm transition-transform duration-300 ease-out group-hover/promo:scale-105 group-hover/promo:-rotate-3'>
-          <LayoutDashboardIcon className='size-5' />
+          <DashboardBlocksIcon className='size-5' />
         </div>
       </div>
 
