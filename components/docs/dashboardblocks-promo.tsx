@@ -2,7 +2,8 @@ import { DashboardBlocksIcon } from '@/components/icons/dashboardblocks'
 import { cn } from '@/lib/utils'
 import { ArrowUpRightIcon } from 'lucide-react'
 
-export const DASHBOARDBLOCKS_URL = 'https://www.dashboardblocks.com/'
+export const DASHBOARDBLOCKS_URL =
+  'https://www.dashboardblocks.com/?utm_source=shadcnmaps.com'
 
 /**
  * Decorative "dashboard" illustration: a tiny wireframe with stat tiles and
