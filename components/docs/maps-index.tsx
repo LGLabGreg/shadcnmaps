@@ -1,8 +1,8 @@
 'use client'
 
+import { Link } from '@/components/link'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { navigation } from '@/lib/navigation'
-import Link from 'next/link'
 import { useMemo, useState } from 'react'
 
 const CATEGORY_ALL = 'All'

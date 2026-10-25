@@ -12,13 +12,30 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "import/no-unassigned-import": "off"
+    "import/no-unassigned-import": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "next/link",
+            "message": "Import { Link } from '@/components/link' instead (prefetch is off to save CDN requests)."
+          }
+        ]
+      }
+    ]
   },
   "env": {
     "builtin": true
   },
   "ignorePatterns": ["node_modules", ".next", "public/r"],
   "overrides": [
+    {
+      "files": ["components/link.tsx"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    },
     {
       "files": ["registry/shadcnmaps/**/*.ts", "registry/shadcnmaps/**/*.tsx"],
       "jsPlugins": [

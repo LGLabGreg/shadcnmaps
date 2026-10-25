@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@/components/link'
 import {
   Collapsible,
   CollapsibleContent,
@@ -23,7 +24,6 @@ import {
 import type { NavSection } from '@/lib/navigation'
 import { navigation } from '@/lib/navigation'
 import { ChevronRightIcon } from 'lucide-react'
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCallback, useState } from 'react'
 
