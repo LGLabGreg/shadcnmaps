@@ -1,5 +1,6 @@
 'use client'
 
+import { Link } from '@/components/link'
 import { Button } from '@/components/ui/button'
 import { AfricaMap } from '@/registry/shadcnmaps/maps/africa'
 import { AustraliaMap } from '@/registry/shadcnmaps/maps/australia'
@@ -8,7 +9,6 @@ import { EuropeMap } from '@/registry/shadcnmaps/maps/europe'
 import { JapanMap } from '@/registry/shadcnmaps/maps/japan'
 import { USAMap } from '@/registry/shadcnmaps/maps/usa'
 import { ArrowRight } from 'lucide-react'
-import Link from 'next/link'
 
 const maps = [
   { name: 'USA', component: USAMap, href: '/maps/usa' },

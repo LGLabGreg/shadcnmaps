@@ -1,9 +1,9 @@
 'use client'
 
+import { Link } from '@/components/link'
 import { Button } from '@/components/ui/button'
 import { WorldMap } from '@/registry/shadcnmaps/maps/world'
 import { ArrowRight } from 'lucide-react'
-import Link from 'next/link'
 
 export function Hero() {
   return (
